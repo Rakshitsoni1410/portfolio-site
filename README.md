@@ -1,12 +1,75 @@
-# React + Vite
+# Rakshit Soni — Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website showcasing my projects, skills, education, and certifications as a software engineer. Built using React.js, Tailwind CSS, and deployed on Netlify.
 
-Currently, two official plugins are available:
+## 🌐 Live Link  
+**Website:** [https://rakshitrsoni.netlify.app](https://rakshitrsoni.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📑 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive Design  
+- Light & Dark Mode Toggle  
+- Projects Section with Live/GitHub Links  
+- Skills & Certifications Grid  
+- SEO Optimized with Meta Tags & Sitemap  
+- Downloadable Resume  
+- Social Profile Links
+
+---
+
+## 🛠️ Tech Stack
+
+- React.js  
+- Vite  
+- Tailwind CSS  
+- Netlify (Deployment)  
+
+---
+
+## 📂 Project Structure
+
+portfolio-site/
+├── public/
+│ ├── icon.png
+│ ├── Rakshit.png
+│ ├── Rakshit.webp
+│ ├── sitemap.xml
+│ ├── robots.txt
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── App.jsx
+│ ├── main.jsx
+├── index.html
+├── tailwind.config.js
+├── vite.config.js
+---
+
+## 🚀 Installation & Development
+
+```bash
+git clone https://github.com/rakshitsoni1410/portfolio-site.git
+cd portfolio-site
+npm install
+npm run dev
+For production build:npm run build
+✅ SEO Checklist
+Meta tags in index.html
+
+Favicon setup
+
+robots.txt
+
+sitemap.xml
+
+Open Graph tags
+
+📄 License
+This project is open source and free to use.
+
+Built by Rakshit Soni
+
+
+If you'd like me to customize it further with badges or GitHub stats widgets, just let me know!
