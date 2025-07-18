@@ -25,7 +25,7 @@ export default function App() {
         {/* Header */}
         <section className="max-w-5xl mx-auto p-4 md:p-6 flex flex-col md:flex-row items-center gap-4 md:gap-6">
           <img
-            src="/Rakshit.png"
+            src="/Rakshit.webp"
             alt="Rakshit Soni"
             className="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-blue-100"
           />
@@ -222,12 +222,11 @@ export default function App() {
           <div className="flex justify-center flex-wrap gap-4 text-2xl">
             <a
               href="https://github.com/rakshitsoni1410"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-500"
+              aria-label="GitHub Profile"
             >
               <FaGithub />
             </a>
+
             <a
               href="https://www.linkedin.com/in/rakshit-r-soni-5bb030286/"
               target="_blank"
