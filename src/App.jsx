@@ -261,64 +261,67 @@ export default function App() {
             📬 Contact Me
           </button>
         </section>
-
         {/* Modal Contact Form */}
         {showModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-md shadow-lg relative">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-md shadow-lg relative animate-fade-in">
               <button
                 className="absolute top-2 right-3 text-lg text-gray-700 dark:text-white"
                 onClick={() => setShowModal(false)}
               >
                 ✕
               </button>
-              <h3 className="text-xl font-bold mb-4">Send Me a Message</h3>
-<form
-  action="https://formsubmit.co/rakshitrsoni@gmail.com"
-  method="POST"
-  className="space-y-3"
->
-  <input
-    type="hidden"
-    name="_captcha"
-    value="false"
-  />
-  <input
-    type="hidden"
-    name="_next"
-    value="https://rakshitrsoni.netlify.app/thank-you"
-  />
+              <h3 className="text-xl font-bold mb-4 text-center">
+                Send Me a Message
+              </h3>
+              <form
+                action="https://formsubmit.co/rakshitrsoni@gmail.com"
+                method="POST"
+                className="space-y-3"
+              >
+                {/* Hidden Inputs */}
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="📩 New message from Portfolio Contact Form"
+                />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://rakshitrsoni.netlify.app/thank-you"
+                />
 
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    className="w-full p-2 rounded border dark:bg-gray-700"
-    required
-  />
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    className="w-full p-2 rounded border dark:bg-gray-700"
-    required
-  />
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    rows="4"
-    className="w-full p-2 rounded border dark:bg-gray-700"
-    required
-  ></textarea>
+                {/* Visible Inputs */}
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  className="w-full p-2 rounded border border-gray-300 dark:bg-gray-700"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  className="w-full p-2 rounded border border-gray-300 dark:bg-gray-700"
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows="4"
+                  className="w-full p-2 rounded border border-gray-300 dark:bg-gray-700"
+                  required
+                ></textarea>
 
-  <button
-    type="submit"
-    className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-  >
-    Send Message
-  </button>
-</form>
-
+                <button
+                  type="submit"
+                  className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
         )}
