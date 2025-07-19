@@ -78,17 +78,50 @@ export default function App() {
           <h2 className="text-2xl font-semibold mb-4">Skills</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {[
-              { name: "Java", icon: <FaJava className="text-xl text-red-600" /> },
-              { name: "Python", icon: <FaPython className="text-xl text-yellow-500" /> },
-              { name: "JavaScript", icon: <FaJs className="text-xl text-yellow-400" /> },
-              { name: "C#", icon: <FaCode className="text-xl text-purple-600" /> },
-              { name: "React.js", icon: <FaReact className="text-xl text-blue-400" /> },
-              { name: "Node.js", icon: <FaNodeJs className="text-xl text-green-600" /> },
-              { name: "MongoDB", icon: <SiMongodb className="text-xl text-green-500" /> },
-              { name: "MySQL", icon: <SiMysql className="text-xl text-blue-500" /> },
-              { name: "HTML", icon: <FaHtml5 className="text-xl text-orange-500" /> },
-              { name: "CSS", icon: <FaCss3Alt className="text-xl text-blue-600" /> },
-              { name: "PHP", icon: <FaPhp className="text-xl text-indigo-600" /> },
+              {
+                name: "Java",
+                icon: <FaJava className="text-xl text-red-600" />,
+              },
+              {
+                name: "Python",
+                icon: <FaPython className="text-xl text-yellow-500" />,
+              },
+              {
+                name: "JavaScript",
+                icon: <FaJs className="text-xl text-yellow-400" />,
+              },
+              {
+                name: "C#",
+                icon: <FaCode className="text-xl text-purple-600" />,
+              },
+              {
+                name: "React.js",
+                icon: <FaReact className="text-xl text-blue-400" />,
+              },
+              {
+                name: "Node.js",
+                icon: <FaNodeJs className="text-xl text-green-600" />,
+              },
+              {
+                name: "MongoDB",
+                icon: <SiMongodb className="text-xl text-green-500" />,
+              },
+              {
+                name: "MySQL",
+                icon: <SiMysql className="text-xl text-blue-500" />,
+              },
+              {
+                name: "HTML",
+                icon: <FaHtml5 className="text-xl text-orange-500" />,
+              },
+              {
+                name: "CSS",
+                icon: <FaCss3Alt className="text-xl text-blue-600" />,
+              },
+              {
+                name: "PHP",
+                icon: <FaPhp className="text-xl text-indigo-600" />,
+              },
             ].map((skill) => (
               <div
                 key={skill.name}
@@ -103,16 +136,41 @@ export default function App() {
 
         {/* Certifications */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
-          <h2 className="text-2xl font-semibold mb-6 text-center">Certifications</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center">
+            Certifications
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {[
-              { name: "Java (Basic)", icon: <FaJava className="text-orange-500 text-3xl" /> },
-              { name: "JavaScript (Basic & Intermediate)", icon: <FaJs className="text-yellow-400 text-3xl" /> },
-              { name: "Python (Basic)", icon: <FaPython className="text-blue-500 text-3xl" /> },
-              { name: "SQL (Basic & Intermediate)", icon: <FaDatabase className="text-gray-700 dark:text-gray-300 text-3xl" /> },
-              { name: "CSS (Basic)", icon: <FaCss3Alt className="text-blue-600 text-3xl" /> },
-              { name: "C# (Basic)", icon: <FaCode className="text-purple-700 text-3xl" /> },
-              { name: "Bootstrap", icon: <FaBootstrap className="text-indigo-700 text-3xl" /> },
+              {
+                name: "Java (Basic)",
+                icon: <FaJava className="text-orange-500 text-3xl" />,
+              },
+              {
+                name: "JavaScript (Basic & Intermediate)",
+                icon: <FaJs className="text-yellow-400 text-3xl" />,
+              },
+              {
+                name: "Python (Basic)",
+                icon: <FaPython className="text-blue-500 text-3xl" />,
+              },
+              {
+                name: "SQL (Basic & Intermediate)",
+                icon: (
+                  <FaDatabase className="text-gray-700 dark:text-gray-300 text-3xl" />
+                ),
+              },
+              {
+                name: "CSS (Basic)",
+                icon: <FaCss3Alt className="text-blue-600 text-3xl" />,
+              },
+              {
+                name: "C# (Basic)",
+                icon: <FaCode className="text-purple-700 text-3xl" />,
+              },
+              {
+                name: "Bootstrap",
+                icon: <FaBootstrap className="text-indigo-700 text-3xl" />,
+              },
               {
                 name: "HTML, CSS & JS (Coursera)",
                 icon: <span className="text-2xl">🌐</span>,
@@ -151,7 +209,9 @@ export default function App() {
 
         {/* Education */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
-          <h2 className="text-2xl font-semibold mb-6 text-center">🎓 Education</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center">
+            🎓 Education
+          </h2>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
               <div>
@@ -176,11 +236,17 @@ export default function App() {
         <section className="max-w-5xl mx-auto p-4 md:p-6 text-center">
           <h2 className="text-2xl font-semibold mb-4">Profiles & Contact</h2>
           <div className="flex justify-center flex-wrap gap-4 text-2xl">
-            <a href="https://github.com/rakshitsoni1410"><FaGithub /></a>
-            <a href="https://linkedin.com/in/rakshit-r-soni-5bb030286"><FaLinkedin /></a>
+            <a href="https://github.com/rakshitsoni1410">
+              <FaGithub />
+            </a>
+            <a href="https://linkedin.com/in/rakshit-r-soni-5bb030286">
+              <FaLinkedin />
+            </a>
             <a href="https://leetcode.com/u/rakshitsoni1410/">LeetCode</a>
             <a href="https://www.geeksforgeeks.org/user/rakshituya7/">GFG</a>
-            <a href="https://www.hackerrank.com/rakshitsoni544"><FaHackerrank /></a>
+            <a href="https://www.hackerrank.com/rakshitsoni544">
+              <FaHackerrank />
+            </a>
             <a href="https://www.w3profile.com/rakshitrsoni/">
               <FaGlobe className="text-3xl" />
               <div className="text-xs">W3Schools</div>
@@ -208,12 +274,28 @@ export default function App() {
               </button>
               <h3 className="text-xl font-bold mb-4">Send Me a Message</h3>
               <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const name = e.target.name.value;
+                  const email = e.target.email.value;
+                  const message = e.target.message.value;
+
+                  const mailtoLink = `mailto:rakshitrsoni@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+                  window.location.href = mailtoLink;
+
+                  // Show confirmation popup
+                  const toast = document.createElement("div");
+                  toast.textContent =
+                    "✅ Message intent opened. Please confirm to send.";
+                  toast.className =
+                    "fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded shadow-lg z-50 animate-fade";
+                  document.body.appendChild(toast);
+                  setTimeout(() => toast.remove(), 3000);
+
+                  setShowModal(false);
+                }}
                 className="space-y-3"
               >
-                <input type="hidden" name="form-name" value="contact" />
                 <input
                   type="text"
                   name="name"
