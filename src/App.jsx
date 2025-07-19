@@ -263,70 +263,81 @@ export default function App() {
         </section>
 
         {/* Modal Contact Form */}
-        {showModal && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-md shadow-lg relative">
-              <button
-                className="absolute top-2 right-3 text-lg text-gray-700 dark:text-white"
-                onClick={() => setShowModal(false)}
-              >
-                ✕
-              </button>
-              <h3 className="text-xl font-bold mb-4">Send Me a Message</h3>
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const name = e.target.name.value;
-                  const email = e.target.email.value;
-                  const message = e.target.message.value;
+       {showModal && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-md shadow-lg relative animate-fade-in">
+      {/* Close Button */}
+      <button
+        className="absolute top-2 right-3 text-xl text-gray-700 dark:text-white hover:text-red-500"
+        onClick={() => setShowModal(false)}
+      >
+        ✕
+      </button>
 
-                  const mailtoLink = `mailto:rakshitrsoni@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
-                  window.location.href = mailtoLink;
+      {/* Heading */}
+      <h3 className="text-xl font-bold mb-4 text-center">Send Me a Message</h3>
 
-                  // Show confirmation popup
-                  const toast = document.createElement("div");
-                  toast.textContent =
-                    "✅ Message intent opened. Please confirm to send.";
-                  toast.className =
-                    "fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded shadow-lg z-50 animate-fade";
-                  document.body.appendChild(toast);
-                  setTimeout(() => toast.remove(), 3000);
+      {/* Form */}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          const name = e.target.name.value.trim();
+          const email = e.target.email.value.trim();
+          const message = e.target.message.value.trim();
 
-                  setShowModal(false);
-                }}
-                className="space-y-3"
-              >
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  className="w-full p-2 rounded border dark:bg-gray-700"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  className="w-full p-2 rounded border dark:bg-gray-700"
-                  required
-                />
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  className="w-full p-2 rounded border dark:bg-gray-700"
-                  rows="4"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        )}
+          if (!name || !email || !message) return;
+
+          const mailtoLink = `mailto:rakshitrsoni@gmail.com?subject=Message from ${encodeURIComponent(
+            name
+          )}&body=${encodeURIComponent(
+            `Name: ${name}\nEmail: ${email}\n\n${message}`
+          )}`;
+          window.location.href = mailtoLink;
+
+          // Toast popup
+          const toast = document.createElement("div");
+          toast.textContent = "✅ Mail window opened. Please confirm to send.";
+          toast.className =
+            "fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded shadow-lg z-50 animate-fade-in";
+          document.body.appendChild(toast);
+          setTimeout(() => toast.remove(), 3000);
+
+          setShowModal(false);
+        }}
+        className="space-y-3"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          className="w-full p-2 rounded border border-gray-300 dark:bg-gray-700"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          className="w-full p-2 rounded border border-gray-300 dark:bg-gray-700"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="4"
+          className="w-full p-2 rounded border border-gray-300 dark:bg-gray-700"
+          required
+        ></textarea>
+
+        <button
+          type="submit"
+          className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+)}
       </main>
     </div>
   );
