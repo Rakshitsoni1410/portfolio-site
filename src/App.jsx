@@ -6,7 +6,21 @@ import {
   FaLinkedin,
   FaHackerrank,
   FaGlobe,
+  FaLaptopCode,
+  FaJava,
+  FaPython,
+  FaDatabase,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaPhp,
+  FaCode, // Use for C#
 } from "react-icons/fa";
+
+import { SiMongodb, SiMysql } from "react-icons/si";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -65,24 +79,62 @@ export default function App() {
           <h2 className="text-2xl font-semibold mb-4">Skills</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {[
-              "Java",
-              "Python",
-              "JavaScript",
-              "C#",
-              "React.js",
-              "Node.js",
-              "MongoDB",
-              "MySQL",
-              "SQL",
-              "HTML",
-              "CSS",
-              "PHP",
+              {
+                name: "Java",
+                icon: <FaJava className="text-xl text-red-600" />,
+              },
+              {
+                name: "Python",
+                icon: <FaPython className="text-xl text-yellow-500" />,
+              },
+              {
+                name: "JavaScript",
+                icon: <FaJs className="text-xl text-yellow-400" />,
+              },
+              {
+                name: "C#",
+                icon: <FaCode className="text-xl text-purple-600" />,
+              },
+
+              {
+                name: "React.js",
+                icon: <FaReact className="text-xl text-blue-400" />,
+              },
+              {
+                name: "Node.js",
+                icon: <FaNodeJs className="text-xl text-green-600" />,
+              },
+              {
+                name: "MongoDB",
+                icon: <SiMongodb className="text-xl text-green-500" />,
+              },
+              {
+                name: "MySQL",
+                icon: <SiMysql className="text-xl text-blue-500" />,
+              },
+              {
+                name: "SQL",
+                icon: <SiMysql className="text-xl text-blue-500" />,
+              },
+              {
+                name: "HTML",
+                icon: <FaHtml5 className="text-xl text-orange-500" />,
+              },
+              {
+                name: "CSS",
+                icon: <FaCss3Alt className="text-xl text-blue-600" />,
+              },
+              {
+                name: "PHP",
+                icon: <FaPhp className="text-xl text-indigo-600" />,
+              },
             ].map((skill) => (
               <div
-                key={skill}
-                className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow text-center"
+                key={skill.name}
+                className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow flex items-center gap-2 justify-center"
               >
-                {skill}
+                {skill.icon}
+                <span>{skill.name}</span>
               </div>
             ))}
           </div>
@@ -130,28 +182,77 @@ export default function App() {
 
         {/* Certifications */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
-          <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          <h2 className="text-2xl font-semibold mb-6 text-center">
+            Certifications
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {[
-              "Java (Basic)",
-              "JavaScript (Basic & Intermediate)",
-              "Python (Basic)",
-              "SQL (Basic & Intermediate)",
-              "CSS (Basic)",
-              "C# (Basic)",
-            ].map((cert, index) => (
+              {
+                name: "Java (Basic)",
+                icon: <FaJava className="text-orange-500 text-3xl" />,
+              },
+              {
+                name: "JavaScript (Basic & Intermediate)",
+                icon: <FaJs className="text-yellow-400 text-3xl" />,
+              },
+              {
+                name: "Python (Basic)",
+                icon: <FaPython className="text-blue-500 text-3xl" />,
+              },
+              {
+                name: "SQL (Basic & Intermediate)",
+                icon: (
+                  <FaDatabase className="text-gray-700 dark:text-gray-300 text-3xl" />
+                ),
+              },
+              {
+                name: "CSS (Basic)",
+                icon: <FaCss3Alt className="text-blue-600 text-3xl" />,
+              },
+              {
+                name: "C# (Basic)",
+                icon: <FaCode className="text-purple-700 text-3xl" />,
+              },
+              {
+                name: "Bootstrap",
+                icon: <FaBootstrap className="text-indigo-700 text-3xl" />,
+              },
+              {
+                name: "HTML, CSS & JS (Coursera)",
+                icon: <span className="text-2xl">🌐</span>,
+                link: "https://coursera.org/verify/QBZAL6TBSX8K",
+              },
+              {
+                name: "Digital Productivity",
+                icon: <FaLaptopCode className="text-blue-600 text-3xl" />,
+              },
+            ].map((cert, idx) => (
               <div
-                key={index}
-                className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md hover:scale-105 transform transition"
+                key={idx}
+                className="bg-white dark:bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
               >
-                <div className="flex items-center justify-center text-blue-600 text-4xl mb-2">
-                  🎓
+                <div className="flex items-center justify-center mb-3">
+                  {cert.icon}
                 </div>
-                <p className="text-center font-medium">{cert}</p>
+                {cert.link ? (
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-center font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    {cert.name}
+                  </a>
+                ) : (
+                  <p className="text-center font-medium text-gray-800 dark:text-gray-200">
+                    {cert.name}
+                  </p>
+                )}
               </div>
             ))}
           </div>
         </section>
+
         <section className="max-w-5xl mx-auto p-6">
           <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
             🎖️ My Badges
