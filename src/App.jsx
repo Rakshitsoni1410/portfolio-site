@@ -17,13 +17,13 @@ import {
   FaCss3Alt,
   FaBootstrap,
   FaPhp,
-  FaCode, // Use for C#
+  FaCode,
 } from "react-icons/fa";
-
 import { SiMongodb, SiMysql } from "react-icons/si";
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -51,7 +51,6 @@ export default function App() {
             <p className="mt-2">
               rakshitsoni@gmail.com | +91 6354798703 | Gujarat, India
             </p>
-
             <div className="flex gap-3 mt-4">
               <a
                 href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/22674395/MjI2NzQzOTU%3D.pdf"
@@ -79,55 +78,17 @@ export default function App() {
           <h2 className="text-2xl font-semibold mb-4">Skills</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {[
-              {
-                name: "Java",
-                icon: <FaJava className="text-xl text-red-600" />,
-              },
-              {
-                name: "Python",
-                icon: <FaPython className="text-xl text-yellow-500" />,
-              },
-              {
-                name: "JavaScript",
-                icon: <FaJs className="text-xl text-yellow-400" />,
-              },
-              {
-                name: "C#",
-                icon: <FaCode className="text-xl text-purple-600" />,
-              },
-
-              {
-                name: "React.js",
-                icon: <FaReact className="text-xl text-blue-400" />,
-              },
-              {
-                name: "Node.js",
-                icon: <FaNodeJs className="text-xl text-green-600" />,
-              },
-              {
-                name: "MongoDB",
-                icon: <SiMongodb className="text-xl text-green-500" />,
-              },
-              {
-                name: "MySQL",
-                icon: <SiMysql className="text-xl text-blue-500" />,
-              },
-              {
-                name: "SQL",
-                icon: <SiMysql className="text-xl text-blue-500" />,
-              },
-              {
-                name: "HTML",
-                icon: <FaHtml5 className="text-xl text-orange-500" />,
-              },
-              {
-                name: "CSS",
-                icon: <FaCss3Alt className="text-xl text-blue-600" />,
-              },
-              {
-                name: "PHP",
-                icon: <FaPhp className="text-xl text-indigo-600" />,
-              },
+              { name: "Java", icon: <FaJava className="text-xl text-red-600" /> },
+              { name: "Python", icon: <FaPython className="text-xl text-yellow-500" /> },
+              { name: "JavaScript", icon: <FaJs className="text-xl text-yellow-400" /> },
+              { name: "C#", icon: <FaCode className="text-xl text-purple-600" /> },
+              { name: "React.js", icon: <FaReact className="text-xl text-blue-400" /> },
+              { name: "Node.js", icon: <FaNodeJs className="text-xl text-green-600" /> },
+              { name: "MongoDB", icon: <SiMongodb className="text-xl text-green-500" /> },
+              { name: "MySQL", icon: <SiMysql className="text-xl text-blue-500" /> },
+              { name: "HTML", icon: <FaHtml5 className="text-xl text-orange-500" /> },
+              { name: "CSS", icon: <FaCss3Alt className="text-xl text-blue-600" /> },
+              { name: "PHP", icon: <FaPhp className="text-xl text-indigo-600" /> },
             ].map((skill) => (
               <div
                 key={skill.name}
@@ -140,83 +101,18 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects */}
-        <section className="max-w-5xl mx-auto p-4 md:p-6">
-          <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              {
-                title: "Get Your Ride – Vehicle Rental System",
-                desc: "Full-stack MERN application with user/admin panels.",
-                link: "https://github.com/Rakshitsoni1410/Get-your-ride",
-              },
-              {
-                title: "Online Course Platform (MERN)",
-                desc: "Manage/explore courses, instructor uploads.",
-                link: "https://github.com/Rakshitsoni1410/couserplatfrom",
-              },
-              {
-                title: "E-commerce for Gold Jewelry (PHP)",
-                desc: "Frontend: HTML, CSS, JS. Backend: PHP/MySQL.",
-                link: "https://rcsoni.netlify.app",
-              },
-            ].map((project, i) => (
-              <div
-                key={i}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 hover:scale-105 transition-transform"
-              >
-                <h3 className="text-lg font-bold mb-2">{project.title}</h3>
-                <p className="text-sm mb-3">{project.desc}</p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  Visit ↗
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Certifications */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
-          <h2 className="text-2xl font-semibold mb-6 text-center">
-            Certifications
-          </h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center">Certifications</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {[
-              {
-                name: "Java (Basic)",
-                icon: <FaJava className="text-orange-500 text-3xl" />,
-              },
-              {
-                name: "JavaScript (Basic & Intermediate)",
-                icon: <FaJs className="text-yellow-400 text-3xl" />,
-              },
-              {
-                name: "Python (Basic)",
-                icon: <FaPython className="text-blue-500 text-3xl" />,
-              },
-              {
-                name: "SQL (Basic & Intermediate)",
-                icon: (
-                  <FaDatabase className="text-gray-700 dark:text-gray-300 text-3xl" />
-                ),
-              },
-              {
-                name: "CSS (Basic)",
-                icon: <FaCss3Alt className="text-blue-600 text-3xl" />,
-              },
-              {
-                name: "C# (Basic)",
-                icon: <FaCode className="text-purple-700 text-3xl" />,
-              },
-              {
-                name: "Bootstrap",
-                icon: <FaBootstrap className="text-indigo-700 text-3xl" />,
-              },
+              { name: "Java (Basic)", icon: <FaJava className="text-orange-500 text-3xl" /> },
+              { name: "JavaScript (Basic & Intermediate)", icon: <FaJs className="text-yellow-400 text-3xl" /> },
+              { name: "Python (Basic)", icon: <FaPython className="text-blue-500 text-3xl" /> },
+              { name: "SQL (Basic & Intermediate)", icon: <FaDatabase className="text-gray-700 dark:text-gray-300 text-3xl" /> },
+              { name: "CSS (Basic)", icon: <FaCss3Alt className="text-blue-600 text-3xl" /> },
+              { name: "C# (Basic)", icon: <FaCode className="text-purple-700 text-3xl" /> },
+              { name: "Bootstrap", icon: <FaBootstrap className="text-indigo-700 text-3xl" /> },
               {
                 name: "HTML, CSS & JS (Coursera)",
                 icon: <span className="text-2xl">🌐</span>,
@@ -253,124 +149,102 @@ export default function App() {
           </div>
         </section>
 
-        <section className="max-w-5xl mx-auto p-6">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-            🎖️ My Badges
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[
-              {
-                title: "Problem Solving",
-                color: "from-pink-400 to-pink-500",
-                stars: 3,
-              },
-              { title: "Java", color: "from-gray-300 to-gray-400", stars: 4 },
-              {
-                title: "Python",
-                color: "from-green-300 to-green-400",
-                stars: 2,
-              },
-              {
-                title: "30 Days of Code",
-                color: "from-yellow-300 to-yellow-400",
-                stars: 5,
-              },
-              {
-                title: "10 Days of JS",
-                color: "from-blue-300 to-blue-400",
-                stars: 3,
-              },
-              { title: "SQL", color: "from-rose-300 to-rose-400", stars: 2 },
-            ].map((badge, index) => (
-              <div
-                key={index}
-                className={`bg-gradient-to-br ${badge.color} text-white rounded-xl p-4 shadow-lg flex flex-col justify-between items-center hover:scale-105 transition`}
-              >
-                <span className="font-semibold text-lg">{badge.title}</span>
-                <div className="flex gap-1 mt-3">
-                  {Array(5)
-                    .fill(0)
-                    .map((_, i) => (
-                      <span key={i}>{i < badge.stars ? "⭐" : "☆"}</span>
-                    ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Education */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
-          <h2 className="text-2xl font-semibold mb-4">Education</h2>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition">
-            <h3 className="text-xl font-bold text-blue-800 dark:text-blue-300 mb-2">
-              Bachelor of Computer Applications (BCA)
-            </h3>
-            <p className="mb-1">Indus University, Gujarat</p>
-            <p className="mb-1 text-sm text-gray-600 dark:text-gray-400">
-              2022 – 2025 (Completed)
-            </p>
-            <p className="text-sm font-medium text-green-600 dark:text-green-400">
-              CGPA: 7.5 / 10
+          <h2 className="text-2xl font-semibold mb-6 text-center">🎓 Education</h2>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+              <div>
+                <h3 className="text-xl font-bold text-blue-800 dark:text-blue-300 mb-1">
+                  Bachelor of Computer Applications (BCA)
+                </h3>
+                <p className="text-md text-gray-700 dark:text-gray-300">
+                  Indus University, Ahmedabad, Gujarat
+                </p>
+              </div>
+              <div className="text-sm mt-2 md:mt-0 text-gray-600 dark:text-gray-400">
+                📅 2022 – 2025
+              </div>
+            </div>
+            <p className="text-sm font-medium text-green-600 dark:text-green-400 mt-2">
+              🎯 CGPA: 7.5 / 10
             </p>
           </div>
         </section>
 
-        {/* Profiles & Contact */}
+        {/* Profiles */}
         <section className="max-w-5xl mx-auto p-4 md:p-6 text-center">
           <h2 className="text-2xl font-semibold mb-4">Profiles & Contact</h2>
           <div className="flex justify-center flex-wrap gap-4 text-2xl">
-            <a
-              href="https://github.com/rakshitsoni1410"
-              aria-label="GitHub Profile"
-            >
-              <FaGithub />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/rakshit-r-soni-5bb030286/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-500"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://leetcode.com/u/rakshitsoni1410/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-yellow-500"
-            >
-              LeetCode
-            </a>
-            <a
-              href="https://www.geeksforgeeks.org/user/rakshituya7/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-green-600"
-            >
-              GFG
-            </a>
-            <a
-              href="https://www.hackerrank.com/rakshitsoni544"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-green-500"
-            >
-              <FaHackerrank />
-            </a>
-            <a
-              href="https://www.w3profile.com/rakshitrsoni/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-green-500 flex flex-col items-center"
-            >
+            <a href="https://github.com/rakshitsoni1410"><FaGithub /></a>
+            <a href="https://linkedin.com/in/rakshit-r-soni-5bb030286"><FaLinkedin /></a>
+            <a href="https://leetcode.com/u/rakshitsoni1410/">LeetCode</a>
+            <a href="https://www.geeksforgeeks.org/user/rakshituya7/">GFG</a>
+            <a href="https://www.hackerrank.com/rakshitsoni544"><FaHackerrank /></a>
+            <a href="https://www.w3profile.com/rakshitrsoni/">
               <FaGlobe className="text-3xl" />
-              <span className="text-xs">W3Schools</span>
+              <div className="text-xs">W3Schools</div>
             </a>
           </div>
+
+          {/* Contact Modal Trigger */}
+          <button
+            onClick={() => setShowModal(true)}
+            className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+          >
+            📬 Contact Me
+          </button>
         </section>
+
+        {/* Modal Contact Form */}
+        {showModal && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg w-full max-w-md shadow-lg relative">
+              <button
+                className="absolute top-2 right-3 text-lg text-gray-700 dark:text-white"
+                onClick={() => setShowModal(false)}
+              >
+                ✕
+              </button>
+              <h3 className="text-xl font-bold mb-4">Send Me a Message</h3>
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                className="space-y-3"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  className="w-full p-2 rounded border dark:bg-gray-700"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  className="w-full p-2 rounded border dark:bg-gray-700"
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  className="w-full p-2 rounded border dark:bg-gray-700"
+                  rows="4"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="w-full py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
