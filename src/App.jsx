@@ -206,6 +206,129 @@ export default function App() {
             ))}
           </div>
         </section>
+        {/* Projects */}
+        <section className="max-w-5xl mx-auto p-4 md:p-6">
+          <h2 className="text-2xl font-semibold mb-6 text-center">
+            📁 Projects
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Project 1 - LMS */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-bold text-blue-700 dark:text-blue-400">
+                  📚 Course Website (LMS)
+                </h3>
+                <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full dark:bg-green-700 dark:text-white">
+                  ✅ Completed
+                </span>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                A learning management system with course browsing, purchase,
+                tracking, instructor uploads, and review features.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-3">
+                {[
+                  "React",
+                  "Tailwind",
+                  "Redux Toolkit",
+                  "Node.js",
+                  "Express",
+                  "MongoDB",
+                  "Webhook",
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs bg-blue-100 dark:bg-blue-600 text-blue-800 dark:text-white px-2 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href="https://github.com/Rakshitsoni1410/couserplatfrom"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 px-4 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm transition"
+              >
+                🔗 View Live
+              </a>
+            </div>
+
+            {/* Project 2 - Jewelry */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-bold text-blue-700 dark:text-blue-400">
+                  💎 Jewelry Business Website
+                </h3>
+                <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full dark:bg-green-700 dark:text-white">
+                  ✅ Completed
+                </span>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                E-commerce site for a family jewelry business with product
+                upload form and backend integration.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-3">
+                {["HTML", "Tailwind", "JavaScript", "PHP", "MySQL"].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="text-xs bg-purple-100 dark:bg-purple-600 text-purple-800 dark:text-white px-2 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
+
+              <a
+                href="https://rcsoni.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 px-4 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm transition"
+              >
+                🔗 View Live
+              </a>
+            </div>
+
+            {/* Project 3 - Uber Clone */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="text-xl font-bold text-blue-700 dark:text-blue-400">
+                  🚘 Uber-like Ride Booking App
+                </h3>
+                <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full dark:bg-yellow-700 dark:text-white">
+                  🛠 In Progress
+                </span>
+              </div>
+              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
+                Ride-sharing app under development with features like booking,
+                real-time tracking, and driver auth.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-3">
+                {["React", "Node.js", "MongoDB", "Tailwind", "Socket.io"].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="text-xs bg-yellow-100 dark:bg-yellow-600 text-yellow-800 dark:text-white px-2 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
+
+              <p className="text-sm italic text-gray-500 dark:text-gray-400">
+                Development repo will be shared soon.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Education */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
