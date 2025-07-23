@@ -172,7 +172,6 @@ export default function App() {
               {
                 name: "Bootstrap",
                 icon: <FaBootstrap className="text-indigo-700 text-3xl" />,
-              
               },
               {
                 name: "HTML, CSS & JS (Coursera)",
@@ -401,7 +400,7 @@ export default function App() {
                 Send Me a Message
               </h3>
               <form
-                action="https://formsubmit.co/rakshitrsoni@gmail.com"
+                action="https://formsubmit.co/4a8668fff89f01e6bb7498159f6f7f10"
                 method="POST"
                 className="space-y-3"
               >
