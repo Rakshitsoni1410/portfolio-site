@@ -49,11 +49,11 @@ export default function App() {
             </h1>
             <p className="text-lg mt-1">Software Engineer</p>
             <p className="mt-2">
-              rakshitsoni@gmail.com | +91 6354798703 | Gujarat, India
+              rakshitrsoni@gmail.com | +91 6354798703 | Gujarat, India
             </p>
             <div className="flex gap-3 mt-4">
               <a
-                href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/22674395/MjI2NzQzOTU%3D.pdf"
+                href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/22674395/MjI2NzQzOTU=.pdf"
                 download
                 className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition"
               >
@@ -144,10 +144,12 @@ export default function App() {
               {
                 name: "Java (Basic)",
                 icon: <FaJava className="text-orange-500 text-3xl" />,
+                link: "https://www.hackerrank.com/certificates/0f1b2c3d4e5f",
               },
               {
                 name: "JavaScript (Basic & Intermediate)",
                 icon: <FaJs className="text-yellow-400 text-3xl" />,
+                link: "https://www.hackerrank.com/certificates/iframe/b04991b66fe0",
               },
               {
                 name: "Python (Basic)",
@@ -164,12 +166,13 @@ export default function App() {
                 icon: <FaCss3Alt className="text-blue-600 text-3xl" />,
               },
               {
-                name: "C# (Basic)",
+                name: "C (Basic)",
                 icon: <FaCode className="text-purple-700 text-3xl" />,
               },
               {
                 name: "Bootstrap",
                 icon: <FaBootstrap className="text-indigo-700 text-3xl" />,
+              
               },
               {
                 name: "HTML, CSS & JS (Coursera)",
