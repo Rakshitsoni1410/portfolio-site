@@ -400,6 +400,18 @@ export default function App() {
                 Send Me a Message
               </h3>
               <form
+                onSubmit={() => {
+                  // Show toast message
+                  const toast = document.createElement("div");
+                  toast.textContent =
+                    "✅ Thank you! You'll get a reply within 24 hours.";
+                  toast.className =
+                    "fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded shadow-lg z-50 animate-fade-in";
+                  document.body.appendChild(toast);
+
+                  // Auto remove after 3 seconds
+                  setTimeout(() => toast.remove(), 3000);
+                }}
                 action="https://formsubmit.co/4a8668fff89f01e6bb7498159f6f7f10"
                 method="POST"
                 className="space-y-3"
