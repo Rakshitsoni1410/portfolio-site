@@ -414,7 +414,7 @@ export default function App() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://rakshitrsoni.netlify.app/thank-you"
+                  value="https://rakshitrsoni.netlify.app"
                 />
 
                 {/* Visible Inputs */}
