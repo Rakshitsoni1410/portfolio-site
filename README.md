@@ -1,75 +1,107 @@
-# Rakshit Soni — Software Engineer Portfolio
+# 🚀 Rakshit Soni — Portfolio Website
 
-This is my personal portfolio website showcasing my projects, skills, education, and certifications as a software engineer. Built using React.js, Tailwind CSS, and deployed on Netlify.
+This is my personal developer portfolio built using **React**, **Tailwind CSS**, and deployed on **Netlify**. It showcases my skills, projects, certifications, and includes a modal-based contact form with FormSubmit integration.
 
-## 🌐 Live Link  
-**Website:** [https://rakshitrsoni.netlify.app](https://rakshitrsoni.netlify.app)
-
----
-
-## 📑 Features
-
-- Responsive Design  
-- Light & Dark Mode Toggle  
-- Projects Section with Live/GitHub Links  
-- Skills & Certifications Grid  
-- SEO Optimized with Meta Tags & Sitemap  
-- Downloadable Resume  
-- Social Profile Links
+![Portfolio Screenshot](./public/Rakshit.webp)
 
 ---
 
-## 🛠️ Tech Stack
+## 🔗 Live Demo
 
-- React.js  
-- Vite  
-- Tailwind CSS  
-- Netlify (Deployment)  
+🌐 [https://rakshitrsoni.netlify.app](https://rakshitrsoni.netlify.app)
 
 ---
 
-## 📂 Project Structure
+## 🛠 Tech Stack
 
-portfolio-site/
+- **Frontend**: React, Tailwind CSS, Vite
+- **Icons**: React Icons
+- **Deployment**: Netlify
+- **Contact Form**: FormSubmit (free form handling service)
+
+---
+
+## 📁 Project Structure
+
+/
 ├── public/
-│ ├── icon.png
-│ ├── Rakshit.png
-│ ├── Rakshit.webp
-│ ├── sitemap.xml
-│ ├── robots.txt
+│ ├── Rakshit.webp # Profile image
+│ └── favicon.png # Favicon/logo
 ├── src/
-│ ├── assets/
-│ ├── components/
-│ ├── App.jsx
-│ ├── main.jsx
-├── index.html
-├── tailwind.config.js
-├── vite.config.js
+│ ├── App.jsx # Main portfolio component
+│ └── index.css # Tailwind styles
+├── index.html # HTML entry point
+├── tailwind.config.js # Tailwind custom config
+├── netlify.toml # Netlify redirect settings (optional)
+└── README.md # This file
 ---
 
-## 🚀 Installation & Development
+## 📦 Installation & Development
 
 ```bash
-git clone https://github.com/rakshitsoni1410/portfolio-site.git
+# Clone the repo
+git clone https://github.com/Rakshitsoni1410/portfolio-site.git
 cd portfolio-site
+
+# Install dependencies
 npm install
+
+# Start local development server
 npm run dev
-For production build:npm run build
-✅ SEO Checklist
-Meta tags in index.html
+🚀 Deployment
+Build the site
 
-Favicon setup
+arduino
+Copy
+Edit
+npm run build
+Deploy to Netlify
 
-robots.txt
+Login to Netlify
 
-sitemap.xml
+Create a new site from Git (or upload the dist/ folder manually)
 
-Open Graph tags
+Set build command: npm run build
+
+Publish directory: dist
+
+💬 Contact Integration
+Uses FormSubmit for message handling:
+
+html
+Copy
+Edit
+<form action="https://formsubmit.co/YOUR_HASH_ID" method="POST">
+Includes modal contact form
+
+Includes subject, redirect URL, and basic anti-spam config
+
+🎯 Features
+Responsive, one-page layout
+
+Light/Dark mode toggle
+
+Skills & Certifications with icons
+
+Projects with tech tags and live links
+
+Modal-based contact form
+
+Mobile friendly UI
 
 📄 License
-This project is open source and free to use.
+MIT License. You’re free to reuse this design for your personal use.
 
-Built by Rakshit Soni
+👨‍💻 Author
+Rakshit R. Soni
+📫 rakshitsoni@gmail.com
+🔗 Netlify Site
+🔗 LinkedIn
 
+yaml
+Copy
+Edit
 
-If you'd like me to customize it further with badges or GitHub stats widgets, just let me know!
+---
+
+Let me know if you also want a `CONTRIBUTING.md` or project badges (like Netlify build status).
