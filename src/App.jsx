@@ -63,13 +63,36 @@ export default function App() {
           </div>
         </section>
 
-        {/* Summary */}
+      {/* Summary */}
+<section className="max-w-5xl mx-auto p-4 md:p-6">
+  <h2 className="text-2xl font-semibold mb-2">Summary</h2>
+  <p>
+    Highly motivated and detail-oriented <strong>Software Engineer</strong> with
+    a strong foundation in <strong>MERN stack development</strong>, 
+    <strong> Java</strong>, and <strong>problem-solving</strong>.  
+    Experienced in building dynamic, user-friendly web applications from
+    scratch — including frontend design, backend logic, and database
+    integration. Adept at learning new technologies quickly, working in 
+    collaborative environments, and delivering high-quality code that meets
+    both user needs and business goals.  
+    Passionate about developing scalable solutions and always eager to take
+    on challenging projects that push my skills to the next level.
+  </p>
+</section>
+
+
+        {/* About Me */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
-          <h2 className="text-2xl font-semibold mb-2">Summary</h2>
+          <h2 className="text-2xl font-semibold mb-2">About Me</h2>
           <p>
-            Enthusiastic Software Engineer with solid skills in MERN stack,
-            Java, and problem-solving. Seeking opportunities to leverage my
-            skills in real-world development projects.
+            💡 I am a passionate <strong>Software Engineer</strong> with
+            hands-on experience in <strong>MERN stack</strong>,{" "}
+            <strong>Java</strong>, and problem-solving. I enjoy building
+            scalable web applications, working with APIs, and learning new
+            technologies. Beyond coding, I love crafting clean UI designs,
+            optimizing backend performance, and creating solutions that enhance
+            user experience. My goal is to grow as a developer while
+            contributing to impactful projects that make a difference.
           </p>
         </section>
 
