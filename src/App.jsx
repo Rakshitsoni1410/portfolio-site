@@ -50,7 +50,6 @@ export default function App() {
             <p className="text-lg mt-1">Software Engineer</p>
             <p className="mt-2">
               rakshitrsoni@gmail.com | +91 9638257457 | Gujarat,India
-              India
             </p>
             <div className="flex gap-3 mt-4">
               <a
