@@ -49,11 +49,11 @@ export default function App() {
             </h1>
             <p className="text-lg mt-1">Software Engineer</p>
             <p className="mt-2">
-              rakshitrsoni@gmail.com | +91 6354798703 | Gujarat, India
+              rakshitrsoni@gmail.com | +91 9638257457 | Gujarat, India
             </p>
             <div className="flex gap-3 mt-4">
               <a
-                href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/22674395/MjI2NzQzOTU=.pdf"
+                href="https://drive.google.com/file/d/1jVxq1xWEHfsf3PqhpOCLMXT7cEu06NNe/view?usp=drive_link"
                 download
                 className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition"
               >
@@ -63,23 +63,23 @@ export default function App() {
           </div>
         </section>
 
-      {/* Summary */}
-<section className="max-w-5xl mx-auto p-4 md:p-6">
-  <h2 className="text-2xl font-semibold mb-2">Summary</h2>
-  <p>
-    Highly motivated and detail-oriented <strong>Software Engineer</strong> with
-    a strong foundation in <strong>MERN stack development</strong>, 
-    <strong> Java</strong>, and <strong>problem-solving</strong>.  
-    Experienced in building dynamic, user-friendly web applications from
-    scratch — including frontend design, backend logic, and database
-    integration. Adept at learning new technologies quickly, working in 
-    collaborative environments, and delivering high-quality code that meets
-    both user needs and business goals.  
-    Passionate about developing scalable solutions and always eager to take
-    on challenging projects that push my skills to the next level.
-  </p>
-</section>
-
+        {/* Summary */}
+        <section className="max-w-5xl mx-auto p-4 md:p-6">
+          <h2 className="text-2xl font-semibold mb-2">Summary</h2>
+          <p>
+            Highly motivated and detail-oriented{" "}
+            <strong>Software Engineer</strong> with a strong foundation in{" "}
+            <strong>MERN stack development</strong>,<strong> Java</strong>, and{" "}
+            <strong>problem-solving</strong>. Experienced in building dynamic,
+            user-friendly web applications from scratch — including frontend
+            design, backend logic, and database integration. Adept at learning
+            new technologies quickly, working in collaborative environments, and
+            delivering high-quality code that meets both user needs and business
+            goals. Passionate about developing scalable solutions and always
+            eager to take on challenging projects that push my skills to the
+            next level.
+          </p>
+        </section>
 
         {/* About Me */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
@@ -232,29 +232,22 @@ export default function App() {
           </div>
         </section>
         {/* Projects */}
-        <section className="max-w-5xl mx-auto p-4 md:p-6">
-          <h2 className="text-2xl font-semibold mb-6 text-center">
+        {/* Projects */}
+        <section className="max-w-6xl mx-auto p-4 md:p-6">
+          <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">
             📁 Projects
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Project 1 - LMS */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-xl font-bold text-blue-700 dark:text-blue-400">
-                  📚 Course Website (LMS)
-                </h3>
-                <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full dark:bg-green-700 dark:text-white">
-                  ✅ Completed
-                </span>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                A learning management system with course browsing, purchase,
-                tracking, instructor uploads, and review features.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-3">
-                {[
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Course Website (LMS)",
+                icon: "📚",
+                status: "Completed",
+                statusStyle:
+                  "bg-green-100 text-green-700 dark:bg-green-700 dark:text-white",
+                desc: "A learning management system with course browsing, purchase tracking, instructor uploads, and review features.",
+                tech: [
                   "React",
                   "Tailwind",
                   "Redux Toolkit",
@@ -262,104 +255,144 @@ export default function App() {
                   "Express",
                   "MongoDB",
                   "Webhook",
-                ].map((tech) => (
+                ],
+                techStyle:
+                  "bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-white",
+                link: "https://github.com/Rakshitsoni1410/couserplatfrom",
+                btn: "View Code",
+              },
+              {
+                title: "Jewelry Business Website",
+                icon: "💎",
+                status: "Completed",
+                statusStyle:
+                  "bg-green-100 text-green-700 dark:bg-green-700 dark:text-white",
+                desc: "E-commerce site for a family jewelry business with product upload form and backend integration.",
+                tech: ["HTML", "Tailwind", "JavaScript", "PHP", "MySQL"],
+                techStyle:
+                  "bg-purple-100 text-purple-800 dark:bg-purple-600 dark:text-white",
+                link: "https://rcsoni.netlify.app/",
+                btn: "View Live",
+              },
+              {
+                title: "Uber-like Ride Booking App",
+                icon: "🚘",
+                status: "In Progress",
+                statusStyle:
+                  "bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-white",
+                desc: "Ride-sharing app under development with features like booking, real-time tracking, and driver authentication.",
+                tech: ["React", "Node.js", "MongoDB", "Tailwind", "Socket.io"],
+                techStyle:
+                  "bg-yellow-100 text-yellow-800 dark:bg-yellow-600 dark:text-white",
+                link: "",
+                btn: "",
+                note: "Development repo will be shared soon.",
+              },
+              {
+                title: "Smart Khata Book",
+                icon: "📊",
+                status: "Completed",
+                statusStyle:
+                  "bg-green-100 text-green-700 dark:bg-green-700 dark:text-white",
+                desc: "A digital ledger management system that helps small businesses track customer credits, transactions, and payments efficiently.",
+                tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
+                techStyle:
+                  "bg-green-100 text-green-800 dark:bg-green-600 dark:text-white",
+                link: "https://github.com/Rakshitsoni1410/smartkhatabook",
+                btn: "View Code",
+              },
+              {
+                title: "Hospital Management System",
+                icon: "🏥",
+                status: "Completed",
+                statusStyle:
+                  "bg-green-100 text-green-700 dark:bg-green-700 dark:text-white",
+                desc: "A web-based hospital management system for managing patients, doctors, appointments, and medical records efficiently.",
+                tech: ["Python", "Django", "HTML", "CSS", "SQLite"],
+                techStyle:
+                  "bg-red-100 text-red-800 dark:bg-red-600 dark:text-white",
+                link: "https://github.com/Rakshitsoni1410/hosptial-in-django",
+                btn: "View Code",
+              },
+            ].map((project, index) => (
+              <div
+                key={index}
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 p-6 border border-gray-100 dark:border-gray-700"
+              >
+                <div className="flex items-start justify-between gap-3 mb-3">
+                  <h3 className="text-xl font-bold text-blue-700 dark:text-blue-400 leading-snug">
+                    {project.icon} {project.title}
+                  </h3>
                   <span
-                    key={tech}
-                    className="text-xs bg-blue-100 dark:bg-blue-600 text-blue-800 dark:text-white px-2 py-1 rounded-full"
+                    className={`text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap ${project.statusStyle}`}
                   >
-                    {tech}
+                    {project.status}
                   </span>
-                ))}
-              </div>
+                </div>
 
-              <a
-                href="https://github.com/Rakshitsoni1410/couserplatfrom"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-2 px-4 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm transition"
-              >
-                🔗 View Live
-              </a>
-            </div>
+                <p className="text-sm text-gray-700 dark:text-gray-300 mb-4 leading-6">
+                  {project.desc}
+                </p>
 
-            {/* Project 2 - Jewelry */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-xl font-bold text-blue-700 dark:text-blue-400">
-                  💎 Jewelry Business Website
-                </h3>
-                <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full dark:bg-green-700 dark:text-white">
-                  ✅ Completed
-                </span>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                E-commerce site for a family jewelry business with product
-                upload form and backend integration.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-3">
-                {["HTML", "Tailwind", "JavaScript", "PHP", "MySQL"].map(
-                  (tech) => (
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs bg-purple-100 dark:bg-purple-600 text-purple-800 dark:text-white px-2 py-1 rounded-full"
+                      className={`text-xs px-2 py-1 rounded-full ${project.techStyle}`}
                     >
                       {tech}
                     </span>
-                  )
+                  ))}
+                </div>
+
+                {project.note && (
+                  <p className="text-sm italic text-gray-500 dark:text-gray-400 mb-4">
+                    {project.note}
+                  </p>
+                )}
+
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-medium transition"
+                  >
+                    🔗 {project.btn}
+                  </a>
                 )}
               </div>
-
-              <a
-                href="https://rcsoni.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-2 px-4 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm transition"
-              >
-                🔗 View Live
-              </a>
-            </div>
-
-            {/* Project 3 - Uber Clone */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-xl font-bold text-blue-700 dark:text-blue-400">
-                  🚘 Uber-like Ride Booking App
-                </h3>
-                <span className="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full dark:bg-yellow-700 dark:text-white">
-                  🛠 In Progress
-                </span>
-              </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                Ride-sharing app under development with features like booking,
-                real-time tracking, and driver auth.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-3">
-                {["React", "Node.js", "MongoDB", "Tailwind", "Socket.io"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs bg-yellow-100 dark:bg-yellow-600 text-yellow-800 dark:text-white px-2 py-1 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-
-              <p className="text-sm italic text-gray-500 dark:text-gray-400">
-                Development repo will be shared soon.
-              </p>
-            </div>
+            ))}
           </div>
         </section>
-
         {/* Education */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
           <h2 className="text-2xl font-semibold mb-6 text-center">
             🎓 Education
           </h2>
+
+          {/* MCA */}
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md mb-4">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+              <div>
+                <h3 className="text-xl font-bold text-blue-800 dark:text-blue-300 mb-1">
+                  Master of Computer Applications (MCA)
+                </h3>
+                <p className="text-md text-gray-700 dark:text-gray-300">
+                  GLS University, Ahmedabad, Gujarat
+                </p>
+              </div>
+              <div className="text-sm mt-2 md:mt-0 text-gray-600 dark:text-gray-400">
+                📅 2025 – 2027 (Pursuing)
+              </div>
+            </div>
+
+            <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400 mt-2">
+              📊 First Semester: 65%
+            </p>
+          </div>
+
+          {/* BCA */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
               <div>
@@ -374,12 +407,12 @@ export default function App() {
                 📅 2022 – 2025
               </div>
             </div>
+
             <p className="text-sm font-medium text-green-600 dark:text-green-400 mt-2">
               🎯 CGPA: 7.5 / 10
             </p>
           </div>
         </section>
-
         {/* Profiles */}
         <section className="max-w-5xl mx-auto p-4 md:p-6 text-center">
           <h2 className="text-2xl font-semibold mb-4">Profiles & Contact</h2>
