@@ -54,7 +54,7 @@ export default function App() {
             </p>
             <div className="flex gap-3 mt-4">
               <a
-                href="https://drive.google.com/file/d/1jVxq1xWEHfsf3PqhpOCLMXT7cEu06NNe/view?usp=drive_link"
+                href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/22674395/MjI2NzQzOTU=.pdf"
                 download
                 className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition"
               >
