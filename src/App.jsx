@@ -365,7 +365,7 @@ export default function App() {
             ))}
           </div>
         </section>
-<<<<<<< HEAD
+
         {/* Education */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
           <h2 className="text-2xl font-semibold mb-6 text-center">
@@ -414,7 +414,7 @@ export default function App() {
             </p>
           </div>
         </section>
-=======
+
 
      {/* Education */}
 <section className="max-w-5xl mx-auto p-4 md:p-6">
@@ -461,7 +461,6 @@ export default function App() {
   </div>
 </section>
 
->>>>>>> 2b82858a8f81f1d0b50fb971437eaf39805032fb
         {/* Profiles */}
         <section className="max-w-5xl mx-auto p-4 md:p-6 text-center">
           <h2 className="text-2xl font-semibold mb-4">Profiles & Contact</h2>
