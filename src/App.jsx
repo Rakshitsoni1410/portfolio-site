@@ -49,7 +49,7 @@ export default function App() {
             </h1>
             <p className="text-lg mt-1">Software Engineer</p>
             <p className="mt-2">
-              rakshitrsoni@gmail.com | +91 9638257457 | Gujarat, India
+              rakshitrsoni@gmail.com | +91 9638257457/6354798703 | Gujarat, India
             </p>
             <div className="flex gap-3 mt-4">
               <a
