@@ -49,7 +49,8 @@ export default function App() {
             </h1>
             <p className="text-lg mt-1">Software Engineer</p>
             <p className="mt-2">
-              rakshitrsoni@gmail.com | +91 9638257457/6354798703 | Gujarat, India
+              rakshitrsoni@gmail.com | +91 9638257457 | Gujarat,
+              India
             </p>
             <div className="flex gap-3 mt-4">
               <a
@@ -384,12 +385,11 @@ export default function App() {
                 </p>
               </div>
               <div className="text-sm mt-2 md:mt-0 text-gray-600 dark:text-gray-400">
-                📅 2025 – 2027 (Pursuing)
+                📅 2025 – 2027 (Pursuing) 
               </div>
             </div>
-
             <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400 mt-2">
-              📊 First Semester: 65%
+              🎯 Expected Graduation: 2027 /📊 First Semester: 65%
             </p>
           </div>
 
@@ -408,58 +408,11 @@ export default function App() {
                 📅 2022 – 2025
               </div>
             </div>
-
             <p className="text-sm font-medium text-green-600 dark:text-green-400 mt-2">
               🎯 CGPA: 7.5 / 10
             </p>
           </div>
         </section>
-
-
-     {/* Education */}
-<section className="max-w-5xl mx-auto p-4 md:p-6">
-  <h2 className="text-2xl font-semibold mb-6 text-center">🎓 Education</h2>
-
-  {/* MCA */}
-  <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md mb-4">
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div>
-        <h3 className="text-xl font-bold text-blue-800 dark:text-blue-300 mb-1">
-          Master of Computer Applications (MCA)
-        </h3>
-        <p className="text-md text-gray-700 dark:text-gray-300">
-          GLS University, Ahmedabad, Gujarat
-        </p>
-      </div>
-      <div className="text-sm mt-2 md:mt-0 text-gray-600 dark:text-gray-400">
-        📅 2025 – 2027 (Pursuing)
-      </div>
-    </div>
-    <p className="text-sm font-medium text-yellow-600 dark:text-yellow-400 mt-2">
-      🎯 Expected Graduation: 2027
-    </p>
-  </div>
-
-  {/* BCA */}
-  <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div>
-        <h3 className="text-xl font-bold text-blue-800 dark:text-blue-300 mb-1">
-          Bachelor of Computer Applications (BCA)
-        </h3>
-        <p className="text-md text-gray-700 dark:text-gray-300">
-          Indus University, Ahmedabad, Gujarat
-        </p>
-      </div>
-      <div className="text-sm mt-2 md:mt-0 text-gray-600 dark:text-gray-400">
-        📅 2022 – 2025
-      </div>
-    </div>
-    <p className="text-sm font-medium text-green-600 dark:text-green-400 mt-2">
-      🎯 CGPA: 7.5 / 10
-    </p>
-  </div>
-</section>
 
         {/* Profiles */}
         <section className="max-w-5xl mx-auto p-4 md:p-6 text-center">
