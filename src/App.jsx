@@ -258,8 +258,8 @@ export default function App() {
                 ],
                 techStyle:
                   "bg-blue-100 text-blue-800 dark:bg-blue-600 dark:text-white",
-                link: "https://github.com/Rakshitsoni1410/couserplatfrom",
-                btn: "View Code",
+                link: "https://nextskilss.netlify.app/my-learning",
+                btn: "View live",
               },
               {
                 title: "Jewelry Business Website",
