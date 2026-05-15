@@ -301,6 +301,32 @@ export default function App() {
                 link: "https://github.com/Rakshitsoni1410/smartkhatabook",
                 btn: "View Code",
               },
+      {
+  title: "Gold Karat Management Software",
+  icon: "💎",
+  status: "Live",
+  statusStyle:
+    "bg-green-100 text-green-700 dark:bg-green-700 dark:text-white",
+
+  desc:
+    "A professional Gold Karat Management Software for jewellery and machinecut businesses. Features include weight record management, karat filtering, PDF export, responsive dashboard, and offline database support.",
+
+  tech: [
+    "React",
+    "Tailwind CSS",
+    "Spring Boot",
+    "SQLite",
+    "JPA",
+    "Axios",
+  ],
+
+  techStyle:
+    "bg-yellow-100 text-yellow-800 dark:bg-yellow-600 dark:text-white",
+
+  link: "https://weight-management-software.netlify.app/",
+
+  btn: "Live Demo",
+},
               {
                 title: "Hospital Management System",
                 icon: "🏥",
