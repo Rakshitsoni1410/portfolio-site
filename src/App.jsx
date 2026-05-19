@@ -66,19 +66,15 @@ export default function App() {
         {/* Summary */}
         <section className="max-w-5xl mx-auto p-4 md:p-6">
           <h2 className="text-2xl font-semibold mb-2">Summary</h2>
-          <p>
-            Highly motivated and detail-oriented{" "}
-            <strong>Software Engineer</strong> with a strong foundation in{" "}
-            <strong>MERN stack development</strong>,<strong> Java</strong>, and{" "}
-            <strong>problem-solving</strong>. Experienced in building dynamic,
-            user-friendly web applications from scratch — including frontend
-            design, backend logic, and database integration. Adept at learning
-            new technologies quickly, working in collaborative environments, and
-            delivering high-quality code that meets both user needs and business
-            goals. Passionate about developing scalable solutions and always
-            eager to take on challenging projects that push my skills to the
-            next level.
-          </p>
+          <p className="text-gray-700 dark:text-gray-300 leading-7">
+  Passionate Software Engineer and MCA student with strong expertise in
+  MERN Stack, Java, and full-stack web development. Skilled in building
+  scalable web applications, REST APIs, and responsive user interfaces.
+  Experienced in developing real-world projects including LMS platforms,
+  business management systems, and ride-booking applications. Always eager
+  to learn new technologies and solve complex problems through clean and
+  efficient code.
+</p>
         </section>
 
         {/* About Me */}
