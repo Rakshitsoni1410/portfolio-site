@@ -1,46 +1,89 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
-  FaSun, FaMoon, FaGithub, FaLinkedin, FaHackerrank,
-  FaGlobe, FaJava, FaPython, FaDatabase, FaJs, FaReact,
-  FaNodeJs, FaHtml5, FaCss3Alt, FaBootstrap, FaPhp, FaCode,
-  FaBars, FaTimes, FaExternalLinkAlt, FaDownload, FaEnvelope,
-  FaMapMarkerAlt, FaPhone,
+  FaSun,
+  FaMoon,
+  FaGithub,
+  FaLinkedin,
+  FaHackerrank,
+  FaGlobe,
+  FaJava,
+  FaPython,
+  FaDatabase,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+  FaPhp,
+  FaCode,
+  FaBars,
+  FaTimes,
+  FaExternalLinkAlt,
+  FaDownload,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaPhone,
 } from "react-icons/fa";
 import {
-  SiMongodb, SiMysql, SiSpringboot, SiTailwindcss,
-  SiFlutter, SiDjango, SiRedux, SiSocketdotio,
+  SiMongodb,
+  SiMysql,
+  SiSpringboot,
+  SiTailwindcss,
+  SiFlutter,
+  SiDjango,
+  SiRedux,
+  SiSocketdotio,
 } from "react-icons/si";
 
 /* ─── DATA ─────────────────────────────────────────── */
 
-const NAV_LINKS = ["About", "Skills", "Projects", "Stats", "Education", "Certifications", "Contact"];
+const NAV_LINKS = [
+  "About",
+  "Skills",
+  "Projects",
+  "Stats",
+  "Education",
+  "Certifications",
+  "Contact",
+];
 
 const SKILLS = [
-  { cat: "Frontend", items: [
-    { name: "React.js", icon: <FaReact />, color: "#61dafb" },
-    { name: "JavaScript", icon: <FaJs />, color: "#f7df1e" },
-    { name: "Redux", icon: <SiRedux />, color: "#764abc" },
-    { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06b6d4" },
-    { name: "HTML5", icon: <FaHtml5 />, color: "#e34f26" },
-    { name: "CSS3", icon: <FaCss3Alt />, color: "#1572b6" },
-  ]},
-  { cat: "Backend", items: [
-    { name: "Node.js", icon: <FaNodeJs />, color: "#68a063" },
-    { name: "Spring Boot", icon: <SiSpringboot />, color: "#6db33f" },
-    { name: "Java", icon: <FaJava />, color: "#f89820" },
-    { name: "Python", icon: <FaPython />, color: "#3776ab" },
-    { name: "Django", icon: <SiDjango />, color: "#092e20" },
-    { name: "PHP", icon: <FaPhp />, color: "#777bb4" },
-  ]},
-  { cat: "Database & Tools", items: [
-    { name: "MongoDB", icon: <SiMongodb />, color: "#47a248" },
-    { name: "MySQL", icon: <SiMysql />, color: "#4479a1" },
-    { name: "Socket.io", icon: <SiSocketdotio />, color: "#010101" },
-    { name: "GitHub", icon: <FaGithub />, color: "#181717" },
-  ]},
-  { cat: "Mobile", items: [
-    { name: "Flutter", icon: <SiFlutter />, color: "#02569b" },
-  ]},
+  {
+    cat: "Frontend",
+    items: [
+      { name: "React.js", icon: <FaReact />, color: "#61dafb" },
+      { name: "JavaScript", icon: <FaJs />, color: "#f7df1e" },
+      { name: "Redux", icon: <SiRedux />, color: "#764abc" },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06b6d4" },
+      { name: "HTML5", icon: <FaHtml5 />, color: "#e34f26" },
+      { name: "CSS3", icon: <FaCss3Alt />, color: "#1572b6" },
+    ],
+  },
+  {
+    cat: "Backend",
+    items: [
+      { name: "Node.js", icon: <FaNodeJs />, color: "#68a063" },
+      { name: "Spring Boot", icon: <SiSpringboot />, color: "#6db33f" },
+      { name: "Java", icon: <FaJava />, color: "#f89820" },
+      { name: "Python", icon: <FaPython />, color: "#3776ab" },
+      { name: "Django", icon: <SiDjango />, color: "#092e20" },
+      { name: "PHP", icon: <FaPhp />, color: "#777bb4" },
+    ],
+  },
+  {
+    cat: "Database & Tools",
+    items: [
+      { name: "MongoDB", icon: <SiMongodb />, color: "#47a248" },
+      { name: "MySQL", icon: <SiMysql />, color: "#4479a1" },
+      { name: "Socket.io", icon: <SiSocketdotio />, color: "#010101" },
+      { name: "GitHub", icon: <FaGithub />, color: "#181717" },
+    ],
+  },
+  {
+    cat: "Mobile",
+    items: [{ name: "Flutter", icon: <SiFlutter />, color: "#02569b" }],
+  },
 ];
 
 const PROJECTS = [
@@ -49,7 +92,14 @@ const PROJECTS = [
     icon: "🤖",
     status: "Completed",
     desc: "Full-stack AI chatbot with JWT auth, role-based access control, Spring Security REST APIs, and real-time chat UI. Built for Gemini/OpenAI API integration.",
-    tech: ["Java", "Spring Boot", "React.js", "MySQL", "JWT", "Spring Security"],
+    tech: [
+      "Java",
+      "Spring Boot",
+      "React.js",
+      "MySQL",
+      "JWT",
+      "Spring Security",
+    ],
     color: "#8b5cf6",
     github: "https://github.com/Rakshitsoni1410/ai-chat-support-system",
     live: "",
@@ -117,22 +167,62 @@ const PROJECTS = [
 ];
 
 const CERTS = [
-  { name: "JavaScript (Intermediate)", icon: <FaJs />, color: "#f7df1e", link: "https://www.hackerrank.com/certificates/iframe/b04991b66fe0" },
+  {
+    name: "JavaScript (Intermediate)",
+    icon: <FaJs />,
+    color: "#f7df1e",
+    link: "https://www.hackerrank.com/certificates/iframe/b04991b66fe0",
+  },
   { name: "Java (Basic)", icon: <FaJava />, color: "#f89820", link: "" },
   { name: "Python (Basic)", icon: <FaPython />, color: "#3776ab", link: "" },
-  { name: "SQL (Basic & Intermediate)", icon: <FaDatabase />, color: "#4479a1", link: "" },
+  {
+    name: "SQL (Basic & Intermediate)",
+    icon: <FaDatabase />,
+    color: "#4479a1",
+    link: "",
+  },
   { name: "CSS (Basic)", icon: <FaCss3Alt />, color: "#1572b6", link: "" },
   { name: "Problem Solving", icon: <FaCode />, color: "#22c55e", link: "" },
   { name: "Bootstrap", icon: <FaBootstrap />, color: "#7952b3", link: "" },
-  { name: "HTML, CSS & JS — Coursera", icon: <FaGlobe />, color: "#0056d3", link: "https://coursera.org/verify/QBZAL6TBSX8K" },
+  {
+    name: "HTML, CSS & JS — Coursera",
+    icon: <FaGlobe />,
+    color: "#0056d3",
+    link: "https://coursera.org/verify/QBZAL6TBSX8K",
+  },
 ];
 
 const SOCIAL = [
-  { label: "GitHub", icon: <FaGithub />, url: "https://github.com/Rakshitsoni1410", color: "#181717" },
-  { label: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/rakshitrsoni1410/", color: "#0a66c2" },
-  { label: "LeetCode", icon: <FaCode />, url: "https://leetcode.com/u/rakshitsoni1410", color: "#ffa116" },
-  { label: "HackerRank", icon: <FaHackerrank />, url: "https://www.hackerrank.com/rakshitsoni544", color: "#00ea64" },
-  { label: "GFG", icon: <FaGlobe />, url: "https://www.geeksforgeeks.org/user/rakshituya7/", color: "#2f8d46" },
+  {
+    label: "GitHub",
+    icon: <FaGithub />,
+    url: "https://github.com/Rakshitsoni1410",
+    color: "#181717",
+  },
+  {
+    label: "LinkedIn",
+    icon: <FaLinkedin />,
+    url: "https://www.linkedin.com/in/rakshitrsoni1410/",
+    color: "#0a66c2",
+  },
+  {
+    label: "LeetCode",
+    icon: <FaCode />,
+    url: "https://leetcode.com/u/rakshitsoni1410",
+    color: "#ffa116",
+  },
+  {
+    label: "HackerRank",
+    icon: <FaHackerrank />,
+    url: "https://www.hackerrank.com/rakshitsoni544",
+    color: "#00ea64",
+  },
+  {
+    label: "GFG",
+    icon: <FaGlobe />,
+    url: "https://www.geeksforgeeks.org/user/rakshituya7/",
+    color: "#2f8d46",
+  },
 ];
 
 /* ─── HOOKS ─────────────────────────────────────────── */
@@ -160,17 +250,22 @@ function useCountUp(target, duration = 1500) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const obs = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      obs.disconnect();
-      let start = 0;
-      const step = target / (duration / 16);
-      const timer = setInterval(() => {
-        start += step;
-        if (start >= target) { setCount(target); clearInterval(timer); }
-        else setCount(Math.floor(start));
-      }, 16);
-    }, { threshold: 0.3 });
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        obs.disconnect();
+        let start = 0;
+        const step = target / (duration / 16);
+        const timer = setInterval(() => {
+          start += step;
+          if (start >= target) {
+            setCount(target);
+            clearInterval(timer);
+          } else setCount(Math.floor(start));
+        }, 16);
+      },
+      { threshold: 0.3 },
+    );
     obs.observe(el);
     return () => obs.disconnect();
   }, [target, duration]);
@@ -181,12 +276,15 @@ function useCountUp(target, duration = 1500) {
 
 function StatusBadge({ status }) {
   const map = {
-    "Live": "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300",
-    "Completed": "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300",
-    "In Progress": "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300",
+    Live: "bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300",
+    Completed: "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300",
+    "In Progress":
+      "bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300",
   };
   return (
-    <span className={`text-xs font-semibold px-3 py-1 rounded-full ${map[status] || map["Completed"]}`}>
+    <span
+      className={`text-xs font-semibold px-3 py-1 rounded-full ${map[status] || map["Completed"]}`}
+    >
       {status}
     </span>
   );
@@ -195,8 +293,14 @@ function StatusBadge({ status }) {
 function StatCard({ value, suffix = "", label, color }) {
   const [count, ref] = useCountUp(value);
   return (
-    <div ref={ref} className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md border border-gray-100 dark:border-gray-700 text-center hover:shadow-lg transition-shadow">
-      <div className="text-4xl font-bold mb-1" style={{ color }}>{count}{suffix}</div>
+    <div
+      ref={ref}
+      className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-md border border-gray-100 dark:border-gray-700 text-center hover:shadow-lg transition-shadow"
+    >
+      <div className="text-4xl font-bold mb-1" style={{ color }}>
+        {count}
+        {suffix}
+      </div>
       <div className="text-sm text-gray-500 dark:text-gray-400">{label}</div>
     </div>
   );
@@ -213,7 +317,9 @@ export default function App() {
   const activeSection = useScrollSpy(NAV_LINKS);
 
   const scrollTo = (id) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById(id.toLowerCase())
+      ?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
 
@@ -223,39 +329,57 @@ export default function App() {
     const form = e.target;
     const formData = new FormData(form);
     formData.append("access_key", "9b19d9ea-91a4-4a42-93b5-e81cf6bcf09e");
-    const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
     const data = await res.json();
     setSending(false);
-    if (data.success) { setSent(true); form.reset(); setTimeout(() => { setSent(false); setShowModal(false); }, 2500); }
+    if (data.success) {
+      setSent(true);
+      form.reset();
+      setTimeout(() => {
+        setSent(false);
+        setShowModal(false);
+      }, 2500);
+    }
   };
 
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans">
-
         {/* ── NAVBAR ── */}
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
           <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-            <span className="font-bold text-blue-600 dark:text-blue-400 text-lg tracking-tight">RS.</span>
+            <span className="font-bold text-blue-600 dark:text-blue-400 text-lg tracking-tight">
+              RS.
+            </span>
             <div className="hidden md:flex items-center gap-1">
               {NAV_LINKS.map((link) => (
-                <button key={link} onClick={() => scrollTo(link)}
+                <button
+                  key={link}
+                  onClick={() => scrollTo(link)}
                   className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                     activeSection === link
                       ? "bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400"
                       : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
-                  }`}>
+                  }`}
+                >
                   {link}
                 </button>
               ))}
             </div>
             <div className="flex items-center gap-2">
-              <button onClick={() => setDarkMode(!darkMode)}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+              >
                 {darkMode ? <FaSun size={14} /> : <FaMoon size={14} />}
               </button>
-              <button className="md:hidden p-2 rounded-full bg-gray-100 dark:bg-gray-800"
-                onClick={() => setMenuOpen(!menuOpen)}>
+              <button
+                className="md:hidden p-2 rounded-full bg-gray-100 dark:bg-gray-800"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
                 {menuOpen ? <FaTimes size={14} /> : <FaBars size={14} />}
               </button>
             </div>
@@ -263,8 +387,11 @@ export default function App() {
           {menuOpen && (
             <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 px-4 py-3 flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
-                <button key={link} onClick={() => scrollTo(link)}
-                  className="text-left px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <button
+                  key={link}
+                  onClick={() => scrollTo(link)}
+                  className="text-left px-3 py-2 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
                   {link}
                 </button>
               ))}
@@ -284,30 +411,48 @@ export default function App() {
                 Open to Work — Ahmedabad · Remote
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight mb-4">
-                Rakshit<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Soni</span>
+                Rakshit R
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  Soni
+                </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-medium mb-3">
                 Full Stack Developer
               </p>
               <p className="text-base text-gray-500 dark:text-gray-500 mb-8 max-w-lg">
-                I build real-world web apps using <strong className="text-gray-700 dark:text-gray-300">MERN stack, Java & Spring Boot</strong> — from AI chatbots to ride-booking platforms. 7+ projects shipped. 357+ LeetCode problems solved.
+                I build real-world web apps using{" "}
+                <strong className="text-gray-700 dark:text-gray-300">
+                  MERN stack, Java & Spring Boot
+                </strong>{" "}
+                — from AI chatbots to ride-booking platforms. 7+ projects
+                shipped. 357+ LeetCode problems solved.
               </p>
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <a href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/22674395/MjI2NzQzOTU=.pdf"
-                  download className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 active:scale-95 transition font-medium text-sm">
+                <a
+                  href="https://hackerrank-resume.s3.us-east-1.amazonaws.com/uploads/22674395/MjI2NzQzOTU=.pdf"
+                  download
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 active:scale-95 transition font-medium text-sm"
+                >
                   <FaDownload size={12} /> Download Resume
                 </a>
-                <button onClick={() => setShowModal(true)}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 active:scale-95 transition font-medium text-sm">
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 active:scale-95 transition font-medium text-sm"
+                >
                   <FaEnvelope size={12} /> Contact Me
                 </button>
               </div>
               <div className="flex gap-4 justify-center md:justify-start mt-6">
                 {SOCIAL.map((s) => (
-                  <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
+                  <a
+                    key={s.label}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     title={s.label}
-                    className="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors text-xl">
+                    className="text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors text-xl"
+                  >
                     {s.icon}
                   </a>
                 ))}
@@ -316,8 +461,11 @@ export default function App() {
             <div className="flex-shrink-0">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full blur-xl opacity-30 scale-110" />
-                <img src="/Rakshit.webp" alt="Rakshit Soni"
-                  className="relative w-52 h-52 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-white dark:border-gray-800" />
+                <img
+                  src="/Rakshit.webp"
+                  alt="Rakshit Soni"
+                  className="relative w-52 h-52 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-white dark:border-gray-800"
+                />
                 <div className="absolute -bottom-2 -right-2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
                   Available
                 </div>
@@ -332,13 +480,28 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-7">
               <p>
-                I'm a <strong className="text-gray-900 dark:text-white">Full Stack Developer</strong> from Ahmedabad, India — currently pursuing MCA at GLS University while building production-grade web applications.
+                I'm a{" "}
+                <strong className="text-gray-900 dark:text-white">
+                  Full Stack Developer
+                </strong>{" "}
+                from Ahmedabad, India — currently pursuing MCA at GLS University
+                while building production-grade web applications.
               </p>
               <p>
-                My focus is on the <strong className="text-gray-900 dark:text-white">MERN stack, Java/Spring Boot</strong> backend systems, and real-time applications. I've shipped 7+ projects across e-commerce, healthcare, education, and fintech domains.
+                My focus is on the{" "}
+                <strong className="text-gray-900 dark:text-white">
+                  MERN stack, Java/Spring Boot
+                </strong>{" "}
+                backend systems, and real-time applications. I've shipped 7+
+                projects across e-commerce, healthcare, education, and fintech
+                domains.
               </p>
               <p>
-                Beyond coding, I actively solve DSA problems on LeetCode — <strong className="text-gray-900 dark:text-white">357+ problems, 1416 contest rating, 115-day streak</strong>. I believe consistent problem-solving makes a better engineer.
+                Beyond coding, I actively solve DSA problems on LeetCode —{" "}
+                <strong className="text-gray-900 dark:text-white">
+                  357+ problems, 1416 contest rating, 115-day streak
+                </strong>
+                . I believe consistent problem-solving makes a better engineer.
               </p>
               <div className="grid grid-cols-2 gap-4 mt-6">
                 {[
@@ -347,21 +510,54 @@ export default function App() {
                   { label: "Phone", value: "+91 9638257457" },
                   { label: "Status", value: "Open to Work" },
                 ].map((item) => (
-                  <div key={item.label} className="bg-gray-100 dark:bg-gray-800 rounded-xl p-3">
-                    <div className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">{item.label}</div>
-                    <div className="text-sm font-medium text-gray-800 dark:text-gray-200">{item.value}</div>
+                  <div
+                    key={item.label}
+                    className="bg-gray-100 dark:bg-gray-800 rounded-xl p-3"
+                  >
+                    <div className="text-xs text-gray-400 uppercase tracking-wide mb-0.5">
+                      {item.label}
+                    </div>
+                    <div className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                      {item.value}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { num: 7, suffix: "+", label: "Projects Shipped", color: "#0ea5e9" },
-                { num: 357, suffix: "+", label: "LeetCode Problems", color: "#f59e0b" },
-                { num: 115, suffix: " days", label: "Max Streak", color: "#22c55e" },
-                { num: 1416, suffix: "", label: "Contest Rating", color: "#8b5cf6" },
+                {
+                  num: 7,
+                  suffix: "+",
+                  label: "Projects Shipped",
+                  color: "#0ea5e9",
+                },
+                {
+                  num: 357,
+                  suffix: "+",
+                  label: "LeetCode Problems",
+                  color: "#f59e0b",
+                },
+                {
+                  num: 115,
+                  suffix: " days",
+                  label: "Max Streak",
+                  color: "#22c55e",
+                },
+                {
+                  num: 1416,
+                  suffix: "",
+                  label: "Contest Rating",
+                  color: "#8b5cf6",
+                },
               ].map((s) => (
-                <StatCard key={s.label} value={s.num} suffix={s.suffix} label={s.label} color={s.color} />
+                <StatCard
+                  key={s.label}
+                  value={s.num}
+                  suffix={s.suffix}
+                  label={s.label}
+                  color={s.color}
+                />
               ))}
             </div>
           </div>
@@ -374,13 +570,24 @@ export default function App() {
             <div className="space-y-8">
               {SKILLS.map((group) => (
                 <div key={group.cat}>
-                  <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">{group.cat}</h3>
+                  <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-4">
+                    {group.cat}
+                  </h3>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
                     {group.items.map((skill) => (
-                      <div key={skill.name}
-                        className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 flex flex-col items-center gap-2 hover:shadow-md hover:-translate-y-0.5 transition-all border border-gray-100 dark:border-gray-700">
-                        <span className="text-2xl" style={{ color: skill.color }}>{skill.icon}</span>
-                        <span className="text-xs font-medium text-center text-gray-700 dark:text-gray-300">{skill.name}</span>
+                      <div
+                        key={skill.name}
+                        className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 flex flex-col items-center gap-2 hover:shadow-md hover:-translate-y-0.5 transition-all border border-gray-100 dark:border-gray-700"
+                      >
+                        <span
+                          className="text-2xl"
+                          style={{ color: skill.color }}
+                        >
+                          {skill.icon}
+                        </span>
+                        <span className="text-xs font-medium text-center text-gray-700 dark:text-gray-300">
+                          {skill.name}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -392,11 +599,16 @@ export default function App() {
 
         {/* ── PROJECTS ── */}
         <section id="projects" className="max-w-6xl mx-auto px-4 py-20">
-          <SectionTitle title="Projects" subtitle={`${PROJECTS.length} real-world applications`} />
+          <SectionTitle
+            title="Projects"
+            subtitle={`${PROJECTS.length} real-world applications`}
+          />
           <div className="grid md:grid-cols-2 gap-6">
             {PROJECTS.map((p, i) => (
-              <div key={i}
-                className="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden hover:-translate-y-1">
+              <div
+                key={i}
+                className="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden hover:-translate-y-1"
+              >
                 <div className="h-1.5 w-full" style={{ background: p.color }} />
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-3 mb-3">
@@ -405,26 +617,39 @@ export default function App() {
                     </h3>
                     <StatusBadge status={p.status} />
                   </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-6 mb-4">{p.desc}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-6 mb-4">
+                    {p.desc}
+                  </p>
                   <div className="flex flex-wrap gap-2 mb-5">
                     {p.tech.map((t) => (
-                      <span key={t} className="text-xs px-2.5 py-1 rounded-full font-medium"
-                        style={{ background: p.color + "18", color: p.color }}>
+                      <span
+                        key={t}
+                        className="text-xs px-2.5 py-1 rounded-full font-medium"
+                        style={{ background: p.color + "18", color: p.color }}
+                      >
                         {t}
                       </span>
                     ))}
                   </div>
                   <div className="flex gap-3">
                     {p.github && (
-                      <a href={p.github} target="_blank" rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition">
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+                      >
                         <FaGithub size={12} /> Code
                       </a>
                     )}
                     {p.live && (
-                      <a href={p.live} target="_blank" rel="noopener noreferrer"
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-lg text-white transition"
-                        style={{ background: p.color }}>
+                        style={{ background: p.color }}
+                      >
                         <FaExternalLinkAlt size={10} /> Live Demo
                       </a>
                     )}
@@ -436,31 +661,60 @@ export default function App() {
         </section>
 
         {/* ── STATS ── */}
+        {/* GitHub & LeetCode Stats */}
         <section id="stats" className="bg-white dark:bg-gray-900 py-20">
           <div className="max-w-6xl mx-auto px-4">
-            <SectionTitle title="GitHub & LeetCode Stats" />
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
-                <img src="https://github-readme-stats.vercel.app/api?username=Rakshitsoni1410&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0f172a&title_color=0ea5e9&icon_color=8b5cf6"
-                  alt="GitHub Stats" className="w-full" />
+            <h2 className="text-3xl font-bold text-center mb-12 text-blue-700 dark:text-blue-400">
+              📊 GitHub & LeetCode Stats
+            </h2>
+
+            {/* Top Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {/* GitHub Stats */}
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+                <img
+                  src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rakshitsoni1410&theme=tokyonight"
+                  alt="GitHub Stats"
+                  className="w-full rounded-xl"
+                />
               </div>
-              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rakshitsoni1410&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f172a&title_color=0ea5e9&langs_count=8"
-                  alt="Top Languages" className="w-full" />
+
+              {/* Top Languages */}
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+                <img
+                  src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Rakshitsoni1410&theme=tokyonight"
+                  alt="Top Languages"
+                  className="w-full rounded-xl"
+                />
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm mb-8">
-              <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rakshitsoni1410&theme=tokyonight&hide_border=true&background=0f172a&ring=0ea5e9&fire=f59e0b&currStreakLabel=0ea5e9"
-                alt="GitHub Streak" className="w-full" />
+
+            {/* GitHub Streak */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg border border-gray-200 dark:border-gray-700 mb-8">
+              <img
+                src="https://github-readme-streak-stats.herokuapp.com/?user=Rakshitsoni1410&theme=tokyonight&hide_border=true&background=0f172a"
+                alt="GitHub Streak"
+                className="w-full rounded-xl"
+              />
             </div>
-            <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm mb-8">
-              <img src="https://github-readme-activity-graph.vercel.app/graph?username=Rakshitsoni1410&theme=react-dark&hide_border=true&bg_color=0f172a"
-                alt="Activity Graph" className="w-full" />
+
+            {/* Activity Graph */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg border border-gray-200 dark:border-gray-700 mb-8">
+              <img
+                src="https://github-readme-activity-graph.vercel.app/graph?username=Rakshitsoni1410&theme=react-dark&hide_border=true&bg_color=0f172a"
+                alt="Activity Graph"
+                className="w-full rounded-xl"
+              />
             </div>
+
+            {/* LeetCode */}
             <div className="flex justify-center">
-              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
-                <img src="https://leetcard.jacoblin.cool/rakshitsoni1410?theme=dark&font=baloo&ext=contest"
-                  alt="LeetCode Stats" className="w-full max-w-lg" />
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+                <img
+                  src="https://leetcard.jacoblin.cool/rakshitsoni1410?theme=dark&font=baloo&ext=contest"
+                  alt="LeetCode Stats"
+                  className="w-full max-w-2xl rounded-xl"
+                />
               </div>
             </div>
           </div>
@@ -487,17 +741,28 @@ export default function App() {
               },
             ].map((edu, i) => (
               <div key={i} className="relative pl-8">
-                <div className="absolute -left-2.5 top-1.5 w-4 h-4 rounded-full border-2 border-white dark:border-gray-950 shadow"
-                  style={{ background: edu.color }} />
+                <div
+                  className="absolute -left-2.5 top-1.5 w-4 h-4 rounded-full border-2 border-white dark:border-gray-950 shadow"
+                  style={{ background: edu.color }}
+                />
                 <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-800 hover:shadow-md transition">
                   <div className="flex flex-col md:flex-row justify-between gap-2">
                     <div>
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">{edu.degree}</h3>
-                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-0.5">{edu.school}</p>
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm mt-0.5">
+                        {edu.school}
+                      </p>
                     </div>
                     <div className="text-right flex-shrink-0">
                       <div className="text-sm text-gray-400">{edu.period}</div>
-                      <div className="text-sm font-semibold mt-0.5" style={{ color: edu.color }}>{edu.status}</div>
+                      <div
+                        className="text-sm font-semibold mt-0.5"
+                        style={{ color: edu.color }}
+                      >
+                        {edu.status}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -507,21 +772,38 @@ export default function App() {
         </section>
 
         {/* ── CERTIFICATIONS ── */}
-        <section id="certifications" className="bg-white dark:bg-gray-900 py-20">
+        <section
+          id="certifications"
+          className="bg-white dark:bg-gray-900 py-20"
+        >
           <div className="max-w-6xl mx-auto px-4">
             <SectionTitle title="Certifications" />
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {CERTS.map((cert, idx) => (
-                <div key={idx}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:-translate-y-0.5 transition-all text-center">
-                  <div className="text-3xl mb-3 flex justify-center" style={{ color: cert.color }}>{cert.icon}</div>
+                <div
+                  key={idx}
+                  className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:-translate-y-0.5 transition-all text-center"
+                >
+                  <div
+                    className="text-3xl mb-3 flex justify-center"
+                    style={{ color: cert.color }}
+                  >
+                    {cert.icon}
+                  </div>
                   {cert.link ? (
-                    <a href={cert.link} target="_blank" rel="noopener noreferrer"
-                      className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline leading-snug block">
-                      {cert.name} <FaExternalLinkAlt size={8} className="inline ml-1" />
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline leading-snug block"
+                    >
+                      {cert.name}{" "}
+                      <FaExternalLinkAlt size={8} className="inline ml-1" />
                     </a>
                   ) : (
-                    <p className="text-sm font-medium text-gray-700 dark:text-gray-300 leading-snug">{cert.name}</p>
+                    <p className="text-sm font-medium text-gray-700 dark:text-gray-300 leading-snug">
+                      {cert.name}
+                    </p>
                   )}
                   <p className="text-xs text-gray-400 mt-1">HackerRank</p>
                 </div>
@@ -532,55 +814,116 @@ export default function App() {
 
         {/* ── CONTACT ── */}
         <section id="contact" className="max-w-6xl mx-auto px-4 py-20">
-          <SectionTitle title="Let's Connect" subtitle="Open to full-time roles, internships & freelance" />
+          <SectionTitle
+            title="Let's Connect"
+            subtitle="Open to full-time roles, internships & freelance"
+          />
           <div className="grid md:grid-cols-2 gap-10">
             <div className="space-y-6">
               {[
-                { icon: <FaEnvelope />, label: "Email", value: "rakshitsoni@gmail.com", href: "mailto:rakshitsoni@gmail.com" },
-                { icon: <FaPhone />, label: "Phone", value: "+91 9638257457", href: "tel:+919638257457" },
-                { icon: <FaMapMarkerAlt />, label: "Location", value: "Ahmedabad, Gujarat, India", href: null },
+                {
+                  icon: <FaEnvelope />,
+                  label: "Email",
+                  value: "rakshitsoni@gmail.com",
+                  href: "mailto:rakshitsoni@gmail.com",
+                },
+                {
+                  icon: <FaPhone />,
+                  label: "Phone",
+                  value: "+91 9638257457",
+                  href: "tel:+919638257457",
+                },
+                {
+                  icon: <FaMapMarkerAlt />,
+                  label: "Location",
+                  value: "Ahmedabad, Gujarat, India",
+                  href: null,
+                },
               ].map((c) => (
-                <div key={c.label} className="flex items-center gap-4 bg-gray-50 dark:bg-gray-900 rounded-2xl p-4 border border-gray-100 dark:border-gray-800">
+                <div
+                  key={c.label}
+                  className="flex items-center gap-4 bg-gray-50 dark:bg-gray-900 rounded-2xl p-4 border border-gray-100 dark:border-gray-800"
+                >
                   <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 rounded-xl flex items-center justify-center flex-shrink-0">
                     {c.icon}
                   </div>
                   <div>
-                    <div className="text-xs text-gray-400 uppercase tracking-wide">{c.label}</div>
+                    <div className="text-xs text-gray-400 uppercase tracking-wide">
+                      {c.label}
+                    </div>
                     {c.href ? (
-                      <a href={c.href} className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline">{c.value}</a>
+                      <a
+                        href={c.href}
+                        className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        {c.value}
+                      </a>
                     ) : (
-                      <div className="text-sm font-medium text-gray-800 dark:text-gray-200">{c.value}</div>
+                      <div className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                        {c.value}
+                      </div>
                     )}
                   </div>
                 </div>
               ))}
               <div className="flex gap-3 flex-wrap">
                 {SOCIAL.map((s) => (
-                  <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition">
+                  <a
+                    key={s.label}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white transition"
+                  >
                     {s.icon} {s.label}
                   </a>
                 ))}
               </div>
             </div>
             <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Send a Message</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+                Send a Message
+              </h3>
               {sent ? (
                 <div className="flex flex-col items-center justify-center h-48 text-center">
                   <div className="text-4xl mb-3">✅</div>
-                  <p className="font-medium text-green-600 dark:text-green-400">Message sent! I'll reply within 24 hours.</p>
+                  <p className="font-medium text-green-600 dark:text-green-400">
+                    Message sent! I'll reply within 24 hours.
+                  </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <input type="hidden" name="subject" value="📩 New Portfolio Contact Message" />
-                  <input type="text" name="name" placeholder="Your Name" required
-                    className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition" />
-                  <input type="email" name="email" placeholder="Your Email" required
-                    className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition" />
-                  <textarea name="message" placeholder="Your message..." rows={4} required
-                    className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition resize-none" />
-                  <button type="submit" disabled={sending}
-                    className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white rounded-xl font-medium text-sm transition active:scale-95">
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="📩 New Portfolio Contact Message"
+                  />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                    className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition"
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="Your message..."
+                    rows={4}
+                    required
+                    className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500 transition resize-none"
+                  />
+                  <button
+                    type="submit"
+                    disabled={sending}
+                    className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white rounded-xl font-medium text-sm transition active:scale-95"
+                  >
                     {sending ? "Sending..." : "🚀 Send Message"}
                   </button>
                 </form>
@@ -592,17 +935,27 @@ export default function App() {
         {/* ── FOOTER ── */}
         <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-8">
           <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-sm text-gray-400">© 2025 Rakshit Soni · Built with React & Tailwind CSS</div>
+            <div className="text-sm text-gray-400">
+              © 2025 Rakshit Soni · Built with React & Tailwind CSS
+            </div>
             <div className="flex gap-4">
               {SOCIAL.map((s) => (
-                <a key={s.label} href={s.url} target="_blank" rel="noopener noreferrer"
-                  title={s.label} className="text-gray-400 hover:text-gray-700 dark:hover:text-white transition text-lg">
+                <a
+                  key={s.label}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={s.label}
+                  className="text-gray-400 hover:text-gray-700 dark:hover:text-white transition text-lg"
+                >
                   {s.icon}
                 </a>
               ))}
             </div>
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+            >
               Back to top ↑
             </button>
           </div>
@@ -610,12 +963,19 @@ export default function App() {
 
         {/* ── CONTACT MODAL ── */}
         {showModal && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 px-4"
-            onClick={(e) => e.target === e.currentTarget && setShowModal(false)}>
+          <div
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 px-4"
+            onClick={(e) => e.target === e.currentTarget && setShowModal(false)}
+          >
             <div className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-md shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="flex items-center justify-between p-5 border-b border-gray-100 dark:border-gray-800">
-                <h3 className="font-bold text-gray-900 dark:text-white">Contact Me</h3>
-                <button onClick={() => setShowModal(false)} className="text-gray-400 hover:text-gray-700 dark:hover:text-white transition">
+                <h3 className="font-bold text-gray-900 dark:text-white">
+                  Contact Me
+                </h3>
+                <button
+                  onClick={() => setShowModal(false)}
+                  className="text-gray-400 hover:text-gray-700 dark:hover:text-white transition"
+                >
                   <FaTimes />
                 </button>
               </div>
@@ -623,19 +983,43 @@ export default function App() {
                 {sent ? (
                   <div className="text-center py-8">
                     <div className="text-4xl mb-3">✅</div>
-                    <p className="font-medium text-green-600 dark:text-green-400">Message sent! I'll reply within 24 hours.</p>
+                    <p className="font-medium text-green-600 dark:text-green-400">
+                      Message sent! I'll reply within 24 hours.
+                    </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <input type="hidden" name="subject" value="📩 New Portfolio Contact Message" />
-                    <input type="text" name="name" placeholder="Your Name" required
-                      className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500" />
-                    <input type="email" name="email" placeholder="Your Email" required
-                      className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500" />
-                    <textarea name="message" placeholder="Your message..." rows={4} required
-                      className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500 resize-none" />
-                    <button type="submit" disabled={sending}
-                      className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white rounded-xl font-semibold text-sm transition">
+                    <input
+                      type="hidden"
+                      name="subject"
+                      value="📩 New Portfolio Contact Message"
+                    />
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                      className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                      className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <textarea
+                      name="message"
+                      placeholder="Your message..."
+                      rows={4}
+                      required
+                      className="w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    />
+                    <button
+                      type="submit"
+                      disabled={sending}
+                      className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white rounded-xl font-semibold text-sm transition"
+                    >
                       {sending ? "Sending..." : "🚀 Send Message"}
                     </button>
                   </form>
@@ -652,7 +1036,9 @@ export default function App() {
 function SectionTitle({ title, subtitle }) {
   return (
     <div className="mb-10">
-      <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{title}</h2>
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+        {title}
+      </h2>
       {subtitle && <p className="text-gray-400 text-sm mt-1">{subtitle}</p>}
       <div className="mt-3 h-1 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
     </div>
