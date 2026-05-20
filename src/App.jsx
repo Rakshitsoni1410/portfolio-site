@@ -1,40 +1,34 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
-  FaSun,
-  FaMoon,
-  FaGithub,
-  FaLinkedin,
-  FaHackerrank,
-  FaGlobe,
-  FaJava,
+  SiJavascript,
+  SiMysql,
+  SiScikitlearn,
+  SiPandas,
+  SiNumpy,
+  SiPlotly,
+  SiExpress,
+  SiTailwindcss,
+  SiMongodb,
+  SiJupyter,
+  SiVisualstudiocode,
+  SiPostman,
+  SiNetlify,
+  SiStreamlit,
+  SiCplusplus,
+} from "react-icons/si";
+
+import {
   FaPython,
-  FaDatabase,
-  FaJs,
+  FaJava,
   FaReact,
   FaNodeJs,
-  FaHtml5,
-  FaCss3Alt,
-  FaBootstrap,
-  FaPhp,
-  FaCode,
-  FaBars,
-  FaTimes,
-  FaExternalLinkAlt,
-  FaDownload,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaPhone,
+  FaGithub,
+  FaBrain,
+  FaRobot,
+  FaServer,
+  FaChartBar,
+  FaProjectDiagram,
 } from "react-icons/fa";
-import {
-  SiMongodb,
-  SiMysql,
-  SiSpringboot,
-  SiTailwindcss,
-  SiFlutter,
-  SiDjango,
-  SiRedux,
-  SiSocketdotio,
-} from "react-icons/si";
 
 /* ─── DATA ─────────────────────────────────────────── */
 
@@ -50,42 +44,54 @@ const NAV_LINKS = [
 
 const SKILLS = [
   {
-    cat: "Frontend",
+    cat: "Programming",
+    items: [
+      { name: "Python", icon: <FaPython />, color: "#3776ab" },
+      { name: "Java", icon: <FaJava />, color: "#f89820" },
+      { name: "JavaScript", icon: <SiJavascript />, color: "#f7df1e" },
+      { name: "SQL", icon: <SiMysql />, color: "#4479a1" },
+      { name: "C++", icon: <SiCplusplus />, color: "#00599c" },
+    ],
+  },
+
+  {
+    cat: "AI / Machine Learning",
+    items: [
+      { name: "Scikit-learn", icon: <SiScikitlearn />, color: "#f7931e" },
+      { name: "Pandas", icon: <SiPandas />, color: "#150458" },
+      { name: "NumPy", icon: <SiNumpy />, color: "#013243" },
+      { name: "Matplotlib", icon: <SiPlotly />, color: "#11557c" },
+      { name: "EDA", icon: <FaChartBar />, color: "#6366f1" },
+      { name: "Random Forest", icon: <FaBrain />, color: "#22c55e" },
+      { name: "SVM", icon: <FaRobot />, color: "#8b5cf6" },
+      { name: "K-Means", icon: <FaProjectDiagram />, color: "#f97316" },
+    ],
+  },
+
+  {
+    cat: "Web Development",
     items: [
       { name: "React.js", icon: <FaReact />, color: "#61dafb" },
-      { name: "JavaScript", icon: <FaJs />, color: "#f7df1e" },
-      { name: "Redux", icon: <SiRedux />, color: "#764abc" },
-      { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06b6d4" },
-      { name: "HTML5", icon: <FaHtml5 />, color: "#e34f26" },
-      { name: "CSS3", icon: <FaCss3Alt />, color: "#1572b6" },
-    ],
-  },
-  {
-    cat: "Backend",
-    items: [
       { name: "Node.js", icon: <FaNodeJs />, color: "#68a063" },
-      { name: "Spring Boot", icon: <SiSpringboot />, color: "#6db33f" },
-      { name: "Java", icon: <FaJava />, color: "#f89820" },
-      { name: "Python", icon: <FaPython />, color: "#3776ab" },
-      { name: "Django", icon: <SiDjango />, color: "#092e20" },
-      { name: "PHP", icon: <FaPhp />, color: "#777bb4" },
-    ],
-  },
-  {
-    cat: "Database & Tools",
-    items: [
+      { name: "Express.js", icon: <SiExpress />, color: "#000000" },
       { name: "MongoDB", icon: <SiMongodb />, color: "#47a248" },
-      { name: "MySQL", icon: <SiMysql />, color: "#4479a1" },
-      { name: "Socket.io", icon: <SiSocketdotio />, color: "#010101" },
-      { name: "GitHub", icon: <FaGithub />, color: "#181717" },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06b6d4" },
+      { name: "REST APIs", icon: <FaServer />, color: "#6366f1" },
     ],
   },
+
   {
-    cat: "Mobile",
-    items: [{ name: "Flutter", icon: <SiFlutter />, color: "#02569b" }],
+    cat: "Tools & Platforms",
+    items: [
+      { name: "GitHub", icon: <FaGithub />, color: "#181717" },
+      { name: "Jupyter", icon: <SiJupyter />, color: "#f37626" },
+      { name: "VS Code", icon: <SiVisualstudiocode />, color: "#007acc" },
+      { name: "Postman", icon: <SiPostman />, color: "#ff6c37" },
+      { name: "Netlify", icon: <SiNetlify />, color: "#00c7b7" },
+      { name: "Streamlit", icon: <SiStreamlit />, color: "#ff4b4b" },
+    ],
   },
 ];
-
 const PROJECTS = [
   {
     title: "AI Chatbot Support System",
