@@ -439,68 +439,28 @@ export default function App() {
         <section id="stats" className="bg-white dark:bg-gray-900 py-20">
           <div className="max-w-6xl mx-auto px-4">
             <SectionTitle title="GitHub & LeetCode Stats" />
-
-            {/* Stat Cards — always visible, no broken images */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-              {[
-                { label: "Total Contributions", value: "1,009+", icon: "📦", color: "#0ea5e9" },
-                { label: "Public Repos", value: "15+", icon: "💻", color: "#8b5cf6" },
-                { label: "LeetCode Solved", value: "357+", icon: "🧠", color: "#f59e0b" },
-                { label: "Contest Rating", value: "1,416", icon: "⭐", color: "#22c55e" },
-                { label: "Max Streak", value: "115 days", icon: "🔥", color: "#ef4444" },
-                { label: "Submissions (1yr)", value: "426+", icon: "📈", color: "#06b6d4" },
-                { label: "Languages", value: "10+", icon: "🌐", color: "#a855f7" },
-                { label: "Years Coding", value: "3+", icon: "📅", color: "#f97316" },
-              ].map((s) => (
-                <div key={s.label}
-                  className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 text-center hover:shadow-md hover:-translate-y-0.5 transition-all">
-                  <div className="text-2xl mb-2">{s.icon}</div>
-                  <div className="text-xl font-bold mb-1" style={{ color: s.color }}>{s.value}</div>
-                  <div className="text-xs text-gray-400">{s.label}</div>
-                </div>
-              ))}
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
+                <img src="https://github-readme-stats.vercel.app/api?username=Rakshitsoni1410&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0f172a&title_color=0ea5e9&icon_color=8b5cf6"
+                  alt="GitHub Stats" className="w-full" />
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rakshitsoni1410&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f172a&title_color=0ea5e9&langs_count=8"
+                  alt="Top Languages" className="w-full" />
+              </div>
             </div>
-
-            {/* Streak — loads fine usually */}
-            <ImgWithFallback
-              src="https://github-readme-streak-stats.herokuapp.com/?user=Rakshitsoni1410&theme=tokyonight&hide_border=true"
-              alt="GitHub Streak"
-              fallback="🔥 GitHub Streak: 1,009+ contributions since May 2024"
-            />
-
-            {/* Activity graph */}
-            <ImgWithFallback
-              src="https://github-readme-activity-graph.vercel.app/graph?username=Rakshitsoni1410&theme=react-dark&hide_border=true"
-              alt="GitHub Activity Graph"
-              fallback="📊 View full activity at github.com/Rakshitsoni1410"
-            />
-
-            {/* LeetCode card */}
+            <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm mb-8">
+              <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rakshitsoni1410&theme=tokyonight&hide_border=true&background=0f172a&ring=0ea5e9&fire=f59e0b&currStreakLabel=0ea5e9"
+                alt="GitHub Streak" className="w-full" />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm mb-8">
+              <img src="https://github-readme-activity-graph.vercel.app/graph?username=Rakshitsoni1410&theme=react-dark&hide_border=true&bg_color=0f172a"
+                alt="Activity Graph" className="w-full" />
+            </div>
             <div className="flex justify-center">
-              <ImgWithFallback
-                src="https://leetcard.jacoblin.cool/rakshitsoni1410?theme=dark&font=baloo&ext=contest"
-                alt="LeetCode Stats"
-                fallback="🧠 357+ problems · Rating 1416 · 115-day streak"
-                className="w-full max-w-lg"
-              />
-            </div>
-
-            {/* Direct links */}
-            <div className="mt-8 text-center">
-              <p className="text-xs text-gray-400 mb-3">View live profiles</p>
-              <div className="flex justify-center gap-6 flex-wrap">
-                <a href="https://github.com/Rakshitsoni1410" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition">
-                  <FaGithub /> GitHub
-                </a>
-                <a href="https://leetcode.com/u/rakshitsoni1410" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-yellow-600 dark:text-yellow-400 hover:text-yellow-700 transition">
-                  🧠 LeetCode
-                </a>
-                <a href="https://www.hackerrank.com/rakshitsoni544" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-green-600 dark:text-green-400 hover:text-green-700 transition">
-                  <FaHackerrank /> HackerRank
-                </a>
+              <div className="rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm">
+                <img src="https://leetcard.jacoblin.cool/rakshitsoni1410?theme=dark&font=baloo&ext=contest"
+                  alt="LeetCode Stats" className="w-full max-w-lg" />
               </div>
             </div>
           </div>
