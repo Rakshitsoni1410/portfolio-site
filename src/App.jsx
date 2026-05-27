@@ -98,7 +98,7 @@ const PROJECTS = [
   { title: "Smart Khata Book", icon: "📒", status: "Completed",
     desc: "Cross-platform Flutter mobile app for small businesses to manage credit/debit ledger entries with real-time balance calculation and offline-first local storage.",
     tech: ["Flutter", "Dart"],
-    color: "#22c55e", github: "https://github.com/Rakshitsoni1410/smartkhatabook", live: "" },
+    color: "#22c55e", github: "https://github.com/Rakshitsoni1410/smartkhatabook", live: "https://smartkhatabooks.netlify.app/" },
   { title: "Hospital Management System", icon: "🏥", status: "Completed",
     desc: "Web-based system for managing patient records, appointments, and hospital staff workflows using Django ORM and admin interface.",
     tech: ["Python", "Django", "HTML", "CSS", "SQLite"],
