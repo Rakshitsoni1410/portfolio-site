@@ -1,107 +1,234 @@
-# 🚀 Rakshit Soni — Portfolio Website
+# 🚀 Rakshit Soni — Developer Portfolio
 
-This is my personal developer portfolio built using **React**, **Tailwind CSS**, and deployed on **Netlify**. It showcases my skills, projects, certifications, and includes a modal-based contact form with FormSubmit integration.
+Modern full-stack developer portfolio built with **React.js** and **Tailwind CSS** featuring:
 
-![Portfolio Screenshot](./public/Rakshit.webp)
-
----
-
-## 🔗 Live Demo
-
-🌐 [https://rakshitrsoni.netlify.app](https://rakshitrsoni.netlify.app)
-
----
-
-## 🛠 Tech Stack
-
-- **Frontend**: React, Tailwind CSS, Vite
-- **Icons**: React Icons
-- **Deployment**: Netlify
-- **Contact Form**: FormSubmit (free form handling service)
+* 🌙 Dark / Light Mode
+* 📱 Fully Responsive Design
+* 📊 GitHub & LeetCode Stats
+* 💼 Real-world Projects Showcase
+* 📬 Working Contact Form (Web3Forms)
+* ✨ Smooth Animations & Modern UI
 
 ---
 
-## 📁 Project Structure
+## 🌐 Live Demo
 
-/
-├── public/
-│ ├── Rakshit.webp # Profile image
-│ └── favicon.png # Favicon/logo
-├── src/
-│ ├── App.jsx # Main portfolio component
-│ └── index.css # Tailwind styles
-├── index.html # HTML entry point
-├── tailwind.config.js # Tailwind custom config
-├── netlify.toml # Netlify redirect settings (optional)
-└── README.md # This file
+🔗 https://rakshitrsoni.netlify.app
+
 ---
 
-## 📦 Installation & Development
+# 🛠 Tech Stack
+
+### Frontend
+
+* React.js
+* Tailwind CSS
+* JavaScript
+* React Icons
+
+### Backend Services
+
+* Web3Forms API (Contact Form)
+
+### Deployment
+
+* Netlify
+
+---
+
+# ✨ Features
+
+## 👨‍💻 Hero Section
+
+* Modern introduction section
+* Resume download button
+* Social profile links
+* Animated availability badge
+
+## 📖 About Section
+
+* Professional summary
+* Coding achievements
+* LeetCode stats
+* Personal details
+
+## ⚡ Skills Section
+
+* Frontend
+* Backend
+* Databases
+* Mobile Development
+* Tools & Technologies
+
+## 💼 Projects Showcase
+
+Includes:
+
+* AI Chatbot Support System
+* Learning Management System
+* Ride Booking App
+* Gold Weight Management Software
+* Jewellery E-Commerce Website
+* Smart Khata Book
+* Hospital Management System
+
+Each project contains:
+
+* Description
+* Tech Stack
+* GitHub Link
+* Live Demo
+
+## 📊 GitHub & LeetCode Stats
+
+Integrated:
+
+* GitHub Stats
+* Language Usage
+* GitHub Streak
+* Activity Graph
+* LeetCode Card
+
+## 🎓 Education Timeline
+
+* MCA — GLS University
+* BCA — Indus University
+
+## 🏆 Certifications
+
+* JavaScript
+* Java
+* Python
+* SQL
+* Problem Solving
+* Bootstrap
+* Coursera Certifications
+
+## 📬 Contact Form
+
+Integrated using Web3Forms API.
+
+Features:
+
+* Real-time submission
+* Success message
+* Responsive modal
+* No backend required
+
+---
+
+# 📦 Installation
+
+Clone the repository:
 
 ```bash
-# Clone the repo
-git clone https://github.com/Rakshitsoni1410/portfolio-site.git
-cd portfolio-site
+git clone https://github.com/Rakshitsoni1410/portfolio.git
+```
 
-# Install dependencies
+Move into project directory:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
 
-# Start local development server
+Run development server:
+
+```bash
 npm run dev
-🚀 Deployment
-Build the site
-
-arduino
-Copy
-Edit
-npm run build
-Deploy to Netlify
-
-Login to Netlify
-
-Create a new site from Git (or upload the dist/ folder manually)
-
-Set build command: npm run build
-
-Publish directory: dist
-
-💬 Contact Integration
-Uses FormSubmit for message handling:
-
-html
-Copy
-Edit
-<form action="https://formsubmit.co/YOUR_HASH_ID" method="POST">
-Includes modal contact form
-
-Includes subject, redirect URL, and basic anti-spam config
-
-🎯 Features
-Responsive, one-page layout
-
-Light/Dark mode toggle
-
-Skills & Certifications with icons
-
-Projects with tech tags and live links
-
-Modal-based contact form
-
-Mobile friendly UI
-
-📄 License
-MIT License. You’re free to reuse this design for your personal use.
-
-👨‍💻 Author
-Rakshit R. Soni
-📫 rakshitsoni@gmail.com
-🔗 Netlify Site
-🔗 LinkedIn
-
-yaml
-Copy
-Edit
+```
 
 ---
 
-Let me know if you also want a `CONTRIBUTING.md` or project badges (like Netlify build status).
+# 🔑 Environment Setup
+
+This project uses Web3Forms for contact form handling.
+
+Replace your access key inside:
+
+```js
+formData.append("access_key", "YOUR_ACCESS_KEY");
+```
+
+Get your free API key from:
+
+https://web3forms.com
+
+---
+
+# 📁 Folder Structure
+
+```bash
+src/
+ ├── components/
+ ├── assets/
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css
+```
+
+---
+
+# 📸 Screenshots
+
+## 🌙 Dark Mode
+
+* Modern glassmorphism UI
+* Responsive design
+* Animated cards
+
+## 📊 Stats Section
+
+* GitHub profile stats
+* LeetCode contest information
+* Contribution graph
+
+---
+
+# 🔗 Social Links
+
+* GitHub: https://github.com/Rakshitsoni1410
+* LinkedIn: https://linkedin.com/in/rakshitrsoni1410
+* LeetCode: https://leetcode.com/u/rakshitsoni1410
+* HackerRank: https://www.hackerrank.com/rakshitsoni544
+
+---
+
+# 🚀 Future Improvements
+
+* Blog Integration
+* Admin Dashboard
+* Multi-language Support
+* Project Filtering
+* AI Assistant Integration
+
+---
+
+# 👨‍💻 Author
+
+## Rakshit Soni
+
+Full Stack Developer | MERN Stack | Java | Spring Boot
+
+📍 Ahmedabad, India
+
+---
+
+# ⭐ Support
+
+If you like this project:
+
+⭐ Star the repository
+🍴 Fork the project
+📢 Share it with others
+
+---
+
+# 📄 License
+
+This project is open-source and available under the MIT License.
