@@ -133,6 +133,189 @@ const SOCIAL = [
   { label: "GFG", icon: <FaGlobe />, url: "https://www.geeksforgeeks.org/user/rakshituya7/" },
 ];
 
+/* ─── SKILL ILLUSTRATIONS ────────────────────────────────────── */
+
+function FrontendIllustration() {
+  return (
+    <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <rect x="8" y="10" width="104" height="62" rx="6" fill="#1e293b" />
+      <rect x="8" y="10" width="104" height="18" rx="6" fill="#334155" />
+      <rect x="8" y="22" width="104" height="6" fill="#334155" />
+      <circle cx="20" cy="19" r="3" fill="#ef4444" />
+      <circle cx="30" cy="19" r="3" fill="#f59e0b" />
+      <circle cx="40" cy="19" r="3" fill="#22c55e" />
+      <rect x="50" y="14" width="50" height="10" rx="5" fill="#475569" />
+      <rect x="54" y="17" width="30" height="4" rx="2" fill="#61dafb" opacity="0.6" />
+      <circle cx="60" cy="55" r="8" fill="none" stroke="#61dafb" strokeWidth="1.5" />
+      <ellipse cx="60" cy="55" rx="16" ry="6" fill="none" stroke="#61dafb" strokeWidth="1" opacity="0.7" transform="rotate(0 60 55)" />
+      <ellipse cx="60" cy="55" rx="16" ry="6" fill="none" stroke="#61dafb" strokeWidth="1" opacity="0.7" transform="rotate(60 60 55)" />
+      <ellipse cx="60" cy="55" rx="16" ry="6" fill="none" stroke="#61dafb" strokeWidth="1" opacity="0.7" transform="rotate(120 60 55)" />
+      <circle cx="60" cy="55" r="2.5" fill="#61dafb" />
+      <rect x="14" y="34" width="20" height="2.5" rx="1.2" fill="#f7df1e" opacity="0.8" />
+      <rect x="14" y="39" width="30" height="2.5" rx="1.2" fill="#e34f26" opacity="0.7" />
+      <rect x="14" y="44" width="24" height="2.5" rx="1.2" fill="#1572b6" opacity="0.7" />
+      <rect x="14" y="49" width="18" height="2.5" rx="1.2" fill="#8b5cf6" opacity="0.7" />
+      <rect x="88" y="34" width="16" height="2.5" rx="1.2" fill="#64748b" opacity="0.5" />
+      <rect x="88" y="39" width="12" height="2.5" rx="1.2" fill="#64748b" opacity="0.5" />
+      <rect x="88" y="44" width="18" height="2.5" rx="1.2" fill="#64748b" opacity="0.5" />
+    </svg>
+  );
+}
+
+function BackendIllustration() {
+  return (
+    <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <rect x="30" y="8" width="60" height="14" rx="3" fill="#1e293b" stroke="#334155" strokeWidth="1" />
+      <rect x="30" y="25" width="60" height="14" rx="3" fill="#1e293b" stroke="#334155" strokeWidth="1" />
+      <rect x="30" y="42" width="60" height="14" rx="3" fill="#1e293b" stroke="#334155" strokeWidth="1" />
+      <circle cx="38" cy="15" r="2.5" fill="#22c55e" />
+      <rect x="44" y="12" width="32" height="2" rx="1" fill="#334155" />
+      <rect x="44" y="16" width="20" height="2" rx="1" fill="#334155" />
+      <rect x="80" y="12" width="4" height="6" rx="1" fill="#475569" />
+      <circle cx="38" cy="32" r="2.5" fill="#f59e0b" />
+      <rect x="44" y="29" width="32" height="2" rx="1" fill="#334155" />
+      <rect x="44" y="33" width="24" height="2" rx="1" fill="#334155" />
+      <rect x="80" y="29" width="4" height="6" rx="1" fill="#475569" />
+      <circle cx="38" cy="49" r="2.5" fill="#6db33f" />
+      <rect x="44" y="46" width="32" height="2" rx="1" fill="#334155" />
+      <rect x="44" y="50" width="18" height="2" rx="1" fill="#334155" />
+      <rect x="80" y="46" width="4" height="6" rx="1" fill="#475569" />
+      <line x1="60" y1="56" x2="60" y2="70" stroke="#6db33f" strokeWidth="1.5" strokeDasharray="3 2" />
+      <circle cx="60" cy="72" r="4" fill="#6db33f" opacity="0.9" />
+      <circle cx="42" cy="72" r="4" fill="#68a063" opacity="0.9" />
+      <circle cx="78" cy="72" r="4" fill="#f89820" opacity="0.9" />
+      <line x1="42" y1="72" x2="56" y2="72" stroke="#475569" strokeWidth="1" />
+      <line x1="64" y1="72" x2="78" y2="72" stroke="#475569" strokeWidth="1" />
+    </svg>
+  );
+}
+
+function DatabaseIllustration() {
+  return (
+    <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <ellipse cx="38" cy="18" rx="16" ry="5" fill="#47a248" opacity="0.9" />
+      <rect x="22" y="18" width="32" height="22" fill="#2d6a2e" />
+      <ellipse cx="38" cy="40" rx="16" ry="5" fill="#47a248" />
+      <ellipse cx="38" cy="18" rx="16" ry="5" fill="#5cba5c" />
+      <path d="M38 22 Q41 28 38 36 Q35 28 38 22Z" fill="#47a248" />
+      <ellipse cx="82" cy="18" rx="16" ry="5" fill="#4479a1" opacity="0.9" />
+      <rect x="66" y="18" width="32" height="22" fill="#2a4d6e" />
+      <ellipse cx="82" cy="40" rx="16" ry="5" fill="#4479a1" />
+      <ellipse cx="82" cy="18" rx="16" ry="5" fill="#5a8fc0" />
+      <path d="M76 28 Q82 24 88 28 Q82 32 76 28Z" fill="#4479a1" opacity="0.6" />
+      <path d="M54 32 L66 32" stroke="#64748b" strokeWidth="1.5" markerEnd="url(#arr)" />
+      <rect x="18" y="52" width="40" height="3" rx="1.5" fill="#47a248" opacity="0.5" />
+      <rect x="18" y="58" width="28" height="3" rx="1.5" fill="#22c55e" opacity="0.4" />
+      <rect x="18" y="64" width="34" height="3" rx="1.5" fill="#47a248" opacity="0.3" />
+      <rect x="62" y="52" width="40" height="3" rx="1.5" fill="#4479a1" opacity="0.5" />
+      <rect x="62" y="58" width="28" height="3" rx="1.5" fill="#5a8fc0" opacity="0.4" />
+      <rect x="62" y="64" width="34" height="3" rx="1.5" fill="#4479a1" opacity="0.3" />
+      <defs>
+        <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+          <path d="M0 0 L6 3 L0 6Z" fill="#64748b" />
+        </marker>
+      </defs>
+    </svg>
+  );
+}
+
+function MobileIllustration() {
+  return (
+    <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <rect x="38" y="6" width="44" height="68" rx="8" fill="#1e293b" />
+      <rect x="38" y="6" width="44" height="68" rx="8" stroke="#334155" strokeWidth="1.5" />
+      <rect x="42" y="14" width="36" height="52" rx="4" fill="#0f172a" />
+      <rect x="52" y="10" width="16" height="4" rx="2" fill="#0f172a" />
+      <rect x="42" y="14" width="36" height="10" rx="4" fill="#02569b" />
+      <rect x="42" y="20" width="36" height="4" fill="#02569b" />
+      <rect x="45" y="16" width="20" height="3" rx="1.5" fill="#54c5f8" opacity="0.9" />
+      <rect x="44" y="27" width="32" height="11" rx="2" fill="#1e293b" stroke="#334155" strokeWidth="0.5" />
+      <circle cx="50" cy="32.5" r="3" fill="#02569b" opacity="0.8" />
+      <rect x="55" y="30" width="16" height="2" rx="1" fill="#54c5f8" opacity="0.7" />
+      <rect x="55" y="34" width="10" height="2" rx="1" fill="#64748b" opacity="0.6" />
+      <rect x="44" y="41" width="32" height="11" rx="2" fill="#1e293b" stroke="#334155" strokeWidth="0.5" />
+      <circle cx="50" cy="46.5" r="3" fill="#0ea5e9" opacity="0.8" />
+      <rect x="55" y="44" width="18" height="2" rx="1" fill="#54c5f8" opacity="0.7" />
+      <rect x="55" y="48" width="12" height="2" rx="1" fill="#64748b" opacity="0.6" />
+      <rect x="42" y="56" width="36" height="10" rx="2" fill="#1e293b" />
+      <circle cx="54" cy="61" r="2.5" fill="#02569b" />
+      <circle cx="60" cy="61" r="2.5" fill="#475569" />
+      <circle cx="66" cy="61" r="2.5" fill="#475569" />
+      <rect x="52" y="72" width="16" height="2.5" rx="1.25" fill="#334155" />
+    </svg>
+  );
+}
+
+function ToolsIllustration() {
+  return (
+    <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <circle cx="30" cy="30" r="16" fill="#24292e" />
+      <circle cx="30" cy="26" r="8" fill="#f0f6fc" />
+      <circle cx="26" cy="24" r="2" fill="#24292e" />
+      <circle cx="34" cy="24" r="2" fill="#24292e" />
+      <path d="M26 30 Q30 34 34 30" stroke="#24292e" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+      <circle cx="14" cy="54" r="4" fill="#6e7681" />
+      <circle cx="30" cy="54" r="4" fill="#6e7681" />
+      <circle cx="46" cy="54" r="4" fill="#22c55e" />
+      <line x1="14" y1="50" x2="14" y2="46" stroke="#6e7681" strokeWidth="1.5" />
+      <line x1="30" y1="50" x2="30" y2="46" stroke="#6e7681" strokeWidth="1.5" />
+      <line x1="46" y1="50" x2="30" y2="46" stroke="#6e7681" strokeWidth="1.5" strokeDasharray="3 2" />
+      <line x1="14" y1="46" x2="30" y2="46" stroke="#6e7681" strokeWidth="1.5" />
+      <circle cx="85" cy="30" r="18" fill="#1a1a1a" />
+      <circle cx="85" cy="30" r="10" fill="#1a1a1a" stroke="#888" strokeWidth="1.5" />
+      <path d="M82 23 L78 30 L84 30 L81 38 L88 28 L82 28 Z" fill="#888" />
+      <circle cx="65" cy="55" r="3.5" fill="#888" />
+      <circle cx="80" cy="65" r="3.5" fill="#888" />
+      <circle cx="95" cy="55" r="3.5" fill="#888" />
+      <circle cx="107" cy="65" r="3.5" fill="#888" />
+      <line x1="65" y1="55" x2="80" y2="65" stroke="#444" strokeWidth="1" />
+      <line x1="80" y1="65" x2="95" y2="55" stroke="#444" strokeWidth="1" />
+      <line x1="95" y1="55" x2="107" y2="65" stroke="#444" strokeWidth="1" />
+    </svg>
+  );
+}
+
+/* ─── SKILL CATEGORY META ────────────────────────────────────── */
+
+const CATEGORY_META = {
+  Frontend: {
+    gradient: "from-[#0ea5e9] to-[#6366f1]",
+    accent: "#61dafb",
+    accentBg: "bg-blue-50 dark:bg-blue-950/50",
+    accentBorder: "border-blue-200 dark:border-blue-800",
+    Illustration: FrontendIllustration,
+    label: "UI & Interaction",
+    desc: "Crafting responsive, pixel-perfect interfaces with modern frameworks and styling tools.",
+  },
+  Backend: {
+    gradient: "from-[#6db33f] to-[#f89820]",
+    accent: "#6db33f",
+    accentBg: "bg-green-50 dark:bg-green-950/50",
+    accentBorder: "border-green-200 dark:border-green-800",
+    Illustration: BackendIllustration,
+    label: "Server & Logic",
+    desc: "Building scalable APIs, auth systems, and business logic with Node.js, Spring Boot & more.",
+  },
+  "Database & Tools": {
+    gradient: "from-[#47a248] to-[#4479a1]",
+    accent: "#47a248",
+    accentBg: "bg-emerald-50 dark:bg-emerald-950/50",
+    accentBorder: "border-emerald-200 dark:border-emerald-800",
+    Illustration: ToolsIllustration,
+    label: "Data & DevTools",
+    desc: "Designing schemas, optimizing queries, and managing real-time connections & version control.",
+  },
+  Mobile: {
+    gradient: "from-[#02569b] to-[#54c5f8]",
+    accent: "#02569b",
+    accentBg: "bg-sky-50 dark:bg-sky-950/50",
+    accentBorder: "border-sky-200 dark:border-sky-800",
+    Illustration: MobileIllustration,
+    label: "Cross-platform Apps",
+    desc: "Building Android & iOS apps from a single Dart codebase with smooth native performance.",
+  },
+};
+
 /* ─── HOOKS ──────────────────────────────────────────────────── */
 
 function useTyping(texts, speed = 80, pause = 1800) {
@@ -203,7 +386,7 @@ function useFadeIn() {
     if (!el) return;
     const obs = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) { setVisible(true); obs.disconnect(); }
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
     obs.observe(el);
     return () => obs.disconnect();
   }, []);
@@ -306,6 +489,87 @@ function Marquee({ items }) {
       </div>
       <style>{`@keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
     </div>
+  );
+}
+
+/* ─── SKILL PILL ─────────────────────────────────────────────── */
+function SkillPill({ skill }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white dark:bg-gray-800/80 border border-gray-100 dark:border-gray-700 cursor-default select-none transition-all duration-200"
+      style={{
+        boxShadow: hovered ? `0 4px 20px ${skill.color}30` : "none",
+        borderColor: hovered ? skill.color + "60" : undefined,
+        transform: hovered ? "translateY(-2px)" : "none",
+      }}
+    >
+      <span
+        className="text-lg flex-shrink-0"
+        style={{
+          color: skill.color,
+          transform: hovered ? "scale(1.25) rotate(-6deg)" : "scale(1)",
+          filter: hovered ? `drop-shadow(0 0 6px ${skill.color}80)` : "none",
+          transition: "transform 0.2s, filter 0.2s",
+          display: "inline-block",
+        }}
+      >
+        {skill.icon}
+      </span>
+      <span className="text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
+        {skill.name}
+      </span>
+    </div>
+  );
+}
+
+/* ─── SKILL CATEGORY CARD ────────────────────────────────────── */
+function CategoryCard({ group, index }) {
+  const meta = CATEGORY_META[group.cat];
+  const { Illustration } = meta;
+  return (
+    <FadeIn delay={index * 0.1}>
+      <div className={`rounded-2xl border ${meta.accentBorder} ${meta.accentBg} overflow-hidden`}>
+        {/* Header row with illustration + info */}
+        <div className="flex items-stretch">
+          {/* Illustration panel */}
+          <div
+            className="flex-shrink-0 w-32 sm:w-40 relative overflow-hidden"
+            style={{ background: "linear-gradient(135deg, #0f172a, #1e293b)" }}
+          >
+            <div className={`absolute inset-0 opacity-10 bg-gradient-to-br ${meta.gradient}`} />
+            <div className="relative z-10 p-2 w-full h-full flex items-center justify-center" style={{ minHeight: 90 }}>
+              <Illustration />
+            </div>
+          </div>
+          {/* Category info */}
+          <div className="flex-1 p-5 flex flex-col justify-center">
+            <div className="flex items-center gap-2 mb-1">
+              <div className="h-2 w-2 rounded-full" style={{ background: meta.accent }} />
+              <span className="text-[11px] font-bold uppercase tracking-widest" style={{ color: meta.accent }}>
+                {group.cat}
+              </span>
+            </div>
+            <h3 className="text-base font-bold text-gray-900 dark:text-white leading-tight mb-1">
+              {meta.label}
+            </h3>
+            <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-md">
+              {meta.desc}
+            </p>
+          </div>
+        </div>
+        {/* Gradient divider */}
+        <div className={`h-px mx-5 bg-gradient-to-r ${meta.gradient} opacity-20`} />
+        {/* Skill pills */}
+        <div className="p-5 pt-4 flex flex-wrap gap-2.5">
+          {group.items.map((skill) => (
+            <SkillPill key={skill.name} skill={skill} />
+          ))}
+        </div>
+      </div>
+    </FadeIn>
   );
 }
 
@@ -497,26 +761,52 @@ export default function App() {
           </div>
         </section>
 
-        {/* ── SKILLS ── */}
+        {/* ── SKILLS (ENHANCED) ── */}
         <section id="skills" className="bg-white dark:bg-gray-900 py-20">
           <div className="max-w-6xl mx-auto px-4">
-            <SectionTitle title="Skills" />
-            <div className="space-y-8">
-              {SKILLS.map((group, gi) => (
-                <FadeIn key={group.cat} delay={gi * 0.1}>
-                  <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">{group.cat}</h3>
-                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
-                    {group.items.map((skill) => (
-                      <div key={skill.name}
-                        className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 flex flex-col items-center gap-2 hover:shadow-md hover:-translate-y-1 transition-all border border-gray-100 dark:border-gray-700 cursor-default group">
-                        <span className="text-2xl transition-transform group-hover:scale-110" style={{ color: skill.color }}>{skill.icon}</span>
-                        <span className="text-xs font-medium text-center text-gray-700 dark:text-gray-300">{skill.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                </FadeIn>
+            {/* Section title */}
+            <FadeIn className="mb-10">
+              <div className="flex items-end gap-4 flex-wrap">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Skills</h2>
+                  <p className="text-gray-400 text-sm mt-1">Technologies I use to build production-ready applications</p>
+                  <div className="mt-3 h-1 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+                </div>
+                <div className="ml-auto mb-1 flex items-center gap-1.5 text-xs font-semibold text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-3 py-1.5 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                  {SKILLS.reduce((a, g) => a + g.items.length, 0)}+ Technologies
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Category cards */}
+            <div className="space-y-5">
+              {SKILLS.map((group, i) => (
+                <CategoryCard key={group.cat} group={group} index={i} />
               ))}
             </div>
+
+            {/* Tech summary bar */}
+            <FadeIn delay={0.4} className="mt-8">
+              <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-px">
+                <div className="rounded-2xl bg-white dark:bg-gray-900 px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                    Always learning · Currently exploring{" "}
+                    <span className="font-semibold text-blue-600 dark:text-blue-400">
+                      AI/ML integration with Spring Boot
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {["MERN", "Spring Boot", "Flutter", "DSA"].map((tag) => (
+                      <span key={tag}
+                        className="text-xs px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-medium border border-blue-100 dark:border-blue-800">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </section>
 
@@ -694,7 +984,7 @@ export default function App() {
                 {TIMELINE.map((item, i) => (
                   <FadeIn key={i} delay={i * 0.1}>
                     <div className={`relative flex flex-col md:flex-row gap-6 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}>
-                      <div className="md:w-1/2 pl-12 md:pl-0 md:pr-10 md:text-right" style={{ textAlign: i % 2 === 0 ? undefined : undefined }}>
+                      <div className="md:w-1/2 pl-12 md:pl-0 md:pr-10">
                         {i % 2 === 0 ? (
                           <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:shadow-md transition md:ml-0">
                             <div className="flex items-center gap-2 mb-1 md:justify-end">
@@ -898,6 +1188,7 @@ export default function App() {
             </div>
           </div>
         )}
+
       </main>
     </div>
   );
