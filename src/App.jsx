@@ -14,7 +14,7 @@ import {
 
 /* ─── DATA ──────────────────────────────────────────────────── */
 
-const NAV_LINKS = ["About","Skills","Services","Projects","Stats","Timeline","Certifications","Contact"];
+const NAV_LINKS = ["About", "Skills", "Services", "Projects", "Stats", "Timeline", "Certifications", "Contact"];
 
 const TYPING_TEXTS = [
   "Full Stack Developer",
@@ -38,31 +38,39 @@ const MARQUEE_ITEMS = [
 ];
 
 const SKILLS = [
-  { cat: "Frontend", items: [
-    { name: "React.js", icon: <FaReact />, color: "#61dafb" },
-    { name: "JavaScript", icon: <FaJs />, color: "#f7df1e" },
-    { name: "Redux", icon: <SiRedux />, color: "#764abc" },
-    { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06b6d4" },
-    { name: "HTML5", icon: <FaHtml5 />, color: "#e34f26" },
-    { name: "CSS3", icon: <FaCss3Alt />, color: "#1572b6" },
-  ]},
-  { cat: "Backend", items: [
-    { name: "Node.js", icon: <FaNodeJs />, color: "#68a063" },
-    { name: "Spring Boot", icon: <SiSpringboot />, color: "#6db33f" },
-    { name: "Java", icon: <FaJava />, color: "#f89820" },
-    { name: "Python", icon: <FaPython />, color: "#3776ab" },
-    { name: "Django", icon: <SiDjango />, color: "#44b78b" },
-    { name: "PHP", icon: <FaPhp />, color: "#777bb4" },
-  ]},
-  { cat: "Database & Tools", items: [
-    { name: "MongoDB", icon: <SiMongodb />, color: "#47a248" },
-    { name: "MySQL", icon: <SiMysql />, color: "#4479a1" },
-    { name: "Socket.io", icon: <SiSocketdotio />, color: "#888" },
-    { name: "GitHub", icon: <FaGithub />, color: "#6e7681" },
-  ]},
-  { cat: "Mobile", items: [
-    { name: "Flutter", icon: <SiFlutter />, color: "#02569b" },
-  ]},
+  {
+    cat: "Frontend", items: [
+      { name: "React.js", icon: <FaReact />, color: "#61dafb" },
+      { name: "JavaScript", icon: <FaJs />, color: "#f7df1e" },
+      { name: "Redux", icon: <SiRedux />, color: "#764abc" },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06b6d4" },
+      { name: "HTML5", icon: <FaHtml5 />, color: "#e34f26" },
+      { name: "CSS3", icon: <FaCss3Alt />, color: "#1572b6" },
+    ]
+  },
+  {
+    cat: "Backend", items: [
+      { name: "Node.js", icon: <FaNodeJs />, color: "#68a063" },
+      { name: "Spring Boot", icon: <SiSpringboot />, color: "#6db33f" },
+      { name: "Java", icon: <FaJava />, color: "#f89820" },
+      { name: "Python", icon: <FaPython />, color: "#3776ab" },
+      { name: "Django", icon: <SiDjango />, color: "#44b78b" },
+      { name: "PHP", icon: <FaPhp />, color: "#777bb4" },
+    ]
+  },
+  {
+    cat: "Database & Tools", items: [
+      { name: "MongoDB", icon: <SiMongodb />, color: "#47a248" },
+      { name: "MySQL", icon: <SiMysql />, color: "#4479a1" },
+      { name: "Socket.io", icon: <SiSocketdotio />, color: "#888" },
+      { name: "GitHub", icon: <FaGithub />, color: "#6e7681" },
+    ]
+  },
+  {
+    cat: "Mobile", items: [
+      { name: "Flutter", icon: <SiFlutter />, color: "#02569b" },
+    ]
+  },
 ];
 
 const SERVICES = [
@@ -75,34 +83,48 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
-  { title: "AI Chatbot Support System", icon: "🤖", status: "Completed",
+  {
+    title: "AI Chatbot Support System", icon: "🤖", status: "Completed",
     desc: "Full-stack AI chatbot with JWT auth, role-based access control, Spring Security REST APIs, and real-time chat UI. Built for Gemini/OpenAI API integration.",
     tech: ["Java", "Spring Boot", "React.js", "MySQL", "JWT", "Spring Security"],
-    color: "#8b5cf6", github: "https://github.com/Rakshitsoni1410/ai-chat-support-system", live: "" },
-  { title: "Learning Management System", icon: "📚", status: "Live",
+    color: "#8b5cf6", github: "https://github.com/Rakshitsoni1410/ai-chat-support-system", live: ""
+  },
+  {
+    title: "Learning Management System", icon: "📚", status: "Live",
     desc: "Full-featured LMS with course browsing, student enrollment, instructor dashboards, Redux state management, and real-time progress tracking.",
     tech: ["React", "Redux Toolkit", "Node.js", "Express", "MongoDB"],
-    color: "#0ea5e9", github: "https://github.com/Rakshitsoni1410/courseplatform", live: "https://nextskilss.netlify.app/" },
-  { title: "Real-Time Ride Booking App", icon: "🚖", status: "In Progress",
+    color: "#0ea5e9", github: "https://github.com/Rakshitsoni1410/courseplatform", live: "https://nextskilss.netlify.app/"
+  },
+  {
+    title: "Real-Time Ride Booking App", icon: "🚖", status: "In Progress",
     desc: "Uber-like ride booking with live driver location via WebSockets, JWT-based auth, and real-time booking status flow between rider and driver.",
     tech: ["React", "Node.js", "MongoDB", "Socket.io", "JWT"],
-    color: "#f59e0b", github: "https://github.com/Rakshitsoni1410/Get-your-ride", live: "" },
-  { title: "Gold Weight Management", icon: "⚖️", status: "Live",
+    color: "#f59e0b", github: "https://github.com/Rakshitsoni1410/Get-your-ride", live: ""
+  },
+  {
+    title: "Gold Weight Management", icon: "⚖️", status: "Live",
     desc: "Professional tool for gold jewellers to track input/output weight, calculate karat-wise loss per job, and export structured PDF reports.",
     tech: ["React", "Spring Boot", "MySQL", "Tailwind CSS", "Axios"],
-    color: "#f97316", github: "https://github.com/Rakshitsoni1410/Weight-Management-Software", live: "https://weight-management-software.netlify.app" },
-  { title: "Jewellery E-Commerce", icon: "💍", status: "Live",
+    color: "#f97316", github: "https://github.com/Rakshitsoni1410/Weight-Management-Software", live: "https://weight-management-software.netlify.app"
+  },
+  {
+    title: "Jewellery E-Commerce", icon: "💍", status: "Live",
     desc: "Responsive e-commerce site for a family jewellery business with product catalog, admin upload panel, and PHP/MySQL backend.",
     tech: ["HTML", "Tailwind CSS", "JavaScript", "PHP", "MySQL"],
-    color: "#ec4899", github: "https://github.com/Rakshitsoni1410/gold-jewellery-websites", live: "https://rcsoni.netlify.app" },
-  { title: "Smart Khata Book", icon: "📒", status: "Completed",
+    color: "#ec4899", github: "https://github.com/Rakshitsoni1410/gold-jewellery-websites", live: "https://rcsoni.netlify.app"
+  },
+  {
+    title: "Smart Khata Book", icon: "📒", status: "Completed",
     desc: "Cross-platform Flutter mobile app for small businesses to manage credit/debit ledger entries with real-time balance calculation and offline-first local storage.",
     tech: ["Flutter", "Dart"],
-    color: "#22c55e", github: "https://github.com/Rakshitsoni1410/smartkhatabook", live: "https://smartkhatabooks.netlify.app/" },
-  { title: "Hospital Management System", icon: "🏥", status: "Completed",
+    color: "#22c55e", github: "https://github.com/Rakshitsoni1410/smartkhatabook", live: "https://smartkhatabooks.netlify.app/"
+  },
+  {
+    title: "Hospital Management System", icon: "🏥", status: "Completed",
     desc: "Web-based system for managing patient records, appointments, and hospital staff workflows using Django ORM and admin interface.",
     tech: ["Python", "Django", "HTML", "CSS", "SQLite"],
-    color: "#ef4444", github: "https://github.com/Rakshitsoni1410/hospital-in-django", live: "" },
+    color: "#ef4444", github: "https://github.com/Rakshitsoni1410/hospital-in-django", live: ""
+  },
 ];
 
 const TIMELINE = [
@@ -488,8 +510,10 @@ function FadeIn({ children, delay = 0, className = "" }) {
   const [ref, visible] = useFadeIn();
   return (
     <div ref={ref} className={className}
-      style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(28px)",
-        transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s` }}>
+      style={{
+        opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(28px)",
+        transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`
+      }}>
       {children}
     </div>
   );
@@ -763,11 +787,10 @@ export default function App() {
             <div className="hidden md:flex items-center gap-1">
               {NAV_LINKS.map((link) => (
                 <button key={link} onClick={() => scrollTo(link)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
-                    activeSection === link
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${activeSection === link
                       ? "bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400"
                       : "text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
-                  }`}>
+                    }`}>
                   {link}
                 </button>
               ))}
