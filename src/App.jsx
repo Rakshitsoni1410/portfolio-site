@@ -5,11 +5,11 @@ import {
   FaNodeJs, FaHtml5, FaCss3Alt, FaBootstrap, FaPhp, FaCode,
   FaBars, FaTimes, FaExternalLinkAlt, FaDownload, FaEnvelope,
   FaMapMarkerAlt, FaPhone, FaRocket, FaMobile, FaServer,
-  FaShieldAlt, FaClock, FaCheckCircle,
+  FaShieldAlt, FaClock, FaCheckCircle, FaTrophy, FaMedal, FaStar,
 } from "react-icons/fa";
 import {
   SiMongodb, SiMysql, SiSpringboot, SiTailwindcss,
-  SiFlutter, SiDjango, SiRedux, SiSocketdotio,
+  SiFlutter, SiDjango, SiRedux, SiSocketdotio, SiCoursera,
 } from "react-icons/si";
 
 /* ─── DATA ──────────────────────────────────────────────────── */
@@ -114,22 +114,111 @@ const TIMELINE = [
   { year: "Now", title: "Open to Work", sub: "Full-time · Internship · Freelance", desc: "357+ LeetCode problems. 7+ projects. Looking for opportunities to contribute real value.", color: "#f97316", icon: "🎯" },
 ];
 
+/* ─── UPDATED CERTS DATA ─────────────────────────────────────── */
 const CERTS = [
-  { name: "JavaScript (Intermediate)", icon: <FaJs />, color: "#f7df1e", link: "https://www.hackerrank.com/certificates/iframe/b04991b66fe0", platform: "HackerRank" },
-  { name: "Java (Basic)", icon: <FaJava />, color: "#f89820", link: "", platform: "HackerRank" },
-  { name: "Python (Basic)", icon: <FaPython />, color: "#3776ab", link: "", platform: "HackerRank" },
-  { name: "SQL (Basic & Intermediate)", icon: <FaDatabase />, color: "#4479a1", link: "", platform: "HackerRank" },
-  { name: "CSS (Basic)", icon: <FaCss3Alt />, color: "#1572b6", link: "", platform: "HackerRank" },
-  { name: "Problem Solving", icon: <FaCode />, color: "#22c55e", link: "", platform: "HackerRank" },
-  { name: "Bootstrap", icon: <FaBootstrap />, color: "#7952b3", link: "", platform: "HackerRank" },
-  { name: "HTML, CSS & JS", icon: <FaGlobe />, color: "#0056d3", link: "https://coursera.org/verify/QBZAL6TBSX8K", platform: "Coursera" },
+  {
+    name: "JavaScript (Intermediate)",
+    icon: <FaJs />,
+    color: "#f7df1e",
+    bgColor: "#78680010",
+    borderColor: "#f7df1e40",
+    link: "https://www.hackerrank.com/certificates/iframe/b04991b66fe0",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+  },
+  {
+    name: "Java (Basic)",
+    icon: <FaJava />,
+    color: "#f89820",
+    bgColor: "#f8982010",
+    borderColor: "#f8982040",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Certified",
+  },
+  {
+    name: "Python (Basic)",
+    icon: <FaPython />,
+    color: "#3776ab",
+    bgColor: "#3776ab10",
+    borderColor: "#3776ab40",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Certified",
+  },
+  {
+    name: "SQL (Basic & Intermediate)",
+    icon: <FaDatabase />,
+    color: "#4479a1",
+    bgColor: "#4479a110",
+    borderColor: "#4479a140",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Certified",
+  },
+  {
+    name: "CSS (Basic)",
+    icon: <FaCss3Alt />,
+    color: "#1572b6",
+    bgColor: "#1572b610",
+    borderColor: "#1572b640",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Certified",
+  },
+  {
+    name: "Problem Solving",
+    icon: <FaCode />,
+    color: "#22c55e",
+    bgColor: "#22c55e10",
+    borderColor: "#22c55e40",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Certified",
+  },
+  {
+    name: "Bootstrap",
+    icon: <FaBootstrap />,
+    color: "#7952b3",
+    bgColor: "#7952b310",
+    borderColor: "#7952b340",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Certified",
+  },
+  {
+    name: "HTML, CSS & JavaScript",
+    icon: <FaGlobe />,
+    color: "#0056d3",
+    bgColor: "#0056d310",
+    borderColor: "#0056d340",
+    link: "https://coursera.org/verify/QBZAL6TBSX8K",
+    platform: "Coursera",
+    platformColor: "#0056d3",
+    platformIcon: <SiCoursera />,
+    badge: "Verified",
+  },
 ];
 
 const SOCIAL = [
   { label: "GitHub", icon: <FaGithub />, url: "https://github.com/Rakshitsoni1410" },
   { label: "LinkedIn", icon: <FaLinkedin />, url: "https://www.linkedin.com/in/rakshitrsoni1410/" },
   { label: "LeetCode", icon: <FaCode />, url: "https://leetcode.com/u/rakshitsoni1410" },
-  { label: "HackerRank", icon: <FaHackerrank />, url: "https://www.hackerrank.com/rakshitsoni544" },
+  { label: "HackerRank", icon: <FaHackerrank />, url: "https://www.hackerrank.com/profile/rakshitsoni544" },
   { label: "GFG", icon: <FaGlobe />, url: "https://www.geeksforgeeks.org/user/rakshituya7/" },
 ];
 
@@ -532,9 +621,7 @@ function CategoryCard({ group, index }) {
   return (
     <FadeIn delay={index * 0.1}>
       <div className={`rounded-2xl border ${meta.accentBorder} ${meta.accentBg} overflow-hidden`}>
-        {/* Header row with illustration + info */}
         <div className="flex items-stretch">
-          {/* Illustration panel */}
           <div
             className="flex-shrink-0 w-32 sm:w-40 relative overflow-hidden"
             style={{ background: "linear-gradient(135deg, #0f172a, #1e293b)" }}
@@ -544,7 +631,6 @@ function CategoryCard({ group, index }) {
               <Illustration />
             </div>
           </div>
-          {/* Category info */}
           <div className="flex-1 p-5 flex flex-col justify-center">
             <div className="flex items-center gap-2 mb-1">
               <div className="h-2 w-2 rounded-full" style={{ background: meta.accent }} />
@@ -560,15 +646,81 @@ function CategoryCard({ group, index }) {
             </p>
           </div>
         </div>
-        {/* Gradient divider */}
         <div className={`h-px mx-5 bg-gradient-to-r ${meta.gradient} opacity-20`} />
-        {/* Skill pills */}
         <div className="p-5 pt-4 flex flex-wrap gap-2.5">
           {group.items.map((skill) => (
             <SkillPill key={skill.name} skill={skill} />
           ))}
         </div>
       </div>
+    </FadeIn>
+  );
+}
+
+/* ─── CERTIFICATE CARD (NEW DESIGN) ─────────────────────────── */
+function CertCard({ cert, index }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <FadeIn delay={index * 0.06}>
+      <a
+        href={cert.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        className="group relative flex flex-col bg-white dark:bg-gray-800 rounded-2xl border overflow-hidden transition-all duration-300 h-full"
+        style={{
+          borderColor: hovered ? cert.color + "80" : undefined,
+          boxShadow: hovered ? `0 8px 30px ${cert.color}20` : "none",
+          transform: hovered ? "translateY(-4px)" : "none",
+        }}
+      >
+        {/* Top accent bar */}
+        <div className="h-1 w-full" style={{ background: cert.color }} />
+
+        {/* Card body */}
+        <div className="p-5 flex flex-col flex-1">
+          {/* Icon + badge row */}
+          <div className="flex items-start justify-between mb-4">
+            <div
+              className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 transition-transform duration-200"
+              style={{
+                background: cert.color + "18",
+                color: cert.color,
+                transform: hovered ? "scale(1.1) rotate(-5deg)" : "scale(1)",
+              }}
+            >
+              {cert.icon}
+            </div>
+            <span
+              className="text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1"
+              style={{ background: cert.color + "18", color: cert.color }}
+            >
+              <FaCheckCircle size={8} />
+              {cert.badge}
+            </span>
+          </div>
+
+          {/* Cert name */}
+          <h3 className="text-sm font-bold text-gray-900 dark:text-white leading-snug mb-3 flex-1">
+            {cert.name}
+          </h3>
+
+          {/* Platform row */}
+          <div className="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700">
+            <div className="flex items-center gap-1.5">
+              <span style={{ color: cert.platformColor, fontSize: 13 }}>{cert.platformIcon}</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{cert.platform}</span>
+            </div>
+            <div
+              className="flex items-center gap-1 text-xs font-medium transition-colors duration-200"
+              style={{ color: hovered ? cert.color : "#94a3b8" }}
+            >
+              View <FaExternalLinkAlt size={8} />
+            </div>
+          </div>
+        </div>
+      </a>
     </FadeIn>
   );
 }
@@ -761,10 +913,9 @@ export default function App() {
           </div>
         </section>
 
-        {/* ── SKILLS (ENHANCED) ── */}
+        {/* ── SKILLS ── */}
         <section id="skills" className="bg-white dark:bg-gray-900 py-20">
           <div className="max-w-6xl mx-auto px-4">
-            {/* Section title */}
             <FadeIn className="mb-10">
               <div className="flex items-end gap-4 flex-wrap">
                 <div>
@@ -778,15 +929,11 @@ export default function App() {
                 </div>
               </div>
             </FadeIn>
-
-            {/* Category cards */}
             <div className="space-y-5">
               {SKILLS.map((group, i) => (
                 <CategoryCard key={group.cat} group={group} index={i} />
               ))}
             </div>
-
-            {/* Tech summary bar */}
             <FadeIn delay={0.4} className="mt-8">
               <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 p-px">
                 <div className="rounded-2xl bg-white dark:bg-gray-900 px-6 py-4 flex flex-wrap items-center justify-between gap-3">
@@ -963,7 +1110,7 @@ export default function App() {
               {[
                 { label: "GitHub", icon: <FaGithub />, url: "https://github.com/Rakshitsoni1410", cls: "border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300" },
                 { label: "LeetCode", icon: "🧠", url: "https://leetcode.com/u/rakshitsoni1410", cls: "border-yellow-300 dark:border-yellow-800 text-yellow-600 dark:text-yellow-400" },
-                { label: "HackerRank", icon: <FaHackerrank />, url: "https://www.hackerrank.com/rakshitsoni544", cls: "border-green-300 dark:border-green-800 text-green-600 dark:text-green-400" },
+                { label: "HackerRank", icon: <FaHackerrank />, url: "https://www.hackerrank.com/profile/rakshitsoni544", cls: "border-green-300 dark:border-green-800 text-green-600 dark:text-green-400" },
               ].map((p) => (
                 <a key={p.label} href={p.url} target="_blank" rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-medium hover:shadow-md transition ${p.cls}`}>
@@ -1049,28 +1196,82 @@ export default function App() {
           </div>
         </section>
 
-        {/* ── CERTIFICATIONS ── */}
+        {/* ── CERTIFICATIONS (REDESIGNED) ── */}
         <section id="certifications" className="bg-white dark:bg-gray-900 py-20">
           <div className="max-w-6xl mx-auto px-4">
-            <SectionTitle title="Certifications" />
+            {/* Section header */}
+            <FadeIn className="mb-10">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Certifications</h2>
+                  <p className="text-gray-400 text-sm mt-1">Verified credentials from HackerRank & Coursera</p>
+                  <div className="mt-3 h-1 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+                </div>
+                {/* Profile link pill */}
+                <a
+                  href="https://www.hackerrank.com/profile/rakshitsoni544"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#2ec866]/10 border border-[#2ec866]/30 text-[#2ec866] font-semibold text-sm hover:bg-[#2ec866]/20 transition-all self-start sm:self-auto"
+                >
+                  <FaHackerrank size={16} />
+                  View HackerRank Profile
+                  <FaExternalLinkAlt size={9} />
+                </a>
+              </div>
+            </FadeIn>
+
+            {/* Platform summary row */}
+            <FadeIn delay={0.05} className="mb-8">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center gap-4 bg-[#2ec866]/5 dark:bg-[#2ec866]/10 border border-[#2ec866]/20 rounded-2xl p-4">
+                  <div className="w-12 h-12 bg-[#2ec866]/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FaHackerrank size={24} className="text-[#2ec866]" />
+                  </div>
+                  <div>
+                    <div className="text-xl font-bold text-gray-900 dark:text-white">7</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">HackerRank Certificates</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 bg-[#0056d3]/5 dark:bg-[#0056d3]/10 border border-[#0056d3]/20 rounded-2xl p-4">
+                  <div className="w-12 h-12 bg-[#0056d3]/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <SiCoursera size={24} className="text-[#0056d3]" />
+                  </div>
+                  <div>
+                    <div className="text-xl font-bold text-gray-900 dark:text-white">1</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">Coursera Certificate</div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Cert cards grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
               {CERTS.map((cert, i) => (
-                <FadeIn key={i} delay={i * 0.05}>
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:shadow-md hover:-translate-y-0.5 transition-all text-center h-full flex flex-col items-center justify-center">
-                    <div className="text-3xl mb-3 flex justify-center" style={{ color: cert.color }}>{cert.icon}</div>
-                    {cert.link ? (
-                      <a href={cert.link} target="_blank" rel="noopener noreferrer"
-                        className="text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline leading-snug block mb-1">
-                        {cert.name} <FaExternalLinkAlt size={7} className="inline" />
-                      </a>
-                    ) : (
-                      <p className="text-xs font-medium text-gray-700 dark:text-gray-300 leading-snug mb-1">{cert.name}</p>
-                    )}
-                    <span className="text-xs text-gray-400">{cert.platform}</span>
-                  </div>
-                </FadeIn>
+                <CertCard key={i} cert={cert} index={i} />
               ))}
             </div>
+
+            {/* Bottom CTA */}
+            <FadeIn delay={0.4} className="mt-8">
+              <div className="rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gray-50/50 dark:bg-gray-800/30">
+                <div className="flex items-center gap-3">
+                  <FaTrophy className="text-yellow-500" size={20} />
+                  <div>
+                    <div className="text-sm font-semibold text-gray-900 dark:text-white">Want to verify any certificate?</div>
+                    <div className="text-xs text-gray-400">All certifications are verifiable on their respective platforms.</div>
+                  </div>
+                </div>
+                <a
+                  href="https://www.hackerrank.com/profile/rakshitsoni544"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2ec866] hover:bg-[#25b057] text-white rounded-xl text-sm font-semibold transition-all active:scale-95 whitespace-nowrap flex-shrink-0"
+                >
+                  <FaHackerrank size={13} /> HackerRank Profile
+                </a>
+              </div>
+            </FadeIn>
           </div>
         </section>
 
