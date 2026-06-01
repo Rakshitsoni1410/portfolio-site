@@ -99,7 +99,7 @@ const PROJECTS = [
     title: "Real-Time Ride Booking App", icon: "🚖", status: "Completed",
     desc: "Uber-like ride booking with live driver location via WebSockets, JWT-based auth, and real-time booking status flow between rider and driver.",
     tech: ["React", "Node.js", "MongoDB", "Socket.io", "JWT"],
-    color: "#f59e0b", github: "https://github.com/Rakshitsoni1410/Get-your-ride", live: ""
+    color: "#f59e0b", github: "https://github.com/Rakshitsoni1410/Get-your-ride", live: "https://get-your-rides.netlify.app/"
   },
   {
     title: "Gold Weight Management", icon: "⚖️", status: "Live",
