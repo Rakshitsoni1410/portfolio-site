@@ -29,7 +29,8 @@ const MARQUEE_ITEMS = [
   "⭐ Contest Rating 1416",
   "🔥 115-Day Streak",
   "📦 1,009+ GitHub Contributions",
-  "🚀 7+ Projects Shipped",
+  "🚀 8+ Projects Shipped",  // change 7 to 8
+  "💸 Bill Splitter — Java + React",  // add this
   "💻 MERN Stack Expert",
   "☕ Java Spring Boot",
   "📱 Flutter Mobile Dev",
@@ -83,6 +84,14 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
+   {
+    title: "Bill Splitter — Full Stack App", icon: "💸", status: "Live",
+    desc: "Production-grade bill splitting app with JWT auth, group expense tracking, equal/percentage/exact split logic, UPI-style payment simulation with wallet system, activity feed, and budget management. Built with Java Spring Boot + React.js.",
+    tech: ["Java", "Spring Boot", "React.js", "MySQL", "JWT", "Socket.io", "Vite"],
+    color: "#6c63ff", 
+    github: "https://github.com/Rakshitsoni1410/bill-splitter-api", 
+    live: ""
+  },
   {
     title: "AI Chatbot Support System", icon: "🤖", status: "Completed",
     desc: "Full-stack AI chatbot with JWT auth, role-based access control, Spring Security REST APIs, and real-time chat UI. Built for Gemini/OpenAI API integration.",
@@ -921,7 +930,7 @@ export default function App() {
             </FadeIn>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { num: 7, suffix: "+", label: "Projects Shipped", color: "#0ea5e9" },
+                { num: 8, suffix: "+", label: "Projects Shipped", color: "#0ea5e9" },
                 { num: 357, suffix: "+", label: "LeetCode Problems", color: "#f59e0b" },
                 { num: 115, suffix: " days", label: "Max LeetCode Streak", color: "#22c55e" },
                 { num: 1416, suffix: "", label: "Contest Rating", color: "#8b5cf6" },
