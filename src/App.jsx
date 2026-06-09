@@ -175,7 +175,7 @@ const PROJECTS = [
       "Vite",
     ],
     color: "#6c63ff",
-    github: "https://github.com/Rakshitsoni1410/bill-splitter-api",
+    github: "https://github.com/Rakshitsoni1410/bill-splitter",
     live: "",
     preview: "billsplitter",
   },
