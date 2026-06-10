@@ -87,16 +87,18 @@ const SKILLS = [
     items: [
       { name: "React.js", icon: <FaReact />, color: "#61dafb" },
       { name: "JavaScript", icon: <FaJs />, color: "#f7df1e" },
-      { name: "Redux", icon: <SiRedux />, color: "#764abc" },
+      { name: "Redux Toolkit", icon: <SiRedux />, color: "#764abc" },
       { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06b6d4" },
       { name: "HTML5", icon: <FaHtml5 />, color: "#e34f26" },
       { name: "CSS3", icon: <FaCss3Alt />, color: "#1572b6" },
+      { name: "Bootstrap", icon: <FaBootstrap />, color: "#7952b3" },
     ],
   },
   {
     cat: "Backend",
     items: [
       { name: "Node.js", icon: <FaNodeJs />, color: "#68a063" },
+      { name: "Express.js", icon: <FaServer />, color: "#888888" },
       { name: "Spring Boot", icon: <SiSpringboot />, color: "#6db33f" },
       { name: "Java", icon: <FaJava />, color: "#f89820" },
       { name: "Python", icon: <FaPython />, color: "#3776ab" },
@@ -111,11 +113,17 @@ const SKILLS = [
       { name: "MySQL", icon: <SiMysql />, color: "#4479a1" },
       { name: "Socket.io", icon: <SiSocketdotio />, color: "#888" },
       { name: "GitHub", icon: <FaGithub />, color: "#6e7681" },
+      { name: "JWT Auth", icon: <FaShieldAlt />, color: "#e535ab" },
+      { name: "REST APIs", icon: <FaServer />, color: "#0ea5e9" },
+      { name: "Git", icon: <FaCode />, color: "#f05032" },
     ],
   },
   {
     cat: "Mobile",
-    items: [{ name: "Flutter", icon: <SiFlutter />, color: "#02569b" }],
+    items: [
+      { name: "Flutter", icon: <SiFlutter />, color: "#02569b" },
+      { name: "Dart", icon: <FaCode />, color: "#0175c2" },
+    ],
   },
 ];
 
@@ -1120,7 +1128,6 @@ const SOCIAL = [
 ];
 
 /* ─── SKILL ILLUSTRATIONS ────────────────────────────────────── */
-
 function FrontendIllustration() {
   return (
     <svg
@@ -1129,127 +1136,70 @@ function FrontendIllustration() {
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full"
     >
-      <rect x="8" y="10" width="104" height="62" rx="6" fill="#1e293b" />
-      <rect x="8" y="10" width="104" height="18" rx="6" fill="#334155" />
-      <rect x="8" y="22" width="104" height="6" fill="#334155" />
-      <circle cx="20" cy="19" r="3" fill="#ef4444" />
-      <circle cx="30" cy="19" r="3" fill="#f59e0b" />
-      <circle cx="40" cy="19" r="3" fill="#22c55e" />
-      <rect x="50" y="14" width="50" height="10" rx="5" fill="#475569" />
-      <rect
-        x="54"
-        y="17"
-        width="30"
-        height="4"
-        rx="2"
-        fill="#61dafb"
+      {/* Browser window */}
+      <rect x="6" y="8" width="108" height="64" rx="7" fill="#0f172a" />
+      <rect x="6" y="8" width="108" height="20" rx="7" fill="#1e293b" />
+      <rect x="6" y="20" width="108" height="8" fill="#1e293b" />
+      {/* Traffic lights */}
+      <circle cx="17" cy="18" r="3.5" fill="#ef4444" />
+      <circle cx="27" cy="18" r="3.5" fill="#f59e0b" />
+      <circle cx="37" cy="18" r="3.5" fill="#22c55e" />
+      {/* URL bar */}
+      <rect x="46" y="13" width="56" height="10" rx="5" fill="#334155" />
+      <circle cx="51" cy="18" r="2.5" fill="#64748b" />
+      <rect x="56" y="16" width="30" height="4" rx="2" fill="#475569" />
+      {/* Code lines */}
+      <rect x="14" y="34" width="22" height="3" rx="1.5" fill="#f97316" />
+      <rect x="40" y="34" width="30" height="3" rx="1.5" fill="#61dafb" />
+      <rect x="74" y="34" width="14" height="3" rx="1.5" fill="#f97316" />
+      <rect x="18" y="41" width="35" height="3" rx="1.5" fill="#a78bfa" />
+      <rect x="57" y="41" width="20" height="3" rx="1.5" fill="#34d399" />
+      <rect x="14" y="48" width="15" height="3" rx="1.5" fill="#f97316" />
+      <rect x="33" y="48" width="45" height="3" rx="1.5" fill="#fbbf24" />
+      <rect x="14" y="55" width="28" height="3" rx="1.5" fill="#61dafb" />
+      <rect x="46" y="55" width="22" height="3" rx="1.5" fill="#a78bfa" />
+      {/* React logo small */}
+      <circle
+        cx="98"
+        cy="52"
+        r="6"
+        fill="none"
+        stroke="#61dafb"
+        strokeWidth="1.2"
+      />
+      <ellipse
+        cx="98"
+        cy="52"
+        rx="10"
+        ry="4"
+        fill="none"
+        stroke="#61dafb"
+        strokeWidth="0.8"
         opacity="0.6"
       />
-      <circle
-        cx="60"
-        cy="55"
-        r="8"
+      <ellipse
+        cx="98"
+        cy="52"
+        rx="10"
+        ry="4"
         fill="none"
         stroke="#61dafb"
-        strokeWidth="1.5"
+        strokeWidth="0.8"
+        opacity="0.6"
+        transform="rotate(60 98 52)"
       />
       <ellipse
-        cx="60"
-        cy="55"
-        rx="16"
-        ry="6"
+        cx="98"
+        cy="52"
+        rx="10"
+        ry="4"
         fill="none"
         stroke="#61dafb"
-        strokeWidth="1"
-        opacity="0.7"
-        transform="rotate(0 60 55)"
+        strokeWidth="0.8"
+        opacity="0.6"
+        transform="rotate(120 98 52)"
       />
-      <ellipse
-        cx="60"
-        cy="55"
-        rx="16"
-        ry="6"
-        fill="none"
-        stroke="#61dafb"
-        strokeWidth="1"
-        opacity="0.7"
-        transform="rotate(60 60 55)"
-      />
-      <ellipse
-        cx="60"
-        cy="55"
-        rx="16"
-        ry="6"
-        fill="none"
-        stroke="#61dafb"
-        strokeWidth="1"
-        opacity="0.7"
-        transform="rotate(120 60 55)"
-      />
-      <circle cx="60" cy="55" r="2.5" fill="#61dafb" />
-      <rect
-        x="14"
-        y="34"
-        width="20"
-        height="2.5"
-        rx="1.2"
-        fill="#f7df1e"
-        opacity="0.8"
-      />
-      <rect
-        x="14"
-        y="39"
-        width="30"
-        height="2.5"
-        rx="1.2"
-        fill="#e34f26"
-        opacity="0.7"
-      />
-      <rect
-        x="14"
-        y="44"
-        width="24"
-        height="2.5"
-        rx="1.2"
-        fill="#1572b6"
-        opacity="0.7"
-      />
-      <rect
-        x="14"
-        y="49"
-        width="18"
-        height="2.5"
-        rx="1.2"
-        fill="#8b5cf6"
-        opacity="0.7"
-      />
-      <rect
-        x="88"
-        y="34"
-        width="16"
-        height="2.5"
-        rx="1.2"
-        fill="#64748b"
-        opacity="0.5"
-      />
-      <rect
-        x="88"
-        y="39"
-        width="12"
-        height="2.5"
-        rx="1.2"
-        fill="#64748b"
-        opacity="0.5"
-      />
-      <rect
-        x="88"
-        y="44"
-        width="18"
-        height="2.5"
-        rx="1.2"
-        fill="#64748b"
-        opacity="0.5"
-      />
+      <circle cx="98" cy="52" r="2" fill="#61dafb" />
     </svg>
   );
 }
@@ -1262,62 +1212,123 @@ function BackendIllustration() {
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full"
     >
+      {/* Server racks */}
       <rect
-        x="30"
+        x="10"
         y="8"
-        width="60"
-        height="14"
-        rx="3"
+        width="100"
+        height="16"
+        rx="4"
         fill="#1e293b"
         stroke="#334155"
         strokeWidth="1"
       />
+      <circle cx="20" cy="16" r="3" fill="#22c55e" />
+      <rect x="28" y="13" width="40" height="6" rx="3" fill="#334155" />
+      <rect x="72" y="13" width="8" height="6" rx="2" fill="#475569" />
+      <rect x="84" y="13" width="8" height="6" rx="2" fill="#475569" />
       <rect
-        x="30"
-        y="25"
-        width="60"
-        height="14"
-        rx="3"
-        fill="#1e293b"
-        stroke="#334155"
-        strokeWidth="1"
+        x="96"
+        y="14"
+        width="6"
+        height="4"
+        rx="1"
+        fill="#22c55e"
+        opacity="0.7"
       />
+
       <rect
-        x="30"
-        y="42"
-        width="60"
-        height="14"
-        rx="3"
+        x="10"
+        y="28"
+        width="100"
+        height="16"
+        rx="4"
         fill="#1e293b"
         stroke="#334155"
         strokeWidth="1"
       />
-      <circle cx="38" cy="15" r="2.5" fill="#22c55e" />
-      <rect x="44" y="12" width="32" height="2" rx="1" fill="#334155" />
-      <rect x="44" y="16" width="20" height="2" rx="1" fill="#334155" />
-      <rect x="80" y="12" width="4" height="6" rx="1" fill="#475569" />
-      <circle cx="38" cy="32" r="2.5" fill="#f59e0b" />
-      <rect x="44" y="29" width="32" height="2" rx="1" fill="#334155" />
-      <rect x="44" y="33" width="24" height="2" rx="1" fill="#334155" />
-      <rect x="80" y="29" width="4" height="6" rx="1" fill="#475569" />
-      <circle cx="38" cy="49" r="2.5" fill="#6db33f" />
-      <rect x="44" y="46" width="32" height="2" rx="1" fill="#334155" />
-      <rect x="44" y="50" width="18" height="2" rx="1" fill="#334155" />
-      <rect x="80" y="46" width="4" height="6" rx="1" fill="#475569" />
+      <circle cx="20" cy="36" r="3" fill="#f59e0b" />
+      <rect x="28" y="33" width="40" height="6" rx="3" fill="#334155" />
+      <rect x="72" y="33" width="8" height="6" rx="2" fill="#475569" />
+      <rect x="84" y="33" width="8" height="6" rx="2" fill="#475569" />
+      <rect
+        x="96"
+        y="34"
+        width="6"
+        height="4"
+        rx="1"
+        fill="#f59e0b"
+        opacity="0.7"
+      />
+
+      <rect
+        x="10"
+        y="48"
+        width="100"
+        height="16"
+        rx="4"
+        fill="#1e293b"
+        stroke="#334155"
+        strokeWidth="1"
+      />
+      <circle cx="20" cy="56" r="3" fill="#6db33f" />
+      <rect x="28" y="53" width="40" height="6" rx="3" fill="#334155" />
+      <rect x="72" y="53" width="8" height="6" rx="2" fill="#475569" />
+      <rect x="84" y="53" width="8" height="6" rx="2" fill="#475569" />
+      <rect
+        x="96"
+        y="54"
+        width="6"
+        height="4"
+        rx="1"
+        fill="#6db33f"
+        opacity="0.7"
+      />
+
+      {/* Connection lines */}
       <line
         x1="60"
-        y1="56"
+        y1="24"
         x2="60"
-        y2="70"
-        stroke="#6db33f"
+        y2="28"
+        stroke="#334155"
         strokeWidth="1.5"
-        strokeDasharray="3 2"
+        strokeDasharray="2 1"
       />
-      <circle cx="60" cy="72" r="4" fill="#6db33f" opacity="0.9" />
-      <circle cx="42" cy="72" r="4" fill="#68a063" opacity="0.9" />
-      <circle cx="78" cy="72" r="4" fill="#f89820" opacity="0.9" />
-      <line x1="42" y1="72" x2="56" y2="72" stroke="#475569" strokeWidth="1" />
-      <line x1="64" y1="72" x2="78" y2="72" stroke="#475569" strokeWidth="1" />
+      <line
+        x1="60"
+        y1="44"
+        x2="60"
+        y2="48"
+        stroke="#334155"
+        strokeWidth="1.5"
+        strokeDasharray="2 1"
+      />
+
+      {/* Node.js badge */}
+      <rect x="10" y="68" width="28" height="8" rx="4" fill="#68a06322" />
+      <text
+        x="14"
+        y="74"
+        fontSize="5"
+        fill="#68a063"
+        fontFamily="monospace"
+        fontWeight="bold"
+      >
+        Node.js
+      </text>
+      {/* Spring badge */}
+      <rect x="42" y="68" width="36" height="8" rx="4" fill="#6db33f22" />
+      <text
+        x="46"
+        y="74"
+        fontSize="5"
+        fill="#6db33f"
+        fontFamily="monospace"
+        fontWeight="bold"
+      >
+        Spring Boot
+      </text>
     </svg>
   );
 }
@@ -1330,92 +1341,114 @@ function DatabaseIllustration() {
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full"
     >
-      <ellipse cx="38" cy="18" rx="16" ry="5" fill="#47a248" opacity="0.9" />
-      <rect x="22" y="18" width="32" height="22" fill="#2d6a2e" />
-      <ellipse cx="38" cy="40" rx="16" ry="5" fill="#47a248" />
-      <ellipse cx="38" cy="18" rx="16" ry="5" fill="#5cba5c" />
-      <path d="M38 22 Q41 28 38 36 Q35 28 38 22Z" fill="#47a248" />
-      <ellipse cx="82" cy="18" rx="16" ry="5" fill="#4479a1" opacity="0.9" />
-      <rect x="66" y="18" width="32" height="22" fill="#2a4d6e" />
-      <ellipse cx="82" cy="40" rx="16" ry="5" fill="#4479a1" />
-      <ellipse cx="82" cy="18" rx="16" ry="5" fill="#5a8fc0" />
-      <path
-        d="M76 28 Q82 24 88 28 Q82 32 76 28Z"
-        fill="#4479a1"
-        opacity="0.6"
-      />
-      <path
-        d="M54 32 L66 32"
+      {/* MongoDB cylinder */}
+      <ellipse cx="35" cy="16" rx="18" ry="6" fill="#47a248" />
+      <rect x="17" y="16" width="36" height="28" fill="#2d6a2e" />
+      <ellipse cx="35" cy="44" rx="18" ry="6" fill="#47a248" />
+      <ellipse cx="35" cy="16" rx="18" ry="6" fill="#5cba5c" />
+      {/* MongoDB shine */}
+      <ellipse cx="28" cy="13" rx="5" ry="2" fill="white" opacity="0.15" />
+      {/* MongoDB label */}
+      <text
+        x="22"
+        y="32"
+        fontSize="5.5"
+        fill="white"
+        fontFamily="monospace"
+        fontWeight="bold"
+      >
+        Mongo
+      </text>
+
+      {/* MySQL cylinder */}
+      <ellipse cx="85" cy="16" rx="18" ry="6" fill="#4479a1" />
+      <rect x="67" y="16" width="36" height="28" fill="#2a4d6e" />
+      <ellipse cx="85" cy="44" rx="18" ry="6" fill="#4479a1" />
+      <ellipse cx="85" cy="16" rx="18" ry="6" fill="#5a8fc0" />
+      {/* MySQL shine */}
+      <ellipse cx="78" cy="13" rx="5" ry="2" fill="white" opacity="0.15" />
+      {/* MySQL label */}
+      <text
+        x="74"
+        y="32"
+        fontSize="5.5"
+        fill="white"
+        fontFamily="monospace"
+        fontWeight="bold"
+      >
+        MySQL
+      </text>
+
+      {/* Connection arrow */}
+      <line
+        x1="53"
+        y1="30"
+        x2="67"
+        y2="30"
         stroke="#64748b"
         strokeWidth="1.5"
-        markerEnd="url(#arr)"
       />
+      <polygon points="65,27 69,30 65,33" fill="#64748b" />
+
+      {/* Tools row */}
       <rect
-        x="18"
-        y="52"
-        width="40"
-        height="3"
-        rx="1.5"
-        fill="#47a248"
-        opacity="0.5"
+        x="8"
+        y="56"
+        width="24"
+        height="16"
+        rx="4"
+        fill="#010101"
+        stroke="#333"
+        strokeWidth="0.5"
       />
+      <text x="12" y="66" fontSize="5" fill="#888" fontFamily="monospace">
+        Socket
+      </text>
+      <text x="14" y="72" fontSize="4.5" fill="#888" fontFamily="monospace">
+        .io
+      </text>
+
       <rect
-        x="18"
-        y="58"
+        x="36"
+        y="56"
+        width="22"
+        height="16"
+        rx="4"
+        fill="#181717"
+        stroke="#333"
+        strokeWidth="0.5"
+      />
+      <text x="39" y="67" fontSize="5" fill="#6e7681" fontFamily="monospace">
+        GitHub
+      </text>
+
+      <rect
+        x="62"
+        y="56"
+        width="18"
+        height="16"
+        rx="4"
+        fill="#000000"
+        stroke="#333"
+        strokeWidth="0.5"
+      />
+      <text x="65" y="67" fontSize="5" fill="#e535ab" fontFamily="monospace">
+        JWT
+      </text>
+
+      <rect
+        x="84"
+        y="56"
         width="28"
-        height="3"
-        rx="1.5"
-        fill="#22c55e"
-        opacity="0.4"
+        height="16"
+        rx="4"
+        fill="#0f1b2d"
+        stroke="#333"
+        strokeWidth="0.5"
       />
-      <rect
-        x="18"
-        y="64"
-        width="34"
-        height="3"
-        rx="1.5"
-        fill="#47a248"
-        opacity="0.3"
-      />
-      <rect
-        x="62"
-        y="52"
-        width="40"
-        height="3"
-        rx="1.5"
-        fill="#4479a1"
-        opacity="0.5"
-      />
-      <rect
-        x="62"
-        y="58"
-        width="28"
-        height="3"
-        rx="1.5"
-        fill="#5a8fc0"
-        opacity="0.4"
-      />
-      <rect
-        x="62"
-        y="64"
-        width="34"
-        height="3"
-        rx="1.5"
-        fill="#4479a1"
-        opacity="0.3"
-      />
-      <defs>
-        <marker
-          id="arr"
-          markerWidth="6"
-          markerHeight="6"
-          refX="3"
-          refY="3"
-          orient="auto"
-        >
-          <path d="M0 0 L6 3 L0 6Z" fill="#64748b" />
-        </marker>
-      </defs>
+      <text x="86" y="67" fontSize="5" fill="#f05032" fontFamily="monospace">
+        Git
+      </text>
     </svg>
   );
 }
@@ -1428,92 +1461,78 @@ function MobileIllustration() {
       xmlns="http://www.w3.org/2000/svg"
       className="w-full h-full"
     >
-      <rect x="38" y="6" width="44" height="68" rx="8" fill="#1e293b" />
+      {/* Phone frame */}
       <rect
-        x="38"
-        y="6"
-        width="44"
-        height="68"
-        rx="8"
+        x="35"
+        y="4"
+        width="50"
+        height="72"
+        rx="10"
+        fill="#1e293b"
         stroke="#334155"
         strokeWidth="1.5"
       />
-      <rect x="42" y="14" width="36" height="52" rx="4" fill="#0f172a" />
-      <rect x="52" y="10" width="16" height="4" rx="2" fill="#0f172a" />
-      <rect x="42" y="14" width="36" height="10" rx="4" fill="#02569b" />
-      <rect x="42" y="20" width="36" height="4" fill="#02569b" />
-      <rect
+      {/* Screen */}
+      <rect x="39" y="12" width="42" height="56" rx="4" fill="#0f172a" />
+      {/* Notch */}
+      <rect x="50" y="6" width="20" height="5" rx="2.5" fill="#0f172a" />
+      {/* Flutter header */}
+      <rect x="39" y="12" width="42" height="14" rx="4" fill="#02569b" />
+      <rect x="39" y="18" width="42" height="8" fill="#02569b" />
+      <text
         x="45"
-        y="16"
-        width="20"
-        height="3"
-        rx="1.5"
+        y="21"
+        fontSize="6"
+        fill="white"
+        fontFamily="monospace"
+        fontWeight="bold"
+      >
+        Flutter App
+      </text>
+      {/* App content */}
+      <rect x="43" y="30" width="34" height="8" rx="3" fill="#1e293b" />
+      <rect x="46" y="33" width="14" height="2.5" rx="1.5" fill="#54c5f8" />
+      <rect x="46" y="37" width="20" height="2" rx="1" fill="#334155" />
+      <rect x="43" y="42" width="16" height="16" rx="3" fill="#1e293b" />
+      <rect x="62" y="42" width="15" height="16" rx="3" fill="#1e293b" />
+      <text x="46" y="52" fontSize="8">
+        📱
+      </text>
+      <text x="64" y="52" fontSize="8">
+        ⚡
+      </text>
+      <rect x="43" y="62" width="34" height="4" rx="2" fill="#02569b" />
+      <text x="50" y="65.5" fontSize="4.5" fill="white" fontFamily="monospace">
+        Cross Platform
+      </text>
+      {/* Side buttons */}
+      <rect x="33" y="20" width="3" height="8" rx="1.5" fill="#334155" />
+      <rect x="33" y="30" width="3" height="8" rx="1.5" fill="#334155" />
+      <rect x="84" y="22" width="3" height="12" rx="1.5" fill="#334155" />
+      {/* Dart badge */}
+      <rect x="8" y="30" width="22" height="10" rx="5" fill="#0175c222" />
+      <text
+        x="11"
+        y="37"
+        fontSize="5.5"
+        fill="#0175c2"
+        fontFamily="monospace"
+        fontWeight="bold"
+      >
+        Dart
+      </text>
+      {/* Flutter badge */}
+      <rect x="90" y="30" width="24" height="10" rx="5" fill="#02569b22" />
+      <text
+        x="93"
+        y="37"
+        fontSize="5.5"
         fill="#54c5f8"
-        opacity="0.9"
-      />
-      <rect
-        x="44"
-        y="27"
-        width="32"
-        height="11"
-        rx="2"
-        fill="#1e293b"
-        stroke="#334155"
-        strokeWidth="0.5"
-      />
-      <circle cx="50" cy="32.5" r="3" fill="#02569b" opacity="0.8" />
-      <rect
-        x="55"
-        y="30"
-        width="16"
-        height="2"
-        rx="1"
-        fill="#54c5f8"
-        opacity="0.7"
-      />
-      <rect
-        x="55"
-        y="34"
-        width="10"
-        height="2"
-        rx="1"
-        fill="#64748b"
-        opacity="0.6"
-      />
-      <rect
-        x="44"
-        y="41"
-        width="32"
-        height="11"
-        rx="2"
-        fill="#1e293b"
-        stroke="#334155"
-        strokeWidth="0.5"
-      />
-      <circle cx="50" cy="46.5" r="3" fill="#0ea5e9" opacity="0.8" />
-      <rect
-        x="55"
-        y="44"
-        width="18"
-        height="2"
-        rx="1"
-        fill="#54c5f8"
-        opacity="0.7"
-      />
-      <rect
-        x="55"
-        y="48"
-        width="12"
-        height="2"
-        rx="1"
-        fill="#64748b"
-        opacity="0.6"
-      />
-      <rect x="42" y="56" width="36" height="10" rx="2" fill="#1e293b" />
-      <circle cx="54" cy="61" r="2.5" fill="#02569b" />
-      <circle cx="60" cy="61" r="2.5" fill="#475569" />
-      <circle cx="66" cy="61" r="2.5" fill="#475569" />
-      <rect x="52" y="72" width="16" height="2.5" rx="1.25" fill="#334155" />
+        fontFamily="monospace"
+        fontWeight="bold"
+      >
+        Flutter
+      </text>
     </svg>
   );
 }
@@ -1912,26 +1931,32 @@ function SkillPill({ skill }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white dark:bg-gray-800/80 border border-gray-100 dark:border-gray-700 cursor-default select-none transition-all duration-200"
+      className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl cursor-default select-none transition-all duration-200"
       style={{
-        boxShadow: hovered ? `0 4px 20px ${skill.color}30` : "none",
-        borderColor: hovered ? skill.color + "60" : undefined,
-        transform: hovered ? "translateY(-2px)" : "none",
+        background: hovered ? skill.color + "25" : skill.color + "12",
+        border: `1.5px solid ${hovered ? skill.color + "90" : skill.color + "40"}`,
+        transform: hovered ? "translateY(-3px)" : "none",
+        boxShadow: hovered ? `0 6px 20px ${skill.color}35` : "none",
       }}
     >
       <span
-        className="text-lg flex-shrink-0"
         style={{
           color: skill.color,
-          transform: hovered ? "scale(1.25) rotate(-6deg)" : "scale(1)",
-          filter: hovered ? `drop-shadow(0 0 6px ${skill.color}80)` : "none",
-          transition: "transform 0.2s, filter 0.2s",
+          fontSize: "1.1rem",
           display: "inline-block",
+          transform: hovered ? "scale(1.25) rotate(-8deg)" : "scale(1)",
+          filter: hovered ? `drop-shadow(0 0 6px ${skill.color}80)` : "none",
+          transition: "all 0.2s ease",
         }}
       >
         {skill.icon}
       </span>
-      <span className="text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
+      <span
+        className="text-sm font-semibold whitespace-nowrap"
+        style={{
+          color: hovered ? skill.color : "inherit",
+        }}
+      >
         {skill.name}
       </span>
     </div>
@@ -1986,7 +2011,7 @@ function CategoryCard({ group, index }) {
         <div
           className={`h-px mx-5 bg-gradient-to-r ${meta.gradient} opacity-20`}
         />
-        <div className="p-5 pt-4 flex flex-wrap gap-2.5">
+        <div className="p-5 pt-4 flex flex-wrap gap-3">
           {group.items.map((skill) => (
             <SkillPill key={skill.name} skill={skill} />
           ))}
