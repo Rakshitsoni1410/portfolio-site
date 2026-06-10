@@ -116,15 +116,17 @@ const SKILLS = [
       { name: "JWT Auth", icon: <FaShieldAlt />, color: "#e535ab" },
       { name: "REST APIs", icon: <FaServer />, color: "#0ea5e9" },
       { name: "Git", icon: <FaCode />, color: "#f05032" },
+      { name: "Socket.io", icon: <SiSocketdotio />, color: "#010101" },
     ],
   },
-  {
-    cat: "Mobile",
-    items: [
-      { name: "Flutter", icon: <SiFlutter />, color: "#02569b" },
-      { name: "Dart", icon: <FaCode />, color: "#0175c2" },
-    ],
-  },
+{
+  cat: "Mobile", items: [
+    { name: "Flutter", icon: <SiFlutter />, color: "#02569b" },
+    { name: "Dart", icon: <FaCode />, color: "#0175c2" },
+    { name: "REST APIs", icon: <FaServer />, color: "#0ea5e9" },
+    { name: "Firebase", icon: <FaDatabase />, color: "#ffca28" },
+  ]
+},
 ];
 
 const SERVICES = [
@@ -993,7 +995,7 @@ const TIMELINE = [
     year: "Now",
     title: "Open to Work",
     sub: "Full-time · Internship · Freelance",
-    desc: "357+ LeetCode problems. 7+ projects. Looking for opportunities to contribute real value.",
+    desc: "357+ LeetCode problems. 8+ projects. Looking for opportunities to contribute real value.",
     color: "#f97316",
     icon: "🎯",
   },
@@ -2210,7 +2212,7 @@ export default function App() {
               </FadeIn>
               <FadeIn delay={0.1}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight mb-3">
-                  Rakshit
+                  Rakshit R 
                   <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                     Soni
@@ -2231,7 +2233,7 @@ export default function App() {
                   <strong className="text-gray-700 dark:text-gray-300">
                     MERN, Java Spring Boot & Flutter
                   </strong>
-                  . 7+ projects shipped. 357+ LeetCode problems solved. BCA
+                  . 8+ projects shipped. 357+ LeetCode problems solved. BCA
                   graduate, MCA pursuing.
                 </p>
               </FadeIn>
@@ -2313,7 +2315,7 @@ export default function App() {
                 <strong className="text-gray-900 dark:text-white">
                   MERN stack, Java/Spring Boot
                 </strong>{" "}
-                backend systems, and real-time applications. I've shipped 7+
+                backend systems, and real-time applications. I've shipped 8+
                 projects across e-commerce, healthcare, education, and fintech
                 domains.
               </p>
@@ -2434,7 +2436,7 @@ export default function App() {
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {["MERN", "Spring Boot", "Flutter", "DSA"].map((tag) => (
+                    {["MERN", "Spring Boot", "Flutter", "DSA", "AI/ML", "Docker"].map((tag) => (
                       <span
                         key={tag}
                         className="text-xs px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-medium border border-blue-100 dark:border-blue-800"
