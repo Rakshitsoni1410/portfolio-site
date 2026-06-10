@@ -186,7 +186,7 @@ const PROJECTS = [
     ],
     color: "#6c63ff",
     github: "https://github.com/Rakshitsoni1410/bill-splitter",
-    live: "",
+    live: "https://bills-splitters-wise.netlify.app/",
     preview: "billsplitter",
   },
   {
