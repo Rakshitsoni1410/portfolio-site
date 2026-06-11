@@ -991,14 +991,22 @@ const TIMELINE = [
     color: "#ec4899",
     icon: "🏫",
   },
+ {
+  year: "Now",
+  title: "Open to Work",
+  sub: "Full-time · Internship · Freelance",
+  desc: "357+ LeetCode problems. 8+ projects including full-stack Java Spring Boot apps. Looking for opportunities to contribute real value.",
+  color: "#f97316",
+  icon: "🎯",
+},
   {
-    year: "Now",
-    title: "Open to Work",
-    sub: "Full-time · Internship · Freelance",
-    desc: "357+ LeetCode problems. 8+ projects. Looking for opportunities to contribute real value.",
-    color: "#f97316",
-    icon: "🎯",
-  },
+  year: "2025",
+  title: "Bill Splitter — Full Stack",
+  sub: "Java · Spring Boot · React.js · MySQL",
+  desc: "Built production-grade bill splitting app with JWT auth, UPI-style wallet payments, activity feed, and budget management. First complete Java + React project.",
+  color: "#6c63ff",
+  icon: "💸",
+},
 ];
 
 /* ─── UPDATED CERTS DATA ─────────────────────────────────────── */
