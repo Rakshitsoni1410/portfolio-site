@@ -202,25 +202,7 @@ const PROJECTS = [
     live: "https://bills-software.netlify.app",
     preview: "billkaro",
   },
-  {
-    title: "AI Chatbot Support System",
-    subtitle: "Spring Boot · JWT Auth",
-    icon: "🤖",
-    status: "Completed",
-    desc: "Full-stack AI chatbot with JWT auth, role-based access control, Spring Security REST APIs, and real-time chat UI. Built for Gemini/OpenAI API integration.",
-    tech: [
-      "Java",
-      "Spring Boot",
-      "React.js",
-      "MySQL",
-      "JWT",
-      "Spring Security",
-    ],
-    color: "#8b5cf6",
-    github: "https://github.com/Rakshitsoni1410/ai-chat-support-system",
-    live: "",
-    preview: "chatbot",
-  },
+
   {
     title: "Learning Management System",
     subtitle: "MERN · Redux Toolkit",
@@ -280,6 +262,25 @@ const PROJECTS = [
     github: "https://github.com/Rakshitsoni1410/smartkhatabook",
     live: "https://smartkhatabooks.netlify.app/",
     preview: "khata",
+  },
+  {
+    title: "AI Chatbot Support System",
+    subtitle: "Spring Boot · JWT Auth",
+    icon: "🤖",
+    status: "Completed",
+    desc: "Full-stack AI chatbot with JWT auth, role-based access control, Spring Security REST APIs, and real-time chat UI. Built for Gemini/OpenAI API integration.",
+    tech: [
+      "Java",
+      "Spring Boot",
+      "React.js",
+      "MySQL",
+      "JWT",
+      "Spring Security",
+    ],
+    color: "#8b5cf6",
+    github: "https://github.com/Rakshitsoni1410/ai-chat-support-system",
+    live: "",
+    preview: "chatbot",
   },
   {
     title: "Hospital Management System",
@@ -466,45 +467,6 @@ const ProjectPreview = ({ type, color }) => {
         <rect x="10" y="130" width="56" height="9" rx="4.5" fill={c + "22"} />
         <text x="16" y="137" fontSize="5.5" fill={c} fontWeight="bold">
           MERN Stack
-        </text>
-      </svg>
-    ),
-
-    chatbot: (
-      <svg viewBox="0 0 280 140" className="w-full h-full">
-        <rect width="280" height="140" fill="#0f172a" rx="8" />
-        <rect width="280" height="28" fill={c} rx="8" />
-        <rect y="20" width="280" height="8" fill={c} />
-        <circle cx="16" cy="14" r="5" fill="white" fillOpacity="0.3" />
-        <text x="26" y="18" fontSize="8" fill="white" fontFamily="monospace">
-          🤖 AI Support Chat
-        </text>
-        <rect x="200" y="8" width="12" height="12" rx="6" fill="#22c55e" />
-        {/* Chat bubbles */}
-        <rect x="10" y="34" width="140" height="20" rx="10" fill="#1e293b" />
-        <text x="18" y="46" fontSize="6.5" fill="#94a3b8">
-          How can I reset my password?
-        </text>
-        <rect x="130" y="58" width="140" height="20" rx="10" fill={c} />
-        <text x="138" y="70" fontSize="6.5" fill="white">
-          Go to Settings → Security
-        </text>
-        <rect x="10" y="82" width="120" height="20" rx="10" fill="#1e293b" />
-        <text x="18" y="94" fontSize="6.5" fill="#94a3b8">
-          What are your features?
-        </text>
-        <rect x="140" y="106" width="130" height="20" rx="10" fill={c} />
-        <text x="148" y="118" fontSize="6.5" fill="white">
-          I can help with support!
-        </text>
-        {/* JWT badge */}
-        <rect x="10" y="126" width="35" height="10" rx="5" fill={c + "44"} />
-        <text x="14" y="133" fontSize="5.5" fill={c} fontWeight="bold">
-          JWT Auth
-        </text>
-        <rect x="50" y="126" width="50" height="10" rx="5" fill="#22c55e22" />
-        <text x="54" y="133" fontSize="5.5" fill="#22c55e" fontWeight="bold">
-          Spring Security
         </text>
       </svg>
     ),
@@ -932,7 +894,44 @@ const ProjectPreview = ({ type, color }) => {
         </text>
       </svg>
     ),
-
+    chatbot: (
+      <svg viewBox="0 0 280 140" className="w-full h-full">
+        <rect width="280" height="140" fill="#0f172a" rx="8" />
+        <rect width="280" height="28" fill={c} rx="8" />
+        <rect y="20" width="280" height="8" fill={c} />
+        <circle cx="16" cy="14" r="5" fill="white" fillOpacity="0.3" />
+        <text x="26" y="18" fontSize="8" fill="white" fontFamily="monospace">
+          🤖 AI Support Chat
+        </text>
+        <rect x="200" y="8" width="12" height="12" rx="6" fill="#22c55e" />
+        {/* Chat bubbles */}
+        <rect x="10" y="34" width="140" height="20" rx="10" fill="#1e293b" />
+        <text x="18" y="46" fontSize="6.5" fill="#94a3b8">
+          How can I reset my password?
+        </text>
+        <rect x="130" y="58" width="140" height="20" rx="10" fill={c} />
+        <text x="138" y="70" fontSize="6.5" fill="white">
+          Go to Settings → Security
+        </text>
+        <rect x="10" y="82" width="120" height="20" rx="10" fill="#1e293b" />
+        <text x="18" y="94" fontSize="6.5" fill="#94a3b8">
+          What are your features?
+        </text>
+        <rect x="140" y="106" width="130" height="20" rx="10" fill={c} />
+        <text x="148" y="118" fontSize="6.5" fill="white">
+          I can help with support!
+        </text>
+        {/* JWT badge */}
+        <rect x="10" y="126" width="35" height="10" rx="5" fill={c + "44"} />
+        <text x="14" y="133" fontSize="5.5" fill={c} fontWeight="bold">
+          JWT Auth
+        </text>
+        <rect x="50" y="126" width="50" height="10" rx="5" fill="#22c55e22" />
+        <text x="54" y="133" fontSize="5.5" fill="#22c55e" fontWeight="bold">
+          Spring Security
+        </text>
+      </svg>
+    ),
     hospital: (
       <svg viewBox="0 0 280 140" className="w-full h-full">
         <rect width="280" height="140" fill="#0f172a" rx="8" />
