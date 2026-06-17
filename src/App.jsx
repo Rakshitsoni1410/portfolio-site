@@ -119,14 +119,15 @@ const SKILLS = [
       { name: "Socket.io", icon: <SiSocketdotio />, color: "#010101" },
     ],
   },
-{
-  cat: "Mobile", items: [
-    { name: "Flutter", icon: <SiFlutter />, color: "#02569b" },
-    { name: "Dart", icon: <FaCode />, color: "#0175c2" },
-    { name: "REST APIs", icon: <FaServer />, color: "#0ea5e9" },
-    { name: "Firebase", icon: <FaDatabase />, color: "#ffca28" },
-  ]
-},
+  {
+    cat: "Mobile",
+    items: [
+      { name: "Flutter", icon: <SiFlutter />, color: "#02569b" },
+      { name: "Dart", icon: <FaCode />, color: "#0175c2" },
+      { name: "REST APIs", icon: <FaServer />, color: "#0ea5e9" },
+      { name: "Firebase", icon: <FaDatabase />, color: "#ffca28" },
+    ],
+  },
 ];
 
 const SERVICES = [
@@ -188,6 +189,18 @@ const PROJECTS = [
     github: "https://github.com/Rakshitsoni1410/bill-splitter",
     live: "https://bills-splitters-wise.netlify.app/",
     preview: "billsplitter",
+  },
+  {
+    title: "BillKaro — GST Billing Software",
+    subtitle: "MERN Stack · GST Compliant",
+    icon: "🧾",
+    status: "Live",
+    desc: "Full-stack GST billing and invoicing platform for Indian businesses. Auto-generated invoice numbers, CGST/SGST calculation, customer database, khata (credit) ledger tracking, and WhatsApp bill sharing. Built with React, Node.js/Express, and MongoDB.",
+    tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS"],
+    color: "#0EA5A0",
+    github: "https://github.com/Rakshitsoni1410/bills-software",
+    live: "https://bills-software.netlify.app",
+    preview: "billkaro",
   },
   {
     title: "AI Chatbot Support System",
@@ -379,6 +392,80 @@ const ProjectPreview = ({ type, color }) => {
         </text>
         <text x="230" y="121" fontSize="5" fill="#94a3b8">
           by Raj
+        </text>
+      </svg>
+    ),
+    billkaro: (
+      <svg viewBox="0 0 280 140" className="w-full h-full">
+        <rect width="280" height="140" fill="#0f172a" rx="8" />
+        <rect width="280" height="28" fill={c} rx="8" />
+        <rect y="20" width="280" height="8" fill={c} />
+        <text x="16" y="18" fontSize="8" fill="white">
+          🧾 BillKaro
+        </text>
+        <rect
+          x="220"
+          y="8"
+          width="50"
+          height="12"
+          rx="6"
+          fill="white"
+          fillOpacity="0.2"
+        />
+        <text x="228" y="17" fontSize="6.5" fill="white">
+          GST Ready
+        </text>
+        {/* Stats row */}
+        <rect x="10" y="34" width="84" height="34" rx="6" fill="#1e293b" />
+        <text x="18" y="47" fontSize="6" fill="#94a3b8">
+          Total Sales
+        </text>
+        <text x="18" y="60" fontSize="10" fill={c} fontWeight="bold">
+          ₹84,500
+        </text>
+        <rect x="98" y="34" width="84" height="34" rx="6" fill="#1e293b" />
+        <text x="106" y="47" fontSize="6" fill="#94a3b8">
+          GST Collected
+        </text>
+        <text x="106" y="60" fontSize="10" fill="#22c55e" fontWeight="bold">
+          ₹9,200
+        </text>
+        <rect x="186" y="34" width="84" height="34" rx="6" fill="#1e293b" />
+        <text x="194" y="47" fontSize="6" fill="#94a3b8">
+          Udhaar Pending
+        </text>
+        <text x="194" y="60" fontSize="10" fill="#ef4444" fontWeight="bold">
+          ₹3,150
+        </text>
+        {/* Invoice rows */}
+        <rect x="10" y="72" width="260" height="16" rx="4" fill="#1e293b" />
+        <text x="18" y="82" fontSize="6" fill="white">
+          SHREETRADERS-20260616-001
+        </text>
+        <rect x="216" y="76" width="44" height="8" rx="4" fill="#22c55e22" />
+        <text x="222" y="82" fontSize="5.5" fill="#22c55e">
+          Paid
+        </text>
+        <rect x="10" y="92" width="260" height="16" rx="4" fill="#1e293b" />
+        <text x="18" y="102" fontSize="6" fill="white">
+          SHREETRADERS-20260616-002
+        </text>
+        <rect x="216" y="96" width="44" height="8" rx="4" fill="#ef444422" />
+        <text x="220" y="102" fontSize="5.5" fill="#ef4444">
+          Udhaar
+        </text>
+        <rect x="10" y="112" width="260" height="16" rx="4" fill="#1e293b" />
+        <text x="18" y="122" fontSize="6" fill="white">
+          SHREETRADERS-20260616-003
+        </text>
+        <rect x="216" y="116" width="44" height="8" rx="4" fill="#22c55e22" />
+        <text x="222" y="122" fontSize="5.5" fill="#22c55e">
+          Paid
+        </text>
+        {/* MERN badge */}
+        <rect x="10" y="130" width="56" height="9" rx="4.5" fill={c + "22"} />
+        <text x="16" y="137" fontSize="5.5" fill={c} fontWeight="bold">
+          MERN Stack
         </text>
       </svg>
     ),
@@ -991,22 +1078,22 @@ const TIMELINE = [
     color: "#ec4899",
     icon: "🏫",
   },
- {
-  year: "Now",
-  title: "Open to Work",
-  sub: "Full-time · Internship · Freelance",
-  desc: "357+ LeetCode problems. 8+ projects including full-stack Java Spring Boot apps. Looking for opportunities to contribute real value.",
-  color: "#f97316",
-  icon: "🎯",
-},
   {
-  year: "2025",
-  title: "Bill Splitter — Full Stack",
-  sub: "Java · Spring Boot · React.js · MySQL",
-  desc: "Built production-grade bill splitting app with JWT auth, UPI-style wallet payments, activity feed, and budget management. First complete Java + React project.",
-  color: "#6c63ff",
-  icon: "💸",
-},
+    year: "Now",
+    title: "Open to Work",
+    sub: "Full-time · Internship · Freelance",
+    desc: "357+ LeetCode problems. 8+ projects including full-stack Java Spring Boot apps. Looking for opportunities to contribute real value.",
+    color: "#f97316",
+    icon: "🎯",
+  },
+  {
+    year: "2025",
+    title: "Bill Splitter — Full Stack",
+    sub: "Java · Spring Boot · React.js · MySQL",
+    desc: "Built production-grade bill splitting app with JWT auth, UPI-style wallet payments, activity feed, and budget management. First complete Java + React project.",
+    color: "#6c63ff",
+    icon: "💸",
+  },
 ];
 
 /* ─── UPDATED CERTS DATA ─────────────────────────────────────── */
@@ -2220,7 +2307,7 @@ export default function App() {
               </FadeIn>
               <FadeIn delay={0.1}>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 dark:text-white leading-tight mb-3">
-                  Rakshit R 
+                  Rakshit R
                   <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                     Soni
@@ -2444,7 +2531,14 @@ export default function App() {
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {["MERN", "Spring Boot", "Flutter", "DSA", "AI/ML", "Docker"].map((tag) => (
+                    {[
+                      "MERN",
+                      "Spring Boot",
+                      "Flutter",
+                      "DSA",
+                      "AI/ML",
+                      "Docker",
+                    ].map((tag) => (
                       <span
                         key={tag}
                         className="text-xs px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-medium border border-blue-100 dark:border-blue-800"
