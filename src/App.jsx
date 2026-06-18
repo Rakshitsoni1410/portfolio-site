@@ -72,7 +72,7 @@ const MARQUEE_ITEMS = [
   "⭐ Contest Rating 1416",
   "🔥 115-Day Streak",
   "📦 1,009+ GitHub Contributions",
-  "🚀 8+ Projects Shipped", // change 7 to 8
+  "🚀 9+ Projects Shipped", // change 7 to 8
   "💸 Bill Splitter — Java + React", // add this
   "💻 MERN Stack Expert",
   "☕ Java Spring Boot",
