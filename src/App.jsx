@@ -2558,39 +2558,69 @@ export default function App() {
             title="What I Can Do For You"
             subtitle="Services I offer as a full stack developer"
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 list-none">
             {SERVICES.map((s, i) => (
-              <FadeIn key={s.title} delay={i * 0.08}>
-                <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:-translate-y-1 transition-all group cursor-default h-full">
+              <FadeIn key={s.title} delay={Math.min(i * 0.08, 0.32)}>
+                <li className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group h-full">
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110"
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
                     style={{ background: s.color + "18", color: s.color }}
+                    aria-hidden="true"
                   >
                     {s.icon}
                   </div>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1.5">
                     {s.title}
                   </h3>
+                  <span
+                    className="block h-0.5 w-6 rounded-full mb-3 transition-all duration-300 group-hover:w-12"
+                    style={{ background: s.color }}
+                  />
                   <p className="text-sm text-gray-500 dark:text-gray-400 leading-6">
                     {s.desc}
                   </p>
-                </div>
+                </li>
               </FadeIn>
             ))}
-          </div>
+          </ul>
+
           <FadeIn delay={0.3}>
-            <div className="mt-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center text-white">
-              <h3 className="text-xl font-bold mb-2">Got a project in mind?</h3>
-              <p className="text-blue-100 text-sm mb-5">
-                I'm available for full-time roles, internships, and freelance
-                projects. Let's build something great together.
-              </p>
-              <button
-                onClick={() => setShowModal(true)}
-                className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-blue-600 rounded-full font-semibold text-sm hover:shadow-lg active:scale-95 transition"
+            <div className="relative mt-10 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-600 to-purple-600 rounded-2xl p-8 text-center text-white">
+              {/* subtle dot texture so it's not a flat gradient block */}
+              <svg
+                className="absolute inset-0 w-full h-full opacity-[0.08]"
+                aria-hidden="true"
               >
-                <FaEnvelope size={12} /> Let's Talk
-              </button>
+                <pattern
+                  id="dots"
+                  width="18"
+                  height="18"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <circle cx="2" cy="2" r="1.4" fill="white" />
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#dots)" />
+              </svg>
+              <div
+                className="absolute -top-16 -right-16 w-56 h-56 bg-white/10 rounded-full blur-3xl"
+                aria-hidden="true"
+              />
+
+              <div className="relative">
+                <h3 className="text-xl font-bold mb-2">
+                  Got a project in mind?
+                </h3>
+                <p className="text-blue-100 text-sm mb-5 max-w-md mx-auto">
+                  I'm available for full-time roles, internships, and freelance
+                  projects. Let's build something great together.
+                </p>
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-blue-600 rounded-full font-semibold text-sm hover:shadow-lg active:scale-95 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+                >
+                  <FaEnvelope size={12} /> Let's Talk
+                </button>
+              </div>
             </div>
           </FadeIn>
         </section>
