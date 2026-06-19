@@ -44,8 +44,8 @@ import {
   SiRedux,
   SiSocketdotio,
   SiCoursera,
+  SiGeeksforgeeks,
 } from "react-icons/si";
-
 /* ─── DATA ──────────────────────────────────────────────────── */
 
 const NAV_LINKS = [
@@ -111,7 +111,6 @@ const SKILLS = [
     items: [
       { name: "MongoDB", icon: <SiMongodb />, color: "#47a248" },
       { name: "MySQL", icon: <SiMysql />, color: "#4479a1" },
-      { name: "Socket.io", icon: <SiSocketdotio />, color: "#888" },
       { name: "GitHub", icon: <FaGithub />, color: "#6e7681" },
       { name: "JWT Auth", icon: <FaShieldAlt />, color: "#e535ab" },
       { name: "REST APIs", icon: <FaServer />, color: "#0ea5e9" },
@@ -1041,57 +1040,58 @@ const TIMELINE = [
     year: "2022",
     title: "Started BCA",
     sub: "Indus University, Ahmedabad",
-    desc: "Began Computer Applications degree. First exposure to programming — C, Java, HTML.",
+    desc: "Began Computer Applications degree — CGPA 7.5. First exposure to programming with C, Java, and HTML.",
     color: "#0ea5e9",
     icon: "🎓",
   },
   {
     year: "2023",
-    title: "First Projects",
-    sub: "HTML · CSS · PHP",
-    desc: "Built first full-stack projects — Jewellery E-Commerce and Hospital Management System.",
+    title: "First Full-Stack Projects",
+    sub: "PHP · Django · MySQL",
+    desc: "Built Jewellery E-Commerce (PHP/MySQL admin panel with inventory & order tracking) and Hospital Management System (Django ORM for patients, appointments, staff).",
     color: "#8b5cf6",
     icon: "💻",
   },
   {
     year: "2024",
-    title: "MERN Stack Mastery",
-    sub: "React · Node.js · MongoDB",
-    desc: "Shipped LMS platform and Smart Khata Book. Started solving DSA on LeetCode daily.",
+    title: "MERN Stack Deep Dive",
+    sub: "React · Redux · Node.js · Socket.io",
+    desc: "Shipped an LMS with instructor dashboards and real-time progress tracking, a real-time Uber-style ride booking app with live driver tracking, and BillKaro — a GST billing platform with auto invoice numbering and WhatsApp bill sharing.",
     color: "#22c55e",
     icon: "🚀",
   },
   {
     year: "2024",
-    title: "Real-Time Systems",
-    sub: "Socket.io · Spring Boot · Flutter",
-    desc: "Built ride booking app with WebSockets. Learned Spring Boot and Flutter cross-platform.",
+    title: "Cross-Platform Development",
+    sub: "Flutter · Dart",
+    desc: "Built Smart Khata Book — an offline-first credit/debit ledger app for small businesses with real-time balance tracking and AI-powered ERP features.",
     color: "#f59e0b",
-    icon: "⚡",
+    icon: "📱",
   },
   {
     year: "2025",
     title: "Started MCA",
-    sub: "GLS University, Ahmedabad",
-    desc: "Pursuing Master of Computer Applications. AI Chatbot project with Spring Security & JWT.",
+    sub: "GLS University, Ahmedabad · Expected 2027",
+    desc: "Pursuing Master of Computer Applications, going deeper into Java, Spring Security, and system design.",
     color: "#ec4899",
     icon: "🏫",
+  },
+  {
+    year: "2025",
+    title: "Java / Spring Boot Specialization",
+    sub: "Spring Security · JWT · BCrypt",
+    desc: "Built Bill Splitter (UPI-style wallet payments, group expense splitting, BCrypt encryption), Gold Weight Management System (karat-wise net loss tracking for jewellers), and an AI Chatbot with role-based access, architected for Gemini/OpenAI integration.",
+    color: "#6c63ff",
+    icon: "☕",
   },
   {
     year: "Now",
     title: "Open to Work",
     sub: "Full-time · Internship · Freelance",
-    desc: "357+ LeetCode problems. 8+ projects including full-stack Java Spring Boot apps. Looking for opportunities to contribute real value.",
+    desc: "357+ LeetCode problems solved (115-day max streak), 8+ HackerRank certifications. Actively seeking internship/fresher roles in Ahmedabad or remote.",
     color: "#f97316",
     icon: "🎯",
-  },
-  {
-    year: "2025",
-    title: "Bill Splitter — Full Stack",
-    sub: "Java · Spring Boot · React.js · MySQL",
-    desc: "Built production-grade bill splitting app with JWT auth, UPI-style wallet payments, activity feed, and budget management. First complete Java + React project.",
-    color: "#6c63ff",
-    icon: "💸",
+    current: true,
   },
 ];
 
@@ -1170,16 +1170,16 @@ const CERTS = [
     badge: "Certified",
   },
   {
-    name: "Bootstrap",
+    name: "Complete Bootstrap Course",
     icon: <FaBootstrap />,
     color: "#7952b3",
     bgColor: "#7952b310",
     borderColor: "#7952b340",
-    link: "https://www.hackerrank.com/profile/rakshitsoni544",
-    platform: "HackerRank",
-    platformColor: "#2ec866",
-    platformIcon: <FaHackerrank />,
-    badge: "Certified",
+    link: "https://media.geeksforgeeks.org/courses/certificates/c217300c0857a36da426f5c32fe45a19.pdf",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
   },
   {
     name: "HTML, CSS & JavaScript",
@@ -1222,7 +1222,16 @@ const SOCIAL = [
     url: "https://www.geeksforgeeks.org/user/rakshituya7/",
   },
 ];
-
+{/* ── SERVICES ── */}
+        {/* Add this helper near your other small utility functions, outside the App component */}
+function toComponentTag(title) {
+  return title
+    .replace(/[^a-zA-Z0-9 ]/g, "")
+    .split(" ")
+    .filter(Boolean)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join("");
+}
 /* ─── SKILL ILLUSTRATIONS ────────────────────────────────────── */
 function FrontendIllustration() {
   return (
@@ -1863,7 +1872,28 @@ function FadeIn({ children, delay = 0, className = "" }) {
     </div>
   );
 }
-
+function useScrollProgress(ref) {
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    function onScroll() {
+      const el = ref.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const total = rect.height || 1;
+      const raw = (vh * 0.8 - rect.top) / total;
+      setProgress(Math.min(1, Math.max(0, raw)));
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [ref]);
+  return progress;
+}
 function StatusBadge({ status }) {
   const map = {
     Live: "bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300",
@@ -1880,7 +1910,39 @@ function StatusBadge({ status }) {
     </span>
   );
 }
-
+function TimelineCard({ item, align }) {
+  return (
+    <div className="relative bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 pt-6 border border-gray-100 dark:border-gray-700 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 overflow-hidden">
+      <div
+        className="absolute top-0 left-0 right-0 h-1"
+        style={{ background: item.color }}
+      />
+      <div
+        className={`flex items-center gap-2 mb-1 ${align === "right" ? "md:justify-end" : ""}`}
+      >
+        <span className="text-base">{item.icon}</span>
+        <time
+          className="text-xs font-bold px-2 py-0.5 rounded-full text-white"
+          style={{ background: item.color }}
+        >
+          {item.year}
+        </time>
+        {item.current && (
+          <span className="text-xs font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">
+            Now
+          </span>
+        )}
+      </div>
+      <h3 className="font-bold text-gray-900 dark:text-white text-sm">
+        {item.title}
+      </h3>
+      <p className="text-xs text-gray-400 mb-2">{item.sub}</p>
+      <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+        {item.desc}
+      </p>
+    </div>
+  );
+}
 function StatCard({ value, suffix = "", label, color }) {
   const [count, ref] = useCountUp(value);
   return (
@@ -2197,6 +2259,8 @@ export default function App() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const activeSection = useScrollSpy(NAV_LINKS);
+  const timelineTrackRef = useRef(null);
+const timelineProgress = useScrollProgress(timelineTrackRef);
   const typedText = useTyping(TYPING_TEXTS);
 
   const scrollTo = (id) => {
@@ -2552,79 +2616,107 @@ export default function App() {
           </div>
         </section>
 
-        {/* ── SERVICES ── */}
-        <section id="services" className="max-w-6xl mx-auto px-4 py-20">
-          <SectionTitle
-            title="What I Can Do For You"
-            subtitle="Services I offer as a full stack developer"
-          />
-          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 list-none">
-            {SERVICES.map((s, i) => (
-              <FadeIn key={s.title} delay={Math.min(i * 0.08, 0.32)}>
-                <li className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group h-full">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: s.color + "18", color: s.color }}
-                    aria-hidden="true"
-                  >
-                    {s.icon}
-                  </div>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1.5">
-                    {s.title}
-                  </h3>
-                  <span
-                    className="block h-0.5 w-6 rounded-full mb-3 transition-all duration-300 group-hover:w-12"
-                    style={{ background: s.color }}
-                  />
-                  <p className="text-sm text-gray-500 dark:text-gray-400 leading-6">
-                    {s.desc}
-                  </p>
-                </li>
-              </FadeIn>
-            ))}
-          </ul>
+        
 
-          <FadeIn delay={0.3}>
-            <div className="relative mt-10 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-600 to-purple-600 rounded-2xl p-8 text-center text-white">
-              {/* subtle dot texture so it's not a flat gradient block */}
-              <svg
-                className="absolute inset-0 w-full h-full opacity-[0.08]"
-                aria-hidden="true"
-              >
-                <pattern
-                  id="dots"
-                  width="18"
-                  height="18"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <circle cx="2" cy="2" r="1.4" fill="white" />
-                </pattern>
-                <rect width="100%" height="100%" fill="url(#dots)" />
-              </svg>
+{/* ── SERVICES ── */}
+<section id="services" className="max-w-6xl mx-auto px-4 py-20">
+  <SectionTitle
+    title="What I Can Do For You"
+    subtitle="Services I offer as a full stack developer"
+  />
+  <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 list-none">
+    {SERVICES.map((s, i) => {
+      const tag = toComponentTag(s.title);
+      return (
+        <FadeIn key={s.title} delay={Math.min(i * 0.08, 0.32)}>
+          <li className="relative overflow-hidden bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group h-full">
+            {/* watermark bracket, ties the card to "code" as the subject's vernacular */}
+            <span
+              className="absolute top-4 right-5 font-mono text-3xl font-bold select-none pointer-events-none opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-300"
+              style={{ color: s.color }}
+              aria-hidden="true"
+            >
+              {`</>`}
+            </span>
+
+            {/* icon: bordered box instead of filled, glows on hover */}
+            <div
+              className="relative w-12 h-12 rounded-xl flex items-center justify-center mb-4 border-[1.5px] transition-transform duration-300 group-hover:scale-110"
+              style={{
+                borderColor: s.color + "50",
+                background: s.color + "0d",
+                color: s.color,
+              }}
+            >
+              {s.icon}
               <div
-                className="absolute -top-16 -right-16 w-56 h-56 bg-white/10 rounded-full blur-3xl"
-                aria-hidden="true"
+                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{
+                  boxShadow: `0 0 0 4px ${s.color}20, 0 8px 16px -4px ${s.color}40`,
+                }}
               />
-
-              <div className="relative">
-                <h3 className="text-xl font-bold mb-2">
-                  Got a project in mind?
-                </h3>
-                <p className="text-blue-100 text-sm mb-5 max-w-md mx-auto">
-                  I'm available for full-time roles, internships, and freelance
-                  projects. Let's build something great together.
-                </p>
-                <button
-                  onClick={() => setShowModal(true)}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-blue-600 rounded-full font-semibold text-sm hover:shadow-lg active:scale-95 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
-                >
-                  <FaEnvelope size={12} /> Let's Talk
-                </button>
-              </div>
             </div>
-          </FadeIn>
-        </section>
 
+            {/* JSX-style eyebrow tag */}
+            <span
+              className="font-mono text-[10px] font-semibold tracking-wider uppercase mb-1.5 inline-block"
+              style={{ color: s.color }}
+            >
+              {`<${tag} />`}
+            </span>
+
+            <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1.5">
+              {s.title}
+            </h3>
+            <span
+              className="block h-0.5 w-6 rounded-full mb-3 transition-all duration-300 group-hover:w-12"
+              style={{ background: s.color }}
+            />
+            <p className="text-sm text-gray-500 dark:text-gray-400 leading-6">
+              {s.desc}
+            </p>
+          </li>
+        </FadeIn>
+      );
+    })}
+  </ul>
+
+  <FadeIn delay={0.3}>
+    <div className="relative mt-10 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-600 to-purple-600 rounded-2xl p-8 text-center text-white">
+      <svg
+        className="absolute inset-0 w-full h-full opacity-[0.08]"
+        aria-hidden="true"
+      >
+        <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.4" fill="white" />
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#dots)" />
+      </svg>
+      <div
+        className="absolute -top-16 -right-16 w-56 h-56 bg-white/10 rounded-full blur-3xl"
+        aria-hidden="true"
+      />
+
+      <div className="relative">
+        <div className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+          <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
+          Currently accepting new projects
+        </div>
+        <h3 className="text-xl font-bold mb-2">Got a project in mind?</h3>
+        <p className="text-blue-100 text-sm mb-5 max-w-md mx-auto">
+          I'm available for full-time roles, internships, and freelance
+          projects. Let's build something great together.
+        </p>
+        <button
+          onClick={() => setShowModal(true)}
+          className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-blue-600 rounded-full font-semibold text-sm hover:shadow-lg active:scale-95 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-600"
+        >
+          <FaEnvelope size={12} /> Let's Talk
+        </button>
+      </div>
+    </div>
+  </FadeIn>
+</section>
         {/* ── PROJECTS ── */}
         <section id="projects" className="bg-white dark:bg-gray-900 py-20">
           <div className="max-w-6xl mx-auto px-4">
@@ -2638,7 +2730,7 @@ export default function App() {
                   <div className="group bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                     {/* ── MOCK PREVIEW ── */}
                     <div
-                      className="relative h-36 flex items-center justify-center overflow-hidden"
+                      className="relative h-52 flex items-center justify-center overflow-hidden"
                       style={{ background: p.color + "12" }}
                     >
                       {/* Floating tech icons background */}
@@ -2699,11 +2791,6 @@ export default function App() {
                           <div className="absolute top-3 right-3">
                             <StatusBadge status={p.status} />
                           </div>
-                          {p.title === "Bill Splitter — Full Stack App" && (
-                            <div className="absolute top-3 left-3 ...">
-                              <FaStar size={9} /> New
-                            </div>
-                          )}
                         </div>
                       </div>
 
@@ -3009,6 +3096,30 @@ export default function App() {
                   url: "https://www.hackerrank.com/profile/rakshitsoni544",
                   cls: "border-green-300 dark:border-green-800 text-green-600 dark:text-green-400",
                 },
+                {
+                  name: "Frontend Developer (React)",
+                  icon: <FaReact />,
+                  color: "#61dafb",
+                  bgColor: "#61dafb10",
+                  borderColor: "#61dafb40",
+                  link: "https://www.hackerrank.com/profile/rakshitsoni544",
+                  platform: "HackerRank",
+                  platformColor: "#2ec866",
+                  platformIcon: <FaHackerrank />,
+                  badge: "Role Certified",
+                },
+                {
+                  name: "C# (Basic)",
+                  icon: <FaCode />,
+                  color: "#9b4f96",
+                  bgColor: "#9b4f9610",
+                  borderColor: "#9b4f9640",
+                  link: "https://www.hackerrank.com/profile/rakshitsoni544",
+                  platform: "HackerRank",
+                  platformColor: "#2ec866",
+                  platformIcon: <FaHackerrank />,
+                  badge: "Certified",
+                },
               ].map((p) => (
                 <a
                   key={p.label}
@@ -3032,67 +3143,50 @@ export default function App() {
               subtitle="From student to developer"
             />
             <div className="relative">
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-purple-600 md:-translate-x-0.5" />
-              <div className="space-y-8">
+              <div
+                ref={timelineTrackRef}
+                className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-800 md:-translate-x-0.5 rounded-full overflow-hidden"
+              >
+                <div
+                  className="absolute top-0 left-0 right-0 bg-gradient-to-b from-blue-600 to-purple-600 transition-all duration-150 ease-out"
+                  style={{ height: `${timelineProgress * 100}%` }}
+                />
+              </div>
+              <div className="space-y-10">
                 {TIMELINE.map((item, i) => (
-                  <FadeIn key={i} delay={i * 0.1}>
+                  <FadeIn key={i} delay={Math.min(i * 0.1, 0.5)}>
                     <div
-                      className={`relative flex flex-col md:flex-row gap-6 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                      className={`group relative flex flex-col md:flex-row gap-6 ${
+                        i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                      }`}
                     >
                       <div className="md:w-1/2 pl-12 md:pl-0 md:pr-10">
                         {i % 2 === 0 ? (
-                          <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:shadow-md transition md:ml-0">
-                            <div className="flex items-center gap-2 mb-1 md:justify-end">
-                              <span className="text-lg">{item.icon}</span>
-                              <span
-                                className="text-xs font-bold px-2 py-0.5 rounded-full text-white"
-                                style={{ background: item.color }}
-                              >
-                                {item.year}
-                              </span>
-                            </div>
-                            <h3 className="font-bold text-gray-900 dark:text-white text-sm">
-                              {item.title}
-                            </h3>
-                            <p className="text-xs text-gray-400 mb-2">
-                              {item.sub}
-                            </p>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                              {item.desc}
-                            </p>
-                          </div>
+                          <TimelineCard item={item} align="right" />
                         ) : (
                           <div className="hidden md:block" />
                         )}
                       </div>
-                      <div
-                        className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full border-2 border-white dark:border-gray-900 shadow-md flex items-center justify-center top-5"
-                        style={{ background: item.color }}
-                      >
-                        <span className="text-xs">{item.icon}</span>
+                      <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-5 w-8 h-8">
+                        {item.current && (
+                          <span
+                            className="absolute inset-0 rounded-full animate-ping opacity-40"
+                            style={{ background: item.color }}
+                          />
+                        )}
+                        <div
+                          className="relative w-8 h-8 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center text-sm transition-transform duration-300 group-hover:scale-110"
+                          style={{
+                            background: item.color,
+                            boxShadow: `0 4px 6px -1px rgba(0,0,0,0.15), 0 0 0 4px ${item.color}26`,
+                          }}
+                        >
+                          {item.icon}
+                        </div>
                       </div>
                       <div className="md:w-1/2 pl-12 md:pl-10">
                         {i % 2 !== 0 ? (
-                          <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 border border-gray-100 dark:border-gray-700 hover:shadow-md transition">
-                            <div className="flex items-center gap-2 mb-1">
-                              <span className="text-lg">{item.icon}</span>
-                              <span
-                                className="text-xs font-bold px-2 py-0.5 rounded-full text-white"
-                                style={{ background: item.color }}
-                              >
-                                {item.year}
-                              </span>
-                            </div>
-                            <h3 className="font-bold text-gray-900 dark:text-white text-sm">
-                              {item.title}
-                            </h3>
-                            <p className="text-xs text-gray-400 mb-2">
-                              {item.sub}
-                            </p>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                              {item.desc}
-                            </p>
-                          </div>
+                          <TimelineCard item={item} align="left" />
                         ) : (
                           <div className="hidden md:block" />
                         )}
@@ -3170,7 +3264,7 @@ export default function App() {
                     Certifications
                   </h2>
                   <p className="text-gray-400 text-sm mt-1">
-                    Verified credentials from HackerRank & Coursera
+                     Verified credentials from HackerRank, GeeksforGeeks & Coursera
                   </p>
                   <div className="mt-3 h-1 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
                 </div>
@@ -3190,17 +3284,30 @@ export default function App() {
 
             {/* Platform summary row */}
             <FadeIn delay={0.05} className="mb-8">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="flex items-center gap-4 bg-[#2ec866]/5 dark:bg-[#2ec866]/10 border border-[#2ec866]/20 rounded-2xl p-4">
                   <div className="w-12 h-12 bg-[#2ec866]/15 rounded-xl flex items-center justify-center flex-shrink-0">
                     <FaHackerrank size={24} className="text-[#2ec866]" />
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      7
+                      8
                     </div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">
                       HackerRank Certificates
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 bg-[#2f8d46]/5 dark:bg-[#2f8d46]/10 border border-[#2f8d46]/20 rounded-2xl p-4">
+                  <div className="w-12 h-12 bg-[#2f8d46]/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <SiGeeksforgeeks size={24} className="text-[#2f8d46]" />
+                  </div>
+                  <div>
+                    <div className="text-xl font-bold text-gray-900 dark:text-white">
+                      1
+                    </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">
+                      GeeksforGeeks Certificate
                     </div>
                   </div>
                 </div>
