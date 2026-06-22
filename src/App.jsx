@@ -1098,103 +1098,182 @@ const TIMELINE = [
 /* ─── UPDATED CERTS DATA ─────────────────────────────────────── */
 const CERTS = [
   {
+    name: "Java (Basic)",
+    icon: <FaJava />,
+    color: "#f89820",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "JavaScript (Basic)",
+    icon: <FaJs />,
+    color: "#f7df1e",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
     name: "JavaScript (Intermediate)",
     icon: <FaJs />,
     color: "#f7df1e",
-    bgColor: "#78680010",
-    borderColor: "#f7df1e40",
     link: "https://www.hackerrank.com/certificates/iframe/b04991b66fe0",
     platform: "HackerRank",
     platformColor: "#2ec866",
     platformIcon: <FaHackerrank />,
     badge: "Verified",
+    type: "SKILL",
   },
   {
-    name: "Java (Basic)",
-    icon: <FaJava />,
-    color: "#f89820",
-    bgColor: "#f8982010",
-    borderColor: "#f8982040",
-    link: "https://www.hackerrank.com/profile/rakshitsoni544",
-    platform: "HackerRank",
-    platformColor: "#2ec866",
-    platformIcon: <FaHackerrank />,
-    badge: "Certified",
-  },
-  {
-    name: "Python (Basic)",
-    icon: <FaPython />,
-    color: "#3776ab",
-    bgColor: "#3776ab10",
-    borderColor: "#3776ab40",
-    link: "https://www.hackerrank.com/profile/rakshitsoni544",
-    platform: "HackerRank",
-    platformColor: "#2ec866",
-    platformIcon: <FaHackerrank />,
-    badge: "Certified",
-  },
-  {
-    name: "SQL (Basic & Intermediate)",
+    name: "SQL (Basic)",
     icon: <FaDatabase />,
     color: "#4479a1",
-    bgColor: "#4479a110",
-    borderColor: "#4479a140",
     link: "https://www.hackerrank.com/profile/rakshitsoni544",
     platform: "HackerRank",
     platformColor: "#2ec866",
     platformIcon: <FaHackerrank />,
-    badge: "Certified",
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "SQL (Intermediate)",
+    icon: <FaDatabase />,
+    color: "#4479a1",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+    type: "SKILL",
   },
   {
     name: "CSS (Basic)",
     icon: <FaCss3Alt />,
     color: "#1572b6",
-    bgColor: "#1572b610",
-    borderColor: "#1572b640",
     link: "https://www.hackerrank.com/profile/rakshitsoni544",
     platform: "HackerRank",
     platformColor: "#2ec866",
     platformIcon: <FaHackerrank />,
-    badge: "Certified",
+    badge: "Verified",
+    type: "SKILL",
   },
   {
-    name: "Problem Solving",
-    icon: <FaCode />,
-    color: "#22c55e",
-    bgColor: "#22c55e10",
-    borderColor: "#22c55e40",
+    name: "Python (Basic)",
+    icon: <FaPython />,
+    color: "#3776ab",
     link: "https://www.hackerrank.com/profile/rakshitsoni544",
     platform: "HackerRank",
     platformColor: "#2ec866",
     platformIcon: <FaHackerrank />,
-    badge: "Certified",
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "Problem Solving (Basic)",
+    icon: <FaCode />,
+    color: "#22c55e",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "C# (Basic)",
+    icon: <FaCode />,
+    color: "#9b4f96",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "React (Basic)",
+    icon: <FaReact />,
+    color: "#61dafb",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "Frontend Developer (React)",
+    icon: <FaReact />,
+    color: "#61dafb",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+    type: "ROLE",
+    roleColor: "#1a3a6e",
+  },
+  {
+    name: "Software Engineer Intern",
+    icon: <FaCode />,
+    color: "#a78bfa",
+    link: "https://www.hackerrank.com/profile/rakshitsoni544",
+    platform: "HackerRank",
+    platformColor: "#2ec866",
+    platformIcon: <FaHackerrank />,
+    badge: "Verified",
+    type: "ROLE",
+    roleColor: "#1a3a6e",
   },
   {
     name: "Complete Bootstrap Course",
     icon: <FaBootstrap />,
     color: "#7952b3",
-    bgColor: "#7952b310",
-    borderColor: "#7952b340",
     link: "https://media.geeksforgeeks.org/courses/certificates/c217300c0857a36da426f5c32fe45a19.pdf",
     platform: "GeeksforGeeks",
     platformColor: "#2f8d46",
     platformIcon: <SiGeeksforgeeks />,
     badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "DevOps - Skill Up",
+    icon: <FaServer />,
+    color: "#2f8d46",
+    link: "https://www.geeksforgeeks.org/certificate/ef55174d1084ada26cb006ba9d569466",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
   },
   {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
     color: "#0056d3",
-    bgColor: "#0056d310",
-    borderColor: "#0056d340",
     link: "https://coursera.org/verify/QBZAL6TBSX8K",
     platform: "Coursera",
     platformColor: "#0056d3",
     platformIcon: <SiCoursera />,
     badge: "Verified",
+    type: "SKILL",
   },
 ];
-
+const BADGES = [
+  { name: "Problem Solving", stars: 1, color: "#f4a27d" },
+  { name: "Java", stars: 3, color: "#c8c8c8" },
+  { name: "Python", stars: 2, color: "#f4a27d" },
+  { name: "Days of Code", stars: 5, color: "#f5c518" },
+  { name: "Days of JS", stars: 2, color: "#f4a27d" },
+  { name: "SQL", stars: 2, color: "#f4a27d" },
+  { name: "React", stars: 1, color: "#f4a27d" },
+];
 const SOCIAL = [
   {
     label: "GitHub",
@@ -3250,117 +3329,248 @@ const timelineProgress = useScrollProgress(timelineTrackRef);
           </div>
         </section>
 
-        {/* ── CERTIFICATIONS (REDESIGNED) ── */}
-        <section
-          id="certifications"
-          className="bg-white dark:bg-gray-900 py-20"
+        
+        {/* ── CERTIFICATIONS ── */}
+<section id="certifications" className="bg-white dark:bg-gray-900 py-20">
+  <div className="max-w-6xl mx-auto px-4">
+
+    {/* Section header */}
+    <FadeIn className="mb-10">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+            Certifications & Badges
+          </h2>
+          <p className="text-gray-400 text-sm mt-1">
+            Verified credentials from HackerRank, GeeksforGeeks & Coursera
+          </p>
+          <div className="mt-3 h-1 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+        </div>
+        <a
+          href="https://www.hackerrank.com/profile/rakshitsoni544"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#2ec866]/10 border border-[#2ec866]/30 text-[#2ec866] font-semibold text-sm hover:bg-[#2ec866]/20 transition-all self-start sm:self-auto"
         >
-          <div className="max-w-6xl mx-auto px-4">
-            {/* Section header */}
-            <FadeIn className="mb-10">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                    Certifications
-                  </h2>
-                  <p className="text-gray-400 text-sm mt-1">
-                     Verified credentials from HackerRank, GeeksforGeeks & Coursera
-                  </p>
-                  <div className="mt-3 h-1 w-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
-                </div>
-                {/* Profile link pill */}
-                <a
-                  href="https://www.hackerrank.com/profile/rakshitsoni544"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#2ec866]/10 border border-[#2ec866]/30 text-[#2ec866] font-semibold text-sm hover:bg-[#2ec866]/20 transition-all self-start sm:self-auto"
-                >
-                  <FaHackerrank size={16} />
-                  View HackerRank Profile
-                  <FaExternalLinkAlt size={9} />
-                </a>
-              </div>
-            </FadeIn>
+          <FaHackerrank size={16} />
+          View HackerRank Profile
+          <FaExternalLinkAlt size={9} />
+        </a>
+      </div>
+    </FadeIn>
 
-            {/* Platform summary row */}
-            <FadeIn delay={0.05} className="mb-8">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="flex items-center gap-4 bg-[#2ec866]/5 dark:bg-[#2ec866]/10 border border-[#2ec866]/20 rounded-2xl p-4">
-                  <div className="w-12 h-12 bg-[#2ec866]/15 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <FaHackerrank size={24} className="text-[#2ec866]" />
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      8
-                    </div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">
-                      HackerRank Certificates
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 bg-[#2f8d46]/5 dark:bg-[#2f8d46]/10 border border-[#2f8d46]/20 rounded-2xl p-4">
-                  <div className="w-12 h-12 bg-[#2f8d46]/15 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <SiGeeksforgeeks size={24} className="text-[#2f8d46]" />
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      1
-                    </div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">
-                      GeeksforGeeks Certificate
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 bg-[#0056d3]/5 dark:bg-[#0056d3]/10 border border-[#0056d3]/20 rounded-2xl p-4">
-                  <div className="w-12 h-12 bg-[#0056d3]/15 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <SiCoursera size={24} className="text-[#0056d3]" />
-                  </div>
-                  <div>
-                    <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      1
-                    </div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">
-                      Coursera Certificate
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Cert cards grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {CERTS.map((cert, i) => (
-                <CertCard key={i} cert={cert} index={i} />
-              ))}
-            </div>
-
-            {/* Bottom CTA */}
-            <FadeIn delay={0.4} className="mt-8">
-              <div className="rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gray-50/50 dark:bg-gray-800/30">
-                <div className="flex items-center gap-3">
-                  <FaTrophy className="text-yellow-500" size={20} />
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                      Want to verify any certificate?
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      All certifications are verifiable on their respective
-                      platforms.
-                    </div>
-                  </div>
-                </div>
-                <a
-                  href="https://www.hackerrank.com/profile/rakshitsoni544"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2ec866] hover:bg-[#25b057] text-white rounded-xl text-sm font-semibold transition-all active:scale-95 whitespace-nowrap flex-shrink-0"
-                >
-                  <FaHackerrank size={13} /> HackerRank Profile
-                </a>
-              </div>
-            </FadeIn>
+    {/* Platform summary */}
+    <FadeIn delay={0.05} className="mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="flex items-center gap-4 bg-[#2ec866]/5 dark:bg-[#2ec866]/10 border border-[#2ec866]/20 rounded-2xl p-4">
+          <div className="w-12 h-12 bg-[#2ec866]/15 rounded-xl flex items-center justify-center flex-shrink-0">
+            <FaHackerrank size={24} className="text-[#2ec866]" />
           </div>
-        </section>
+          <div>
+            <div className="text-xl font-bold text-gray-900 dark:text-white">12</div>
+            <div className="text-xs text-gray-500 dark:text-gray-400">HackerRank Certificates</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-4 bg-[#2f8d46]/5 dark:bg-[#2f8d46]/10 border border-[#2f8d46]/20 rounded-2xl p-4">
+          <div className="w-12 h-12 bg-[#2f8d46]/15 rounded-xl flex items-center justify-center flex-shrink-0">
+            <SiGeeksforgeeks size={24} className="text-[#2f8d46]" />
+          </div>
+          <div>
+            <div className="text-xl font-bold text-gray-900 dark:text-white">2</div>
+            <div className="text-xs text-gray-500 dark:text-gray-400">GeeksforGeeks Certificates</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-4 bg-[#0056d3]/5 dark:bg-[#0056d3]/10 border border-[#0056d3]/20 rounded-2xl p-4">
+          <div className="w-12 h-12 bg-[#0056d3]/15 rounded-xl flex items-center justify-center flex-shrink-0">
+            <SiCoursera size={24} className="text-[#0056d3]" />
+          </div>
+          <div>
+            <div className="text-xl font-bold text-gray-900 dark:text-white">1</div>
+            <div className="text-xs text-gray-500 dark:text-gray-400">Coursera Certificate</div>
+          </div>
+        </div>
+      </div>
+    </FadeIn>
+
+    {/* ── MY BADGES (HackerRank style hexagons) ── */}
+    <FadeIn delay={0.1} className="mb-10">
+      <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-6">
+        <div className="flex items-center gap-2 mb-6">
+          <FaMedal className="text-yellow-500" size={18} />
+          <h3 className="text-base font-bold text-gray-900 dark:text-white">My Badges</h3>
+          <span className="ml-auto text-xs text-gray-400 bg-gray-100 dark:bg-gray-700 px-2.5 py-1 rounded-full">
+            {BADGES.length} Badges
+          </span>
+        </div>
+        <div className="flex flex-wrap gap-4 justify-center sm:justify-start">
+          {BADGES.map((badge, i) => (
+            <FadeIn key={i} delay={i * 0.06}>
+              <a
+                href="https://www.hackerrank.com/profile/rakshitsoni544"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center gap-2 cursor-pointer"
+              >
+                {/* Hexagon badge */}
+                <div className="relative w-20 h-20 transition-transform duration-200 group-hover:scale-110 group-hover:-translate-y-1">
+                  <svg viewBox="0 0 100 115" className="w-full h-full drop-shadow-md">
+                    <polygon
+                      points="50,5 95,28 95,87 50,110 5,87 5,28"
+                      fill={badge.color}
+                      opacity="0.9"
+                    />
+                    <polygon
+                      points="50,5 95,28 95,87 50,110 5,87 5,28"
+                      fill="none"
+                      stroke="white"
+                      strokeOpacity="0.3"
+                      strokeWidth="2"
+                    />
+                    {/* shine */}
+                    <polygon
+                      points="50,8 92,30 92,50 50,8"
+                      fill="white"
+                      opacity="0.08"
+                    />
+                  </svg>
+                  {/* Badge name inside hex */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center px-1">
+                    <span className="text-[9px] font-bold text-white text-center leading-tight drop-shadow">
+                      {badge.name}
+                    </span>
+                    {/* Stars */}
+                    <div className="flex gap-0.5 mt-1">
+                      {Array.from({ length: badge.stars }).map((_, si) => (
+                        <FaStar key={si} size={7} className="text-white drop-shadow" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </FadeIn>
+
+    {/* ── CERT CARDS (HackerRank file style) ── */}
+    <FadeIn delay={0.15} className="mb-8">
+      <div className="flex items-center gap-2 mb-5">
+        <FaCheckCircle className="text-blue-500" size={16} />
+        <h3 className="text-base font-bold text-gray-900 dark:text-white">My Certifications</h3>
+        <span className="ml-auto text-xs text-gray-400 bg-gray-100 dark:bg-gray-700 px-2.5 py-1 rounded-full">
+          {CERTS.length} Total
+        </span>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {CERTS.map((cert, i) => (
+          <FadeIn key={i} delay={i * 0.04}>
+            <a
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex flex-col rounded-xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              style={{
+                borderColor: cert.type === "ROLE" ? "#1a3a6e" : "#2ec866" + "50",
+                background: cert.type === "ROLE"
+                  ? "linear-gradient(145deg, #1a3a6e, #0f2044)"
+                  : cert.platform === "GeeksforGeeks"
+                    ? "linear-gradient(145deg, #1a472a, #0d2b18)"
+                    : cert.platform === "Coursera"
+                      ? "linear-gradient(145deg, #003a8c, #001f5b)"
+                      : "linear-gradient(145deg, #1a3a2a, #0d2118)",
+              }}
+            >
+              {/* Folded corner */}
+              <div
+                className="absolute top-0 right-0 w-8 h-8"
+                style={{
+                  background: cert.type === "ROLE" ? "#2a5298" : "#2ec866",
+                  clipPath: "polygon(100% 0, 0 0, 100% 100%)",
+                  opacity: 0.7,
+                }}
+              />
+
+              {/* Card body */}
+              <div className="p-4 flex flex-col flex-1 gap-3">
+                {/* Icon */}
+                <div
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-lg flex-shrink-0 transition-transform duration-200 group-hover:scale-110"
+                  style={{ background: cert.color + "25", color: cert.color }}
+                >
+                  {cert.icon}
+                </div>
+
+                {/* Name */}
+                <div className="text-xs font-bold text-white leading-snug flex-1 pr-2">
+                  {cert.name}
+                </div>
+
+                {/* Bottom row: Verified + type badge */}
+                <div className="flex items-center justify-between mt-auto">
+                  <div className="flex items-center gap-1">
+                    <FaCheckCircle size={8} className="text-[#2ec866]" />
+                    <span className="text-[9px] font-bold text-[#2ec866]">Verified</span>
+                  </div>
+                  <span
+                    className="text-[8px] font-black px-1.5 py-0.5 rounded"
+                    style={{
+                      background: cert.type === "ROLE" ? "#2a5298" : "#2ec86640",
+                      color: cert.type === "ROLE" ? "#90b4f8" : "#2ec866",
+                    }}
+                  >
+                    {cert.type}
+                  </span>
+                </div>
+              </div>
+
+              {/* Platform strip at bottom */}
+              <div
+                className="px-3 py-1.5 flex items-center gap-1.5 border-t"
+                style={{
+                  borderColor: "rgba(255,255,255,0.08)",
+                  background: "rgba(0,0,0,0.2)",
+                }}
+              >
+                <span style={{ color: cert.platformColor, fontSize: 10 }}>
+                  {cert.platformIcon}
+                </span>
+                <span className="text-[9px] text-white/50 font-medium">{cert.platform}</span>
+              </div>
+            </a>
+          </FadeIn>
+        ))}
+      </div>
+    </FadeIn>
+
+    {/* Bottom CTA */}
+    <FadeIn delay={0.4}>
+      <div className="rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gray-50/50 dark:bg-gray-800/30">
+        <div className="flex items-center gap-3">
+          <FaTrophy className="text-yellow-500" size={20} />
+          <div>
+            <div className="text-sm font-semibold text-gray-900 dark:text-white">
+              Want to verify any certificate?
+            </div>
+            <div className="text-xs text-gray-400">
+              All certifications are verifiable on their respective platforms.
+            </div>
+          </div>
+        </div>
+        
+        <a
+          href="https://www.hackerrank.com/profile/rakshitsoni544"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2ec866] hover:bg-[#25b057] text-white rounded-xl text-sm font-semibold transition-all active:scale-95 whitespace-nowrap flex-shrink-0"
+        >
+          <FaHackerrank size={13} /> HackerRank Profile
+        </a>
+      </div>
+    </FadeIn>
+
+  </div>
+</section>
 
         {/* ── CONTACT ── */}
         <section id="contact" className="max-w-6xl mx-auto px-4 py-20">
