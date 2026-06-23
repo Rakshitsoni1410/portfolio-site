@@ -1299,6 +1299,17 @@ const CERTS = [
     type: "SKILL",
   },
   {
+  name: "SQL - Skill Up",
+  icon: <FaDatabase />,
+  color: "#4479a1",
+  link: "https://www.geeksforgeeks.org/certificate/eed10ec4fe7c509d0de29c371c6b9478",
+  platform: "GeeksforGeeks",
+  platformColor: "#2f8d46",
+  platformIcon: <SiGeeksforgeeks />,
+  badge: "Verified",
+  type: "SKILL",
+},
+  {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
     color: "#0056d3",
@@ -3437,7 +3448,7 @@ export default function App() {
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      6
+                      7
                     </div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">
                       GeeksforGeeks Certificates
