@@ -9,7 +9,7 @@ import {
   FaJava,
   FaPython,
   FaDatabase,
-  FaLaptopCode ,
+  FaLaptopCode,
   FaJs,
   FaReact,
   FaNodeJs,
@@ -1299,16 +1299,16 @@ const CERTS = [
     type: "SKILL",
   },
   {
-  name: "SQL - Skill Up",
-  icon: <FaDatabase />,
-  color: "#4479a1",
-  link: "https://www.geeksforgeeks.org/certificate/eed10ec4fe7c509d0de29c371c6b9478",
-  platform: "GeeksforGeeks",
-  platformColor: "#2f8d46",
-  platformIcon: <SiGeeksforgeeks />,
-  badge: "Verified",
-  type: "SKILL",
-},
+    name: "SQL - Skill Up",
+    icon: <FaDatabase />,
+    color: "#4479a1",
+    link: "https://www.geeksforgeeks.org/certificate/eed10ec4fe7c509d0de29c371c6b9478",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
+  },
   {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
@@ -1321,6 +1321,9 @@ const CERTS = [
     type: "SKILL",
   },
 ];
+const hackerRankCerts = CERTS.filter((cert) => cert.platform === "HackerRank");
+const gfgCerts = CERTS.filter((cert) => cert.platform === "GeeksforGeeks");
+const courseraCerts = CERTS.filter((cert) => cert.platform === "Coursera");
 const BADGES = [
   { name: "Problem Solving", stars: 1, color: "#f4a27d" },
   { name: "Java", stars: 3, color: "#c8c8c8" },
@@ -1354,7 +1357,7 @@ const SOCIAL = [
   {
     label: "GFG",
     icon: <FaGlobe />,
-    url: "https://www.geeksforgeeks.org/user/rakshituya7/",
+    url: "https://www.geeksforgeeks.org/user/rakshitsoni1410/",
   },
 ];
 {
@@ -3543,115 +3546,148 @@ export default function App() {
               </div>
             </FadeIn>
 
-            {/* ── CERT CARDS (HackerRank file style) ── */}
-            <FadeIn delay={0.15} className="mb-8">
-              <div className="flex items-center gap-2 mb-5">
-                <FaCheckCircle className="text-blue-500" size={16} />
-                <h3 className="text-base font-bold text-gray-900 dark:text-white">
-                  My Certifications
-                </h3>
-                <span className="ml-auto text-xs text-gray-400 bg-gray-100 dark:bg-gray-700 px-2.5 py-1 rounded-full">
-                  {CERTS.length} Total
-                </span>
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {CERTS.map((cert, i) => (
-                  <FadeIn key={i} delay={i * 0.04}>
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group relative flex flex-col rounded-xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                      style={{
-                        borderColor:
-                          cert.type === "ROLE" ? "#1a3a6e" : "#2ec866" + "50",
-                        background:
-                          cert.type === "ROLE"
-                            ? "linear-gradient(145deg, #1a3a6e, #0f2044)"
-                            : cert.platform === "GeeksforGeeks"
-                              ? "linear-gradient(145deg, #1a472a, #0d2b18)"
-                              : cert.platform === "Coursera"
-                                ? "linear-gradient(145deg, #003a8c, #001f5b)"
-                                : "linear-gradient(145deg, #1a3a2a, #0d2118)",
-                      }}
-                    >
-                      {/* Folded corner */}
-                      <div
-                        className="absolute top-0 right-0 w-8 h-8"
-                        style={{
-                          background:
-                            cert.type === "ROLE" ? "#2a5298" : "#2ec866",
-                          clipPath: "polygon(100% 0, 0 0, 100% 100%)",
-                          opacity: 0.7,
-                        }}
-                      />
+            {/* HACKERRANK CERTIFICATES */}
+            <FadeIn delay={0.15} className="mb-14">
+              <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                <FaHackerrank className="text-[#2ec866]" />
+                HackerRank Certificates
+              </h3>
 
-                      {/* Card body */}
-                      <div className="p-4 flex flex-col flex-1 gap-3">
-                        {/* Icon */}
-                        <div
-                          className="w-9 h-9 rounded-lg flex items-center justify-center text-lg flex-shrink-0 transition-transform duration-200 group-hover:scale-110"
-                          style={{
-                            background: cert.color + "25",
-                            color: cert.color,
-                          }}
-                        >
-                          {cert.icon}
-                        </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {hackerRankCerts.map((cert, i) => (
+                  <a
+                    key={i}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#f6f6f6] rounded-2xl p-4 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all"
+                  >
+                    <div className="border border-gray-300 rounded-xl p-5 bg-white">
+                      <div className="text-center">
+                        <p className="text-lg font-serif font-bold text-gray-800">
+                          Certificate of Accomplishment
+                        </p>
 
-                        {/* Name */}
-                        <div className="text-xs font-bold text-white leading-snug flex-1 pr-2">
+                        <div className="my-4 bg-[#1b1b2d] text-white py-2 px-4 rounded-md text-sm font-semibold">
                           {cert.name}
                         </div>
 
-                        {/* Bottom row: Verified + type badge */}
-                        <div className="flex items-center justify-between mt-auto">
-                          <div className="flex items-center gap-1">
-                            <FaCheckCircle
-                              size={8}
-                              className="text-[#2ec866]"
-                            />
-                            <span className="text-[9px] font-bold text-[#2ec866]">
-                              Verified
-                            </span>
-                          </div>
-                          <span
-                            className="text-[8px] font-black px-1.5 py-0.5 rounded"
-                            style={{
-                              background:
-                                cert.type === "ROLE" ? "#2a5298" : "#2ec86640",
-                              color:
-                                cert.type === "ROLE" ? "#90b4f8" : "#2ec866",
-                            }}
-                          >
-                            {cert.type}
-                          </span>
-                        </div>
-                      </div>
+                        <p className="text-xs text-gray-500 mt-4">
+                          Presented to
+                        </p>
 
-                      {/* Platform strip at bottom */}
-                      <div
-                        className="px-3 py-1.5 flex items-center gap-1.5 border-t"
-                        style={{
-                          borderColor: "rgba(255,255,255,0.08)",
-                          background: "rgba(0,0,0,0.2)",
-                        }}
-                      >
-                        <span
-                          style={{ color: cert.platformColor, fontSize: 10 }}
-                        >
-                          {cert.platformIcon}
-                        </span>
-                        <span className="text-[9px] text-white/50 font-medium">
-                          {cert.platform}
-                        </span>
+                        <p className="text-2xl italic font-serif text-gray-800 mt-2">
+                          Rakshit R Soni
+                        </p>
+
+                        <div className="w-full h-[1px] bg-gray-300 my-4"></div>
+
+                        <p className="text-xs text-gray-500">
+                          HackerRank Verified Certificate
+                        </p>
                       </div>
-                    </a>
-                  </FadeIn>
+                    </div>
+                  </a>
                 ))}
               </div>
             </FadeIn>
 
+            {/* GFG CERTIFICATES */}
+            <FadeIn delay={0.2} className="mb-14">
+              <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                <SiGeeksforgeeks className="text-[#2f8d46]" />
+                GeeksforGeeks Certificates
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {gfgCerts.map((cert, i) => (
+                  <a
+                    key={i}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-2xl p-4 shadow-lg border hover:-translate-y-2 hover:shadow-xl transition-all"
+                  >
+                    <div className="border-4 border-[#2f8d46] rounded-xl p-5 h-full">
+                      <div className="text-center">
+                        <p className="text-sm font-bold text-[#2f8d46]">
+                          CERTIFICATE OF COMPLETION
+                        </p>
+
+                        <div
+                          className="text-4xl flex justify-center my-4"
+                          style={{ color: cert.color }}
+                        >
+                          {cert.icon}
+                        </div>
+
+                        <h4 className="font-bold text-lg min-h-[60px] text-gray-900">
+                          {cert.name}
+                        </h4>
+
+                        <p className="text-sm text-gray-500 mt-4">Awarded to</p>
+                        <p className="text-lg font-semibold mt-1 text-gray-800">
+                          Rakshit R Soni
+                        </p>
+
+                        <div className="mt-6 border-t pt-4">
+                          <p className="text-xs text-gray-500">
+                            GeeksforGeeks Verified
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </FadeIn>
+
+            {/* COURSERA CERTIFICATES */}
+            <FadeIn delay={0.25} className="mb-8">
+              <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                <SiCoursera className="text-[#0056d3]" />
+                Coursera Certificates
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {courseraCerts.map((cert, i) => (
+                  <a
+                    key={i}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-2xl shadow-lg hover:-translate-y-2 transition-all overflow-hidden"
+                  >
+                    <div className="flex min-h-[220px]">
+                      <div className="flex-1 p-6">
+                        <p className="text-sm text-gray-500">
+                          Course Certificate
+                        </p>
+
+                        <h4 className="text-xl font-semibold text-gray-900 mt-4">
+                          Rakshit Riteshkumar Soni
+                        </h4>
+
+                        <p className="mt-6 font-medium text-gray-800">
+                          {cert.name}
+                        </p>
+
+                        <p className="text-sm text-gray-500 mt-4">
+                          Verified by Coursera
+                        </p>
+                      </div>
+
+                      <div className="w-32 bg-gray-100 flex flex-col justify-center items-center border-l">
+                        <SiCoursera size={42} className="text-[#0056d3]" />
+                        <p className="text-xs mt-3 font-semibold text-gray-600">
+                          CERTIFIED
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </FadeIn>
             {/* Bottom CTA */}
             <FadeIn delay={0.4}>
               <div className="rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gray-50/50 dark:bg-gray-800/30">
@@ -3828,7 +3864,7 @@ export default function App() {
                 RS.
               </span>
               <span className="text-xs text-gray-400 ml-3">
-                © 2025 Rakshit Soni · Built with React & Tailwind CSS
+                © 2026 Rakshit R Soni · Built with React & Tailwind CSS
               </span>
             </div>
             <div className="flex gap-4">
