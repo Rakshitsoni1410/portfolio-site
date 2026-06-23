@@ -9,6 +9,7 @@ import {
   FaJava,
   FaPython,
   FaDatabase,
+  FaLaptopCode ,
   FaJs,
   FaReact,
   FaNodeJs,
@@ -1280,6 +1281,17 @@ const CERTS = [
     icon: <FaReact />,
     color: "#61dafb",
     link: "https://www.geeksforgeeks.org/certificate/d0b746109a4c8b938f93418986076e07",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "Front-End Interview Prep",
+    icon: <FaLaptopCode />,
+    color: "#38bdf8",
+    link: "https://www.geeksforgeeks.org/certificate/74082e51017b8bcf9424a2d529ea1d99",
     platform: "GeeksforGeeks",
     platformColor: "#2f8d46",
     platformIcon: <SiGeeksforgeeks />,
@@ -3425,7 +3437,7 @@ export default function App() {
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      5
+                      6
                     </div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">
                       GeeksforGeeks Certificates
