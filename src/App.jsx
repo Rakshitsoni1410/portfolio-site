@@ -1254,27 +1254,38 @@ const CERTS = [
     type: "SKILL",
   },
   {
-  name: "Next.js Development",
-  icon: <FaCode />,
-  color: "#2f8d46",
-  link: "https://www.geeksforgeeks.org/certificate/3c5c7bb0ddc5e142e8072bebd4f12923",
-  platform: "GeeksforGeeks",
-  platformColor: "#2f8d46",
-  platformIcon: <SiGeeksforgeeks />,
-  badge: "Verified",
-  type: "SKILL",
-},
-{
-  name: "API Bootcamp (Postman)",
-  icon: <FaServer />,
-  color: "#ff6c37",
-  link: "https://www.geeksforgeeks.org/certificate/cf1e979cc5100c3db5694b917a10abd1",
-  platform: "GeeksforGeeks",
-  platformColor: "#2f8d46",
-  platformIcon: <SiGeeksforgeeks />,
-  badge: "Verified",
-  type: "SKILL",
-},
+    name: "Next.js Development",
+    icon: <FaCode />,
+    color: "#2f8d46",
+    link: "https://www.geeksforgeeks.org/certificate/3c5c7bb0ddc5e142e8072bebd4f12923",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "API Bootcamp (Postman)",
+    icon: <FaServer />,
+    color: "#ff6c37",
+    link: "https://www.geeksforgeeks.org/certificate/cf1e979cc5100c3db5694b917a10abd1",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "React JS Development",
+    icon: <FaReact />,
+    color: "#61dafb",
+    link: "https://www.geeksforgeeks.org/certificate/d0b746109a4c8b938f93418986076e07",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
+  },
   {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
@@ -3414,7 +3425,7 @@ export default function App() {
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      4
+                      5
                     </div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">
                       GeeksforGeeks Certificates
