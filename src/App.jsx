@@ -1311,16 +1311,16 @@ const CERTS = [
     type: "SKILL",
   },
   {
-  name: "AWS Cloud Practitioner",
-  icon: <FaCloud />,
-  color: "#ff9900",
-  link: "https://www.geeksforgeeks.org/certificate/2f5397b758408717516797a63df6992e",
-  platform: "GeeksforGeeks",
-  platformColor: "#2f8d46",
-  platformIcon: <SiGeeksforgeeks />,
-  badge: "Verified",
-  type: "SKILL",
-},
+    name: "AWS Cloud Practitioner",
+    icon: <FaCloud />,
+    color: "#ff9900",
+    link: "https://www.geeksforgeeks.org/certificate/2f5397b758408717516797a63df6992e",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
+  },
   {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
@@ -2781,52 +2781,82 @@ export default function App() {
               const tag = toComponentTag(s.title);
               return (
                 <FadeIn key={s.title} delay={Math.min(i * 0.08, 0.32)}>
-                  <li className="relative overflow-hidden bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group h-full">
-                    {/* watermark bracket, ties the card to "code" as the subject's vernacular */}
-                    <span
-                      className="absolute top-4 right-5 font-mono text-3xl font-bold select-none pointer-events-none opacity-[0.06] group-hover:opacity-[0.12] transition-opacity duration-300"
-                      style={{ color: s.color }}
-                      aria-hidden="true"
-                    >
-                      {`</>`}
-                    </span>
-
-                    {/* icon: bordered box instead of filled, glows on hover */}
+                  <li className="group relative h-full">
                     <div
-                      className="relative w-12 h-12 rounded-xl flex items-center justify-center mb-4 border-[1.5px] transition-transform duration-300 group-hover:scale-110"
-                      style={{
-                        borderColor: s.color + "50",
-                        background: s.color + "0d",
-                        color: s.color,
-                      }}
-                    >
-                      {s.icon}
+                      className="absolute inset-0 rounded-3xl opacity-0 blur-xl transition-all duration-500 group-hover:opacity-100"
+                      style={{ background: `${s.color}30` }}
+                    />
+
+                    <div className="relative overflow-hidden h-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl rounded-3xl p-6 border border-gray-200 dark:border-gray-800 hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl">
+                      {/* top gradient line */}
                       <div
-                        className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        className="absolute top-0 left-0 w-full h-1"
                         style={{
-                          boxShadow: `0 0 0 4px ${s.color}20, 0 8px 16px -4px ${s.color}40`,
+                          background: `linear-gradient(90deg, ${s.color}, transparent)`,
                         }}
                       />
+
+                      {/* number */}
+                      <div
+                        className="absolute top-5 right-5 text-4xl font-black opacity-10 group-hover:opacity-20 transition"
+                        style={{ color: s.color }}
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </div>
+
+                      {/* icon */}
+                      <div
+                        className="relative w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6"
+                        style={{
+                          background: `${s.color}15`,
+                          border: `1px solid ${s.color}40`,
+                          color: s.color,
+                        }}
+                      >
+                        {s.icon}
+                      </div>
+
+                      {/* tag */}
+                      <span
+                        className="inline-block text-xs font-bold mb-3"
+                        style={{ color: s.color }}
+                      >
+                        {`<${tag} />`}
+                      </span>
+
+                      {/* title */}
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                        {s.title}
+                      </h3>
+
+                      {/* divider */}
+                      <div
+                        className="h-1 w-12 rounded-full mb-4 transition-all duration-500 group-hover:w-20"
+                        style={{ background: s.color }}
+                      />
+
+                      {/* desc */}
+                      <p className="text-sm text-gray-500 dark:text-gray-400 leading-7 mb-5">
+                        {s.desc}
+                      </p>
+
+                      {/* footer */}
+                      <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+                        <span className="text-xs text-gray-400">
+                          Professional Service
+                        </span>
+
+                        <div
+                          className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 group-hover:translate-x-1"
+                          style={{
+                            background: `${s.color}15`,
+                            color: s.color,
+                          }}
+                        >
+                          →
+                        </div>
+                      </div>
                     </div>
-
-                    {/* JSX-style eyebrow tag */}
-                    <span
-                      className="font-mono text-[10px] font-semibold tracking-wider uppercase mb-1.5 inline-block"
-                      style={{ color: s.color }}
-                    >
-                      {`<${tag} />`}
-                    </span>
-
-                    <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1.5">
-                      {s.title}
-                    </h3>
-                    <span
-                      className="block h-0.5 w-6 rounded-full mb-3 transition-all duration-300 group-hover:w-12"
-                      style={{ background: s.color }}
-                    />
-                    <p className="text-sm text-gray-500 dark:text-gray-400 leading-6">
-                      {s.desc}
-                    </p>
                   </li>
                 </FadeIn>
               );
