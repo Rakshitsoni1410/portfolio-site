@@ -1322,6 +1322,17 @@ const CERTS = [
     type: "SKILL",
   },
   {
+  name: "AWS Solution Architect Associate",
+  icon: <FaCloud />,
+  color: "#ff9900",
+  link: "https://www.geeksforgeeks.org/certificate/9a56f8e273066c147ed14e062c5c3327",
+  platform: "GeeksforGeeks",
+  platformColor: "#2f8d46",
+  platformIcon: <SiGeeksforgeeks />,
+  badge: "Verified",
+  type: "SKILL",
+},
+  {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
     color: "#0056d3",
