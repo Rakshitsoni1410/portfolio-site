@@ -1348,7 +1348,7 @@ const CERTS = [
   name: "CRUD Operations in MongoDB",
   icon: <SiMongodb />,
   color: "#00ED64",
-  link: "https://www.credly.com/badges/6429360f-e99f-4ed6-96ef-6ab38345775",
+  link: "https://www.credly.com/badges/6429360f-e99f-4ed6-96ef-6ab383457754/public_url",
   platform: "MongoDB",
   platformColor: "#00ED64",
   platformIcon: <SiMongodb />,
