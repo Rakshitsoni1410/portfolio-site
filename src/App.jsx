@@ -1345,18 +1345,18 @@ const CERTS = [
     type: "SKILL",
   },
   {
-    name: "CRUD Operations in MongoDB",
-    icon: <FaDatabase />,
-    color: "#47A248",
-    link: "https://www.credly.com/badges/6429360f-e99f-4ed6-96ef-6ab383457754",
-    platform: "Credly",
-    platformColor: "#ff6b35",
-    platformIcon: <FaAward />,
-    badge: "Verified",
-    type: "SKILL",
-  },
-  
+  name: "CRUD Operations in MongoDB",
+  icon: <SiMongodb />,
+  color: "#00ED64",
+  link: "https://www.credly.com/badges/6429360f-e99f-4ed6-96ef-6ab38345775",
+  platform: "MongoDB",
+  platformColor: "#00ED64",
+  platformIcon: <SiMongodb />,
+  badge: "Verified",
+  type: "SKILL",
+},
 ];
+const mongoCerts = CERTS.filter(cert => cert.platform === "MongoDB");
 const hackerRankCerts = CERTS.filter((cert) => cert.platform === "HackerRank");
 const gfgCerts = CERTS.filter((cert) => cert.platform === "GeeksforGeeks");
 const courseraCerts = CERTS.filter((cert) => cert.platform === "Coursera");
@@ -3728,71 +3728,121 @@ export default function App() {
                 Coursera Certificates
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {courseraCerts.map((cert, i) => (
                   <a
                     key={i}
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white rounded-2xl shadow-lg hover:-translate-y-2 transition-all overflow-hidden"
+                    className="group bg-[#f8f8f8] rounded-2xl p-3 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all"
                   >
-                    <div className="flex min-h-[220px]">
-                      <div className="flex-1 p-6">
-                        <p className="text-sm text-gray-500">
-                          Course Certificate
-                        </p>
+                    <div className="bg-white border-[6px] border-gray-300 rounded-lg overflow-hidden min-h-[260px]">
+                      <div className="flex h-full">
+                        {/* LEFT SIDE */}
+                        <div className="flex-1 p-7 flex flex-col justify-between">
+                          <div>
+                            <p className="text-xs uppercase tracking-[0.25em] text-gray-500">
+                              Course Certificate
+                            </p>
 
-                        <h4 className="text-xl font-semibold text-gray-900 mt-4">
-                          Rakshit Riteshkumar Soni
-                        </h4>
+                            <div className="w-14 h-[2px] bg-[#0056d3] mt-3 mb-5"></div>
 
-                        <p className="mt-6 font-medium text-gray-800">
-                          {cert.name}
-                        </p>
+                            <h4 className="text-2xl font-serif text-gray-900">
+                              Rakshit Riteshkumar Soni
+                            </h4>
 
-                        <p className="text-sm text-gray-500 mt-4">
-                          Verified by Coursera
-                        </p>
-                      </div>
+                            <p className="text-sm text-gray-500 mt-3">
+                              has successfully completed
+                            </p>
 
-                      <div className="w-32 bg-gray-100 flex flex-col justify-center items-center border-l">
-                        <SiCoursera size={42} className="text-[#0056d3]" />
-                        <p className="text-xs mt-3 font-semibold text-gray-600">
-                          CERTIFIED
-                        </p>
+                            <p className="text-lg font-semibold text-gray-800 mt-5 leading-relaxed">
+                              {cert.name}
+                            </p>
+                          </div>
+
+                          <div className="pt-6">
+                            <div className="w-44 h-[1px] bg-gray-400 mb-2"></div>
+                            <p className="text-xs text-gray-500">
+                              Verified by Coursera
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* RIGHT RIBBON */}
+                        <div className="w-36 bg-gradient-to-b from-gray-100 to-gray-200 border-l relative flex flex-col items-center justify-center">
+                          <div className="absolute inset-x-0 bottom-0 h-8 bg-gray-200 [clip-path:polygon(0_0,100%_0,50%_100%)]" />
+
+                          <p className="text-xs tracking-[0.25em] font-semibold text-gray-600 mb-4 text-center">
+                            COURSE CERTIFICATE
+                          </p>
+
+                          <div className="w-20 h-20 rounded-full border-4 border-gray-400 flex items-center justify-center bg-white shadow-inner">
+                            <SiCoursera size={38} className="text-[#0056d3]" />
+                          </div>
+
+                          <p className="text-[10px] mt-4 font-semibold text-gray-500">
+                            CERTIFIED
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </a>
                 ))}
               </div>
             </FadeIn>
-            {/* Bottom CTA */}
-            <FadeIn delay={0.4}>
-              <div className="rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 p-6 flex flex-col sm:flex-row items-center justify-between gap-4 bg-gray-50/50 dark:bg-gray-800/30">
-                <div className="flex items-center gap-3">
-                  <FaTrophy className="text-yellow-500" size={20} />
-                  <div>
-                    <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                      Want to verify any certificate?
-                    </div>
-                    <div className="text-xs text-gray-400">
-                      All certifications are verifiable on their respective
-                      platforms.
-                    </div>
-                  </div>
-                </div>
+            {/* MONGODB CERTIFICATES */}
+            <FadeIn delay={0.3} className="mb-8">
+              <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                <SiMongodb className="text-[#00ED64]" />
+                MongoDB Certificates
+              </h3>
 
-                <a
-                  href="https://www.hackerrank.com/profile/rakshitsoni544"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#2ec866] hover:bg-[#25b057] text-white rounded-xl text-sm font-semibold transition-all active:scale-95 whitespace-nowrap flex-shrink-0"
-                >
-                  <FaHackerrank size={13} /> HackerRank Profile
-                </a>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {mongoCerts.map((cert, i) => (
+                  <a
+                    key={i}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-[#0d1117] rounded-2xl p-4 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all"
+                  >
+                    <div className="border border-[#00ED64]/30 rounded-xl p-6 bg-gradient-to-br from-[#001E2B] to-[#0d1117] min-h-[240px]">
+                      <div className="flex flex-col h-full justify-between">
+                        <div>
+                          <div className="flex justify-between items-center mb-6">
+                            <SiMongodb size={38} className="text-[#00ED64]" />
+                            <span className="text-xs text-[#00ED64] font-semibold">
+                              VERIFIED BADGE
+                            </span>
+                          </div>
+
+                          <p className="text-sm text-gray-400 mb-3">
+                            Skill Certification
+                          </p>
+
+                          <h4 className="text-2xl font-bold text-white mb-5">
+                            {cert.name}
+                          </h4>
+
+                          <p className="text-sm text-gray-400">Awarded to</p>
+                          <p className="text-lg font-semibold text-white mt-1">
+                            Rakshit Riteshkumar Soni
+                          </p>
+                        </div>
+
+                        <div className="mt-8 pt-4 border-t border-[#00ED64]/20">
+                          <p className="text-xs text-gray-500">
+                            Issued via Credly • MongoDB
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ))}
               </div>
             </FadeIn>
+            
           </div>
         </section>
 
