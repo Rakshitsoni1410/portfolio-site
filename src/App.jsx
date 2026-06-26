@@ -12,6 +12,7 @@ import {
   FaDatabase,
   FaLaptopCode,
   FaJs,
+  FaAward,
   FaReact,
   FaNodeJs,
   FaHtml5,
@@ -1322,16 +1323,16 @@ const CERTS = [
     type: "SKILL",
   },
   {
-  name: "AWS Solution Architect Associate",
-  icon: <FaCloud />,
-  color: "#ff9900",
-  link: "https://www.geeksforgeeks.org/certificate/9a56f8e273066c147ed14e062c5c3327",
-  platform: "GeeksforGeeks",
-  platformColor: "#2f8d46",
-  platformIcon: <SiGeeksforgeeks />,
-  badge: "Verified",
-  type: "SKILL",
-},
+    name: "AWS Solution Architect Associate",
+    icon: <FaCloud />,
+    color: "#ff9900",
+    link: "https://www.geeksforgeeks.org/certificate/9a56f8e273066c147ed14e062c5c3327",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
+  },
   {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
@@ -1343,6 +1344,18 @@ const CERTS = [
     badge: "Verified",
     type: "SKILL",
   },
+  {
+    name: "CRUD Operations in MongoDB",
+    icon: <FaDatabase />,
+    color: "#47A248",
+    link: "https://www.credly.com/badges/6429360f-e99f-4ed6-96ef-6ab383457754",
+    platform: "Credly",
+    platformColor: "#ff6b35",
+    platformIcon: <FaAward />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  
 ];
 const hackerRankCerts = CERTS.filter((cert) => cert.platform === "HackerRank");
 const gfgCerts = CERTS.filter((cert) => cert.platform === "GeeksforGeeks");
@@ -3504,7 +3517,7 @@ export default function App() {
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      7
+                      9
                     </div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">
                       GeeksforGeeks Certificates
@@ -3522,6 +3535,19 @@ export default function App() {
                     <div className="text-xs text-gray-500 dark:text-gray-400">
                       Coursera Certificate
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 bg-orange-500/5 dark:bg-orange-500/10 border border-orange-500/20 rounded-2xl p-4">
+                <div className="w-12 h-12 bg-orange-500/15 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FaAward size={24} className="text-orange-500" />
+                </div>
+                <div>
+                  <div className="text-xl font-bold text-gray-900 dark:text-white">
+                    1
+                  </div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                    Credly Certificate
                   </div>
                 </div>
               </div>
