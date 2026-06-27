@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import {
   FaSun,
+  FaRobot,
   FaMoon,
   FaGithub,
   FaLinkedin,
@@ -1334,6 +1335,17 @@ const CERTS = [
     type: "SKILL",
   },
   {
+  name: "Introduction to Generative AI with Snowflake",
+  icon: <FaRobot />,
+  color: "#29B5E8",
+  link: "https://www.geeksforgeeks.org/certificate/3157dc0d1848b3d35093799887487530",
+  platform: "GeeksforGeeks",
+  platformColor: "#2f8d46",
+  platformIcon: <SiGeeksforgeeks />,
+  badge: "Verified",
+  type: "SKILL",
+},
+  {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
     color: "#0056d3",
@@ -1349,6 +1361,17 @@ const CERTS = [
   icon: <SiMongodb />,
   color: "#00ED64",
   link: "https://www.credly.com/badges/6429360f-e99f-4ed6-96ef-6ab383457754/public_url",
+  platform: "MongoDB",
+  platformColor: "#00ED64",
+  platformIcon: <SiMongodb />,
+  badge: "Verified",
+  type: "SKILL",
+},
+{
+  name: "From Relational Model (SQL) to MongoDB's Document Model",
+  icon: <SiMongodb />,
+  color: "#00ED64",
+  link: "https://www.credly.com/badges/05b1c916-0c43-47c2-bf82-8ba672eefb0e/public_url",
   platform: "MongoDB",
   platformColor: "#00ED64",
   platformIcon: <SiMongodb />,
@@ -3517,7 +3540,7 @@ export default function App() {
                   </div>
                   <div>
                     <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      9
+                      10
                     </div>
                     <div className="text-xs text-gray-500 dark:text-gray-400">
                       GeeksforGeeks Certificates
@@ -3544,7 +3567,7 @@ export default function App() {
                 </div>
                 <div>
                   <div className="text-xl font-bold text-gray-900 dark:text-white">
-                    1
+                    2
                   </div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">
                     Credly Certificate
