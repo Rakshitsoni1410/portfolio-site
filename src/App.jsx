@@ -51,6 +51,13 @@ import {
   SiGeeksforgeeks,
 } from "react-icons/si";
 /* ─── DATA ──────────────────────────────────────────────────── */
+const IBMIcon = ({ size = "text-base" }) => {
+  return (
+    <span className={`${size} font-black tracking-[0.25em] text-[#0f62fe]`}>
+      IBM
+    </span>
+  );
+};
 
 const NAV_LINKS = [
   "About",
@@ -1335,16 +1342,16 @@ const CERTS = [
     type: "SKILL",
   },
   {
-  name: "Introduction to Generative AI with Snowflake",
-  icon: <FaRobot />,
-  color: "#29B5E8",
-  link: "https://www.geeksforgeeks.org/certificate/3157dc0d1848b3d35093799887487530",
-  platform: "GeeksforGeeks",
-  platformColor: "#2f8d46",
-  platformIcon: <SiGeeksforgeeks />,
-  badge: "Verified",
-  type: "SKILL",
-},
+    name: "Introduction to Generative AI with Snowflake",
+    icon: <FaRobot />,
+    color: "#29B5E8",
+    link: "https://www.geeksforgeeks.org/certificate/3157dc0d1848b3d35093799887487530",
+    platform: "GeeksforGeeks",
+    platformColor: "#2f8d46",
+    platformIcon: <SiGeeksforgeeks />,
+    badge: "Verified",
+    type: "SKILL",
+  },
   {
     name: "HTML, CSS & JavaScript",
     icon: <FaGlobe />,
@@ -1357,29 +1364,45 @@ const CERTS = [
     type: "SKILL",
   },
   {
-  name: "CRUD Operations in MongoDB",
-  icon: <SiMongodb />,
-  color: "#00ED64",
-  link: "https://www.credly.com/badges/6429360f-e99f-4ed6-96ef-6ab383457754/public_url",
-  platform: "MongoDB",
-  platformColor: "#00ED64",
-  platformIcon: <SiMongodb />,
-  badge: "Verified",
-  type: "SKILL",
-},
-{
-  name: "From Relational Model (SQL) to MongoDB's Document Model",
-  icon: <SiMongodb />,
-  color: "#00ED64",
-  link: "https://www.credly.com/badges/05b1c916-0c43-47c2-bf82-8ba672eefb0e/public_url",
-  platform: "MongoDB",
-  platformColor: "#00ED64",
-  platformIcon: <SiMongodb />,
-  badge: "Verified",
-  type: "SKILL",
-},
+    name: "CRUD Operations in MongoDB",
+    icon: <SiMongodb />,
+    color: "#00ED64",
+    link: "https://www.credly.com/badges/6429360f-e99f-4ed6-96ef-6ab383457754/public_url",
+    platform: "MongoDB",
+    platformColor: "#00ED64",
+    platformIcon: <SiMongodb />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "From Relational Model (SQL) to MongoDB's Document Model",
+    icon: <SiMongodb />,
+    color: "#00ED64",
+    link: "https://www.credly.com/badges/05b1c916-0c43-47c2-bf82-8ba672eefb0e/public_url",
+    platform: "MongoDB",
+    platformColor: "#00ED64",
+    platformIcon: <SiMongodb />,
+    badge: "Verified",
+    type: "SKILL",
+  },
+  {
+    name: "Web Development Fundamentals",
+    icon: <FaLaptopCode />,
+    color: "#0f62fe",
+    link: "https://www.credly.com/badges/346cccdc-d4c6-4873-8e95-7851eba67631/public_url",
+    platform: "IBM",
+    platformColor: "#0f62fe",
+    platformIcon: (
+      <span className="font-black text-[11px] tracking-widest text-[#0f62fe]">
+        IBM
+      </span>
+    ),
+    badge: "Verified",
+    type: "SKILL",
+  },
 ];
-const mongoCerts = CERTS.filter(cert => cert.platform === "MongoDB");
+const ibmCerts = CERTS.filter((cert) => cert.platform === "IBM");
+const mongoCerts = CERTS.filter((cert) => cert.platform === "MongoDB");
 const hackerRankCerts = CERTS.filter((cert) => cert.platform === "HackerRank");
 const gfgCerts = CERTS.filter((cert) => cert.platform === "GeeksforGeeks");
 const courseraCerts = CERTS.filter((cert) => cert.platform === "Coursera");
@@ -3865,7 +3888,57 @@ export default function App() {
                 ))}
               </div>
             </FadeIn>
-            
+            {/* IBM CERTIFICATES */}
+            <FadeIn delay={0.35} className="mb-8">
+              <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+                <IBMIcon />
+                IBM Certificates
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {ibmCerts.map((cert, i) => (
+                  <a
+                    key={i}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-[#161616] rounded-2xl p-4 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all"
+                  >
+                    <div className="border border-[#0f62fe]/30 rounded-xl p-6 bg-gradient-to-br from-[#161616] to-[#262626] min-h-[240px]">
+                      <div className="flex flex-col h-full justify-between">
+                        <div>
+                          <div className="flex justify-between items-center mb-6">
+                            <IBMIcon size="text-2xl" />
+                            <span className="text-xs text-[#78a9ff] font-semibold">
+                              VERIFIED
+                            </span>
+                          </div>
+
+                          <p className="text-sm text-gray-400 mb-3">
+                            IBM SkillsBuild Certification
+                          </p>
+
+                          <h4 className="text-2xl font-bold text-white mb-5">
+                            {cert.name}
+                          </h4>
+
+                          <p className="text-sm text-gray-400">Awarded to</p>
+                          <p className="text-lg font-semibold text-white mt-1">
+                            Rakshit Riteshkumar Soni
+                          </p>
+                        </div>
+
+                        <div className="mt-8 pt-4 border-t border-[#0f62fe]/20">
+                          <p className="text-xs text-gray-500">
+                            Issued via IBM SkillsBuild
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </FadeIn>
           </div>
         </section>
 
