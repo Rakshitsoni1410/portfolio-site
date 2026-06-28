@@ -1400,6 +1400,17 @@ const CERTS = [
     badge: "Verified",
     type: "SKILL",
   },
+  {
+    name: "Code Generation Using IBM Granite",
+    icon: <FaRobot />,
+    color: "#0f62fe",
+    link: "https://www.credly.com/badges/0153f9c9-f786-453e-9e92-dff255b36ed4/public_url",
+    platform: "IBM",
+    platformColor: "#0f62fe",
+    platformIcon: <IBMIcon />,
+    badge: "Verified",
+    type: "SKILL",
+  },
 ];
 const ibmCerts = CERTS.filter((cert) => cert.platform === "IBM");
 const mongoCerts = CERTS.filter((cert) => cert.platform === "MongoDB");
@@ -3932,6 +3943,24 @@ export default function App() {
                           <p className="text-xs text-gray-500">
                             Issued via IBM SkillsBuild
                           </p>
+                          <p className="text-sm text-gray-400 mb-3">
+                            IBM SkillsBuild Certification
+                          </p>
+
+                          <h4 className="text-2xl font-bold text-white mb-5">
+                            {cert.name}
+                          </h4>
+
+                          <p className="text-sm text-gray-400">Awarded to</p>
+                          <p className="text-lg font-semibold text-white mt-1">
+                            Rakshit Riteshkumar Soni
+                          </p>
+
+                          <div className="mt-8 pt-4 border-t border-[#0f62fe]/20">
+                            <p className="text-xs text-gray-500">
+                              AI • Prompt Engineering • Granite Models
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
