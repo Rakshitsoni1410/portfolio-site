@@ -1411,7 +1411,19 @@ const CERTS = [
     badge: "Verified",
     type: "SKILL",
   },
+  {
+  name: "AWS ML Basics",
+  icon: <FaCloud />,
+  color: "#ff9900",
+  link: "https://aws.amazon.com/training/",
+  platform: "AWS",
+  platformColor: "#ff9900",
+  platformIcon: <FaCloud />,
+  badge: "Verified",
+  type: "SKILL",
+},
 ];
+const awsCerts = CERTS.filter((cert) => cert.platform === "AWS");
 const ibmCerts = CERTS.filter((cert) => cert.platform === "IBM");
 const mongoCerts = CERTS.filter((cert) => cert.platform === "MongoDB");
 const hackerRankCerts = CERTS.filter((cert) => cert.platform === "HackerRank");
@@ -3608,6 +3620,19 @@ export default function App() {
                   </div>
                 </div>
               </div>
+              <div className="flex items-center gap-4 bg-[#ff9900]/5 dark:bg-[#ff9900]/10 border border-[#ff9900]/20 rounded-2xl p-4">
+  <div className="w-12 h-12 bg-[#ff9900]/15 rounded-xl flex items-center justify-center flex-shrink-0">
+    <FaCloud size={24} className="text-[#ff9900]" />
+  </div>
+  <div>
+    <div className="text-xl font-bold text-gray-900 dark:text-white">
+      1
+    </div>
+    <div className="text-xs text-gray-500 dark:text-gray-400">
+      AWS Certificates
+    </div>
+  </div>
+</div>
             </FadeIn>
 
             {/* ── MY BADGES (HackerRank style hexagons) ── */}
@@ -3968,6 +3993,55 @@ export default function App() {
                 ))}
               </div>
             </FadeIn>
+            {/* AWS CERTIFICATES */}
+<FadeIn delay={0.3} className="mb-14">
+  <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+    <FaCloud className="text-[#ff9900]" />
+    AWS Certificates
+  </h3>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {awsCerts.map((cert, i) => (
+      <a
+        key={i}
+        href={cert.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-white rounded-2xl p-4 shadow-lg border hover:-translate-y-2 hover:shadow-xl transition-all"
+      >
+        <div className="border-4 border-[#ff9900] rounded-xl p-5 h-full bg-gradient-to-br from-white to-orange-50">
+          <div className="text-center">
+            <p className="text-sm font-bold text-[#ff9900]">
+              AWS TRAINING & CERTIFICATION
+            </p>
+
+            <div
+              className="text-4xl flex justify-center my-4"
+              style={{ color: cert.color }}
+            >
+              {cert.icon}
+            </div>
+
+            <h4 className="font-bold text-lg min-h-[60px] text-gray-900">
+              {cert.name}
+            </h4>
+
+            <p className="text-sm text-gray-500 mt-4">Awarded to</p>
+            <p className="text-lg font-semibold mt-1 text-gray-800">
+              Rakshit R Soni
+            </p>
+
+            <div className="mt-6 border-t pt-4">
+              <p className="text-xs text-gray-500">
+                AWS Verified Certificate
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+</FadeIn>
           </div>
         </section>
 
