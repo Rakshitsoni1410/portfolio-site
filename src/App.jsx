@@ -1415,7 +1415,7 @@ const CERTS = [
   name: "AWS ML Basics",
   icon: <FaCloud />,
   color: "#ff9900",
-  link: "https://aws.amazon.com/training/",
+  link: "https://drive.google.com/file/d/1NEPyTd8jznBK7Ggre1AKZJUNtVBAi66B/view?usp=sharing",
   platform: "AWS",
   platformColor: "#ff9900",
   platformIcon: <FaCloud />,
